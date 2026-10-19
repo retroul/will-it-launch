@@ -548,6 +548,62 @@ window.AC_DATA = {
    }
   },
   {
+   "slug": "battlebit-remastered",
+   "name": "BattleBit Remastered",
+   "genre": "Shooter",
+   "anticheats": [
+    "Easy Anti-Cheat",
+    "FACEIT"
+   ],
+   "url": "",
+   "steam": "671860",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/671860/header.jpg?t=1730393449",
+   "updated": "2024-01-19",
+   "history": [
+    {
+     "name": "Devs commit to supporting EAC on Linux.",
+     "date": "Jul 14, 2023",
+     "url": "https://www.reddit.com/r/pcgaming/comments/14zhjb1/battlebit_ama/jrxva4o/"
+    },
+    {
+     "name": "Devs announce FACEIT Linux support via official Discord",
+     "date": "Jul 15, 2023",
+     "url": "https://i.postimg.cc/DZ4Ty8Wb/battlebit-mod-post.png"
+    }
+   ],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "running",
+     "notes": [
+      {
+       "text": "Official support for Linux version of FACEIT has been announced, but is not currently implemented.",
+       "url": "https://postimg.cc/1nSTvRr9"
+      },
+      {
+       "text": "Devs have commited to contunuing to support Linux users via EasyAntiCheat on community servers.",
+       "url": "https://www.reddit.com/r/pcgaming/comments/14zhjb1/comment/jrxuy0x/"
+      }
+     ]
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
    "slug": "battlefield-1",
    "name": "Battlefield 1",
    "genre": "Shooter",
@@ -810,6 +866,52 @@ window.AC_DATA = {
    }
   },
   {
+   "slug": "black-squad",
+   "name": "Black Squad",
+   "genre": "Shooter",
+   "anticheats": [
+    "BattlEye",
+    "nProtect GameGuard"
+   ],
+   "url": "",
+   "steam": "550650",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550650/header.jpg?t=1756315059",
+   "updated": "2024-01-19",
+   "history": [
+    {
+     "name": "BattlEye Support enabled",
+     "date": "Mon Nov 15 2021 17:40:07 GMT+0000",
+     "url": "https://www.protondb.com/app/550650#sxxv_1dLa4"
+    }
+   ],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "supported",
+     "notes": [
+      {
+       "text": "Recent reports suggest game may be broken"
+      }
+     ]
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
    "slug": "blade-soul-neo",
    "name": "Blade & Soul NEO",
    "genre": "MMO",
@@ -997,6 +1099,41 @@ window.AC_DATA = {
        "text": "Cross-play with PC"
       }
      ]
+    }
+   }
+  },
+  {
+   "slug": "breachers",
+   "name": "Breachers",
+   "genre": "Shooter",
+   "anticheats": [
+    "Easy Anti-Cheat"
+   ],
+   "url": "https://www.breachersvr.com/",
+   "steam": "1922010",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1922010/29e5fa6079fd9a551073a0a11cbdc78b7dbb0f2b/header_alt_assets_0.jpg?t=1791211713",
+   "updated": "2025-12-17",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "denied",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
     }
    }
   },
@@ -1344,6 +1481,41 @@ window.AC_DATA = {
    }
   },
   {
+   "slug": "counter-strike-1-6",
+   "name": "Counter-Strike 1.6",
+   "genre": "Shooter",
+   "anticheats": [
+    "VAC"
+   ],
+   "url": "",
+   "steam": "10",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/10/header.jpg?t=1745368572",
+   "updated": "2024-11-10",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "supported",
+     "notes": []
+    },
+    "linux": {
+     "status": "supported",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
    "slug": "counter-strike-2",
    "name": "Counter-Strike 2",
    "genre": "Shooter",
@@ -1367,6 +1539,45 @@ window.AC_DATA = {
        "text": "macOS support ended when CS:GO became CS2 (2023)"
       }
      ]
+    },
+    "linux": {
+     "status": "supported",
+     "notes": [
+      {
+       "text": "Native Linux version"
+      }
+     ]
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
+   "slug": "counter-strike-source",
+   "name": "Counter-Strike: Source",
+   "genre": "Shooter",
+   "anticheats": [
+    "VAC"
+   ],
+   "url": "",
+   "steam": "240",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/240/header.jpg?t=1745368575",
+   "updated": "2024-01-19",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
     },
     "linux": {
      "status": "supported",
@@ -1496,6 +1707,45 @@ window.AC_DATA = {
     "linux": {
      "status": "running",
      "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
+   "slug": "day-of-defeat-source",
+   "name": "Day of Defeat: Source",
+   "genre": "Shooter",
+   "anticheats": [
+    "VAC"
+   ],
+   "url": "",
+   "steam": "300",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/300/header.jpg?t=1763407002",
+   "updated": "2024-01-19",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "supported",
+     "notes": [
+      {
+       "text": "Native Linux version"
+      }
+     ]
     },
     "android": {
      "status": "unavailable",
@@ -1698,6 +1948,41 @@ window.AC_DATA = {
     },
     "linux": {
      "status": "broken",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
+   "slug": "deceit-2",
+   "name": "Deceit 2",
+   "genre": "Social",
+   "anticheats": [
+    "Easy Anti-Cheat"
+   ],
+   "url": "",
+   "steam": "2064870",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2064870/c7b9c187581f8e968e1e7c0c494cbd856b66ea56/header.jpg?t=1788775010",
+   "updated": "2025-06-18",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "running",
      "notes": []
     },
     "android": {
@@ -1921,6 +2206,41 @@ window.AC_DATA = {
    }
   },
   {
+   "slug": "dirt-rally-2-0",
+   "name": "DiRT Rally 2.0",
+   "genre": "Racing & Sports",
+   "anticheats": [
+    "VAC"
+   ],
+   "url": "",
+   "steam": "690790",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/690790/7a10c1ff13373845ff5c0bc4fc2421838043601e/header.jpg?t=1789553676",
+   "updated": "2024-11-04",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "running",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
    "slug": "dota-2",
    "name": "Dota 2",
    "genre": "MOBA",
@@ -2095,6 +2415,41 @@ window.AC_DATA = {
     },
     "ios": {
      "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
+   "slug": "dragonheir-silent-gods",
+   "name": "Dragonheir: Silent Gods",
+   "genre": "Anime RPG",
+   "anticheats": [
+    "Proxima Game Anti Cheat"
+   ],
+   "url": "",
+   "steam": "2203070",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2203070/f7f02854bc3b0c39e8392c9d74844330cd1a4f3e/header.jpg?t=1789474301",
+   "updated": "2025-08-08",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "broken",
+     "notes": []
+    },
+    "android": {
+     "status": "supported",
+     "notes": []
+    },
+    "ios": {
+     "status": "supported",
      "notes": []
     }
    }
@@ -2570,6 +2925,77 @@ window.AC_DATA = {
    }
   },
   {
+   "slug": "eternal-return",
+   "name": "Eternal Return",
+   "genre": "MOBA",
+   "anticheats": [
+    "XIGNCODE3",
+    "UNCHEATER"
+   ],
+   "url": "https://playeternalreturn.com/main",
+   "steam": "528010",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/528010/header.jpg?t=1772728537",
+   "updated": "2024-01-19",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "supported",
+     "notes": []
+    },
+    "linux": {
+     "status": "supported",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
+   "slug": "exoprimal",
+   "name": "Exoprimal",
+   "genre": "Shooter",
+   "anticheats": [
+    "Easy Anti-Cheat"
+   ],
+   "url": "",
+   "steam": "1286320",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1286320/header.jpg?t=1733977429",
+   "updated": "2024-11-03",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "running",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
    "slug": "f1-25",
    "name": "F1 25",
    "genre": "Racing & Sports",
@@ -2724,6 +3150,47 @@ window.AC_DATA = {
    }
   },
   {
+   "slug": "far-cry-5",
+   "name": "Far Cry 5",
+   "genre": "Action",
+   "anticheats": [
+    "Easy Anti-Cheat"
+   ],
+   "url": "",
+   "steam": "552520",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552520/0dbbd22689fafc2b5b86996257a8e115ff935e81/header.jpg?t=1785365694",
+   "updated": "2024-08-18",
+   "history": [
+    {
+     "name": "Removed EAC",
+     "date": "26 November 2019 13:54:44 UTC",
+     "url": "https://steamdb.info/depot/552521/history/?changeid=M:7117179758041625493"
+    }
+   ],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "supported",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
    "slug": "farlight-84",
    "name": "Farlight 84",
    "genre": "Battle Royale",
@@ -2779,6 +3246,41 @@ window.AC_DATA = {
        "text": "Cross-play with PC"
       }
      ]
+    }
+   }
+  },
+  {
+   "slug": "fellowship",
+   "name": "Fellowship",
+   "genre": "Action",
+   "anticheats": [
+    "Easy Anti-Cheat"
+   ],
+   "url": "https://www.playfellowship.com/en/",
+   "steam": "2352620",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2352620/9a614f739249e84fb74fe986cd6ccfc0edcee2bb/header.jpg?t=1782140326",
+   "updated": "2025-12-11",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "running",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
     }
    }
   },
@@ -3069,6 +3571,41 @@ window.AC_DATA = {
    }
   },
   {
+   "slug": "game-of-thrones-kingsroad",
+   "name": "Game of Thrones: Kingsroad",
+   "genre": "Action",
+   "anticheats": [
+    "XIGNCODE3"
+   ],
+   "url": "",
+   "steam": "4214820",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4214820/160ee31fd542a319a8daddb4bc18460139b164b7/header.jpg?t=1791937741",
+   "updated": "2025-12-15",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "running",
+     "notes": []
+    },
+    "android": {
+     "status": "supported",
+     "notes": []
+    },
+    "ios": {
+     "status": "supported",
+     "notes": []
+    }
+   }
+  },
+  {
    "slug": "garry-s-mod",
    "name": "Garry's Mod",
    "genre": "Social",
@@ -3292,6 +3829,76 @@ window.AC_DATA = {
     },
     "linux": {
      "status": "supported",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
+   "slug": "ghost-recon-wildlands",
+   "name": "Ghost Recon Wildlands",
+   "genre": "Shooter",
+   "anticheats": [
+    "Easy Anti-Cheat"
+   ],
+   "url": "https://www.ubisoft.com/en-us/game/ghost-recon/breakpoint/wildlands",
+   "steam": "460930",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/36ca0e082902bb8b6f4f0f3ae20de41b1a3c54c6/header.jpg?t=1790268185",
+   "updated": "2024-01-19",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "broken",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
+   "slug": "ghosts-of-tabor",
+   "name": "Ghosts of Tabor",
+   "genre": "Shooter",
+   "anticheats": [
+    "BattlEye"
+   ],
+   "url": "",
+   "steam": "1957780",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1957780/603bbfc5b960364ccbf709be475bb2aa25562131/header.jpg?t=1788933700",
+   "updated": "2025-12-11",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "denied",
      "notes": []
     },
     "android": {
@@ -3993,6 +4600,52 @@ window.AC_DATA = {
    }
   },
   {
+   "slug": "insurgency",
+   "name": "Insurgency",
+   "genre": "Shooter",
+   "anticheats": [
+    "VAC",
+    "BattlEye"
+   ],
+   "url": "",
+   "steam": "222880",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/222880/header.jpg?t=1758742858",
+   "updated": "2024-01-19",
+   "history": [
+    {
+     "name": "Works with BattlEye in Proton",
+     "date": "Sun Jan 02 2022 19:54:10 GMT+0000",
+     "url": "https://www.protondb.com/app/222880#YD21dwFjsq"
+    }
+   ],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "supported",
+     "notes": []
+    },
+    "linux": {
+     "status": "supported",
+     "notes": [
+      {
+       "text": "Native Linux version"
+      }
+     ]
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
    "slug": "insurgency-sandstorm",
    "name": "Insurgency: Sandstorm",
    "genre": "Shooter",
@@ -4505,6 +5158,41 @@ window.AC_DATA = {
    }
   },
   {
+   "slug": "madoka-magica-magia-exedra",
+   "name": "Madoka Magica Magia Exedra",
+   "genre": "Anime RPG",
+   "anticheats": [
+    "CrackProof"
+   ],
+   "url": "",
+   "steam": "",
+   "image": "images/covers/madoka-magica-magia-exedra.jpg",
+   "updated": "2025-12-15",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "broken",
+     "notes": []
+    },
+    "android": {
+     "status": "supported",
+     "notes": []
+    },
+    "ios": {
+     "status": "supported",
+     "notes": []
+    }
+   }
+  },
+  {
    "slug": "maplestory",
    "name": "MapleStory",
    "genre": "MMO",
@@ -4544,6 +5232,41 @@ window.AC_DATA = {
        "text": "Separate game: MapleStory M"
       }
      ]
+    }
+   }
+  },
+  {
+   "slug": "maplestory-worlds",
+   "name": "MapleStory Worlds",
+   "genre": "MMO",
+   "anticheats": [
+    "Nexon Game Security"
+   ],
+   "url": "",
+   "steam": "",
+   "image": "images/covers/maplestory-worlds.jpg",
+   "updated": "2024-10-31",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "broken",
+     "notes": []
+    },
+    "android": {
+     "status": "supported",
+     "notes": []
+    },
+    "ios": {
+     "status": "supported",
+     "notes": []
     }
    }
   },
@@ -4733,6 +5456,41 @@ window.AC_DATA = {
    }
   },
   {
+   "slug": "mordhau",
+   "name": "Mordhau",
+   "genre": "Action",
+   "anticheats": [
+    "VAC"
+   ],
+   "url": "",
+   "steam": "629760",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/629760/header.jpg?t=1777933284",
+   "updated": "2024-01-19",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "supported",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
    "slug": "motogp-25",
    "name": "MotoGP 25",
    "genre": "Racing & Sports",
@@ -4829,6 +5587,41 @@ window.AC_DATA = {
     },
     "linux": {
      "status": "supported",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
+   "slug": "myth-of-empires",
+   "name": "Myth of Empires",
+   "genre": "Survival",
+   "anticheats": [
+    "Easy Anti-Cheat"
+   ],
+   "url": "https://www.mythofempires.com/",
+   "steam": "1371580",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1371580/header.jpg?t=1783469343",
+   "updated": "2024-08-29",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "broken",
      "notes": []
     },
     "android": {
@@ -5067,6 +5860,41 @@ window.AC_DATA = {
        "text": "Mobile version released April 2025"
       }
      ]
+    }
+   }
+  },
+  {
+   "slug": "onward",
+   "name": "Onward",
+   "genre": "Shooter",
+   "anticheats": [
+    "Easy Anti-Cheat"
+   ],
+   "url": "",
+   "steam": "496240",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/496240/df9a63717fe3bee4ccaad33717e6bdaed4435c42/header.jpg?t=1745345271",
+   "updated": "2024-10-27",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "running",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
     }
    }
   },
@@ -5451,6 +6279,41 @@ window.AC_DATA = {
    }
   },
   {
+   "slug": "predator-hunting-grounds",
+   "name": "Predator: Hunting Grounds",
+   "genre": "Survival",
+   "anticheats": [
+    "Easy Anti-Cheat"
+   ],
+   "url": "",
+   "steam": "1556200",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1556200/header.jpg?t=1788366223",
+   "updated": "2024-09-01",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "running",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
    "slug": "predecessor",
    "name": "Predecessor",
    "genre": "MOBA",
@@ -5625,6 +6488,47 @@ window.AC_DATA = {
    }
   },
   {
+   "slug": "quake-champions",
+   "name": "Quake Champions",
+   "genre": "Shooter",
+   "anticheats": [
+    "Unknown (Custom)"
+   ],
+   "url": "https://quake.bethesda.net",
+   "steam": "611500",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/611500/header.jpg?t=1790187617",
+   "updated": "2024-01-19",
+   "history": [
+    {
+     "name": "\"Offically Supported through Proton\"",
+     "date": "July 14, 2022, 2:09 PM CDT",
+     "url": "https://steamcommunity.com/games/611500/announcements/detail/5349730511804644555"
+    }
+   ],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "supported",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
    "slug": "ragnarok-online",
    "name": "Ragnarok Online",
    "genre": "MMO",
@@ -5691,6 +6595,47 @@ window.AC_DATA = {
     },
     "ios": {
      "status": "supported",
+     "notes": []
+    }
+   }
+  },
+  {
+   "slug": "rainbow-six-extraction",
+   "name": "Rainbow Six Extraction",
+   "genre": "Shooter",
+   "anticheats": [
+    "Denuvo Anti-Cheat"
+   ],
+   "url": "https://www.ubisoft.com/en-us/game/rainbow-six/extraction",
+   "steam": "2379390",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2379390/header.jpg?t=1765569459",
+   "updated": "2024-01-27",
+   "history": [
+    {
+     "name": "Proton Experimental fixes Rainbow Six Extraction, EA App, Immortals of Aveum",
+     "date": "Aug 23, 2023, 4:44 PM UTC",
+     "url": "https://www.gamingonlinux.com/2023/08/proton-experimental-fixes-rainbow-six-extraction-ea-app-immortals-of-aveum/"
+    }
+   ],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "running",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
      "notes": []
     }
    }
@@ -6399,6 +7344,87 @@ window.AC_DATA = {
    }
   },
   {
+   "slug": "skull-and-bones",
+   "name": "Skull and Bones",
+   "genre": "Action",
+   "anticheats": [
+    "BattlEye"
+   ],
+   "url": "",
+   "steam": "2853730",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2853730/b0e631853f8a6dda7c841d6a74df9dae4598fb0f/header.jpg?t=1792053411",
+   "updated": "2024-09-01",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "running",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
+   "slug": "smite",
+   "name": "SMITE",
+   "genre": "MOBA",
+   "anticheats": [
+    "Easy Anti-Cheat"
+   ],
+   "url": "https://www.smitegame.com/",
+   "steam": "386360",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/386360/header.jpg?t=1764627618",
+   "updated": "2024-01-19",
+   "history": [
+    {
+     "name": "Previously working most likely due to fluke in EAC Config",
+     "date": "Aug 05, 2022, 9:57 PM",
+     "url": "https://github.com/ValveSoftware/Proton/issues/6062#issuecomment-1206809079"
+    },
+    {
+     "name": "Linux Support!",
+     "date": "Jun 7, 2023, 12:00 PM CDT",
+     "url": "https://www.smitegame.com/news/the-season-of-souls-10-6-update-notes/"
+    }
+   ],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "supported",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
    "slug": "smite-2",
    "name": "SMITE 2",
    "genre": "MOBA",
@@ -6421,6 +7447,41 @@ window.AC_DATA = {
     },
     "linux": {
      "status": "supported",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
+   "slug": "sniper-elite-4",
+   "name": "Sniper Elite 4",
+   "genre": "Shooter",
+   "anticheats": [
+    "VAC"
+   ],
+   "url": "",
+   "steam": "312660",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312660/header.jpg?t=1681207252",
+   "updated": "2024-10-18",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "running",
      "notes": []
     },
     "android": {
@@ -6583,6 +7644,45 @@ window.AC_DATA = {
    }
   },
   {
+   "slug": "sonic-rumble",
+   "name": "Sonic Rumble",
+   "genre": "Battle Royale",
+   "anticheats": [
+    "Uncheater"
+   ],
+   "url": "",
+   "steam": "2951690",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2951690/b5b043746584be58c2064bfa23dd1569529c4153/header.jpg?t=1787628064",
+   "updated": "2025-07-10",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "broken",
+     "notes": [
+      {
+       "text": "Unreleased, Speculative"
+      }
+     ]
+    },
+    "android": {
+     "status": "supported",
+     "notes": []
+    },
+    "ios": {
+     "status": "supported",
+     "notes": []
+    }
+   }
+  },
+  {
    "slug": "squad",
    "name": "Squad",
    "genre": "Shooter",
@@ -6721,6 +7821,41 @@ window.AC_DATA = {
    "steam": "",
    "image": "images/covers/starcraft-ii.jpg",
    "updated": "2024-05-25",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "supported",
+     "notes": []
+    },
+    "linux": {
+     "status": "running",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
+   "slug": "starcraft-remastered",
+   "name": "StarCraft: Remastered",
+   "genre": "Strategy",
+   "anticheats": [
+    "Warden"
+   ],
+   "url": "",
+   "steam": "",
+   "image": "images/covers/starcraft-remastered.png",
+   "updated": "2024-09-12",
    "history": [],
    "platforms": {
     "windows": {
@@ -7044,6 +8179,41 @@ window.AC_DATA = {
      "url": "https://www.ubisoft.com/en-us/game/the-crew/motorfest/news-updates/35DPcha72DbvZFcSFkHP28/season-8-quality-of-life-improvements"
     }
    ],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "supported",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
+   "slug": "the-division",
+   "name": "The Division",
+   "genre": "Shooter",
+   "anticheats": [
+    "FairFight"
+   ],
+   "url": "https://www.ubisoft.com/en-us/game/the-division/the-division-1",
+   "steam": "365590",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/365590/e36fd6a73af2b20d6286633ee3a089acf53397ff/header.jpg?t=1782421726",
+   "updated": "2024-01-19",
+   "history": [],
    "platforms": {
     "windows": {
      "status": "supported",
@@ -7480,6 +8650,41 @@ window.AC_DATA = {
     },
     "linux": {
      "status": "running",
+     "notes": []
+    },
+    "android": {
+     "status": "supported",
+     "notes": []
+    },
+    "ios": {
+     "status": "supported",
+     "notes": []
+    }
+   }
+  },
+  {
+   "slug": "undawn",
+   "name": "Undawn",
+   "genre": "Survival",
+   "anticheats": [
+    "Anti-Cheat Expert"
+   ],
+   "url": "",
+   "steam": "1881700",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1881700/header.jpg?t=1774904319",
+   "updated": "2024-09-27",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "broken",
      "notes": []
     },
     "android": {
@@ -8138,6 +9343,41 @@ window.AC_DATA = {
    }
   },
   {
+   "slug": "watch-dogs-2",
+   "name": "Watch Dogs 2",
+   "genre": "Action",
+   "anticheats": [
+    "Easy Anti-Cheat"
+   ],
+   "url": "https://www.ubisoft.com/en-us/game/watch-dogs/watch-dogs-2",
+   "steam": "447040",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/447040/header.jpg?t=1751986887",
+   "updated": "2025-07-30",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "linux": {
+     "status": "running",
+     "notes": []
+    },
+    "android": {
+     "status": "unavailable",
+     "notes": []
+    },
+    "ios": {
+     "status": "unavailable",
+     "notes": []
+    }
+   }
+  },
+  {
    "slug": "watch-dogs-legion",
    "name": "Watch Dogs: Legion",
    "genre": "Action",
@@ -8223,6 +9463,41 @@ window.AC_DATA = {
        "text": "Separate game: World of Tanks Blitz"
       }
      ]
+    }
+   }
+  },
+  {
+   "slug": "world-of-tanks-blitz",
+   "name": "World of Tanks Blitz",
+   "genre": "Shooter",
+   "anticheats": [
+    "Unknown (Custom)"
+   ],
+   "url": "https://wotblitz.com/",
+   "steam": "444200",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/444200/bd64dd64069d31a55e803ca181f4e1b6df7c9ae5/header.jpg?t=1791962132",
+   "updated": "2024-02-27",
+   "history": [],
+   "platforms": {
+    "windows": {
+     "status": "supported",
+     "notes": []
+    },
+    "macos": {
+     "status": "supported",
+     "notes": []
+    },
+    "linux": {
+     "status": "running",
+     "notes": []
+    },
+    "android": {
+     "status": "supported",
+     "notes": []
+    },
+    "ios": {
+     "status": "supported",
+     "notes": []
     }
    }
   },

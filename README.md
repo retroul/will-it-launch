@@ -2,9 +2,13 @@
 
 **Can I play it on Linux, Steam Deck, Mac or my phone?**
 
-Anti-cheat decides whether a lot of online games run outside Windows. Will It Launch? tracks 200+ popular online games on five platforms (Windows, Mac, Linux & Steam Deck, Android, iPhone & iPad) so you can check before you buy, install or switch.
+Anti-cheat decides whether a lot of online games run outside Windows. Will It Launch? tracks 230+ popular online games on five platforms (Windows, Mac, Linux & Steam Deck, Android, iPhone & iPad) so you can check before you buy, install or switch.
 
-![Will It Launch?](docs/screenshot.png)
+**Try it: https://retroul.github.io/will-it-launch/**
+
+| Light | Dark |
+| --- | --- |
+| ![Will It Launch? in light mode](docs/screenshot-light.png) | ![Will It Launch? in dark mode](docs/screenshot-dark.png) |
 
 ## Features
 
@@ -13,7 +17,8 @@ Anti-cheat decides whether a lot of online games run outside Windows. Will It La
 - **Search and filter** by name, genre, anti-cheat or status, and sort by what works best.
 - **Anti-cheat breakdown**: how Easy Anti-Cheat, BattlEye, Vanguard and 40+ others behave on each platform.
 - **Game requests with voting**, anonymous and one vote per connection (optional, see below).
-- Light and dark themes, works on phones, no build step, no tracking.
+- Light and dark themes, works on phones, no build step.
+- **Private by design**: no accounts, cookies, analytics or tracking, and a strict Content Security Policy. See [SECURITY.md](SECURITY.md).
 
 ## Run it
 

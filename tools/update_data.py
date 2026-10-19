@@ -290,6 +290,41 @@ GAMES = [
     G("DRAGON BALL XENOVERSE 2", "Fighting", title="Dragon Ball Xenoverse 2"),
     G("MY HERO ULTRA RUMBLE", "Fighting", title="My Hero Ultra Rumble"),
     G("NARUTO TO BORUTO: SHINOBI STRIKER", "Fighting", title="Naruto to Boruto: Shinobi Striker"),
+    # --- Added October 2026 -------------------------------------------------
+    G("Counter-Strike", "Shooter", title="Counter-Strike 1.6", mac="S"),
+    G("Counter-Strike: Source", "Shooter"),
+    G("Day of Defeat: Source", "Shooter"),
+    G("Insurgency", "Shooter", mac="S"),
+    G("Black Squad", "Shooter"),
+    G("Mordhau", "Action"),
+    G("Tom Clancy's Ghost Recon Wildlands", "Shooter", title="Ghost Recon Wildlands", steam="460930"),
+    G("Tom Clancy's The Division", "Shooter", title="The Division"),
+    G("Tom Clancy\u2019s Rainbow Six® Extraction", "Shooter", title="Rainbow Six Extraction"),
+    G("Quake Champions", "Shooter"),
+    G("BattleBit Remastered", "Shooter"),
+    G("Sniper Elite 4", "Shooter"),
+    G("Ghosts of Tabor", "Shooter", steam="1957780"),
+    G("Onward", "Shooter"),
+    G("Breachers", "Shooter"),
+    G("Exoprimal", "Shooter"),
+    G("World of Tanks Blitz", "Shooter", mac="S", android="S", ios="S", steam="444200"),
+    G("Eternal Return", "MOBA", mac="S"),
+    G("SMITE", "MOBA"),
+    G("StarCraft: Remastered", "Strategy", mac="S"),
+    G("Skull and Bones", "Action"),
+    G("Watch_Dogs® 2", "Action", title="Watch Dogs 2"),
+    G("Far Cry 5", "Action"),
+    G("Fellowship", "Action", steam="2352620"),
+    G("Myth of Empires", "Survival"),
+    G("Deceit 2", "Social"),
+    G("Predator: Hunting Grounds", "Survival", steam="1556200"),
+    G("DiRT Rally 2.0", "Racing & Sports", steam="690790"),
+    G("Sonic Rumble", "Battle Royale", android="S", ios="S"),
+    G("Undawn", "Survival", android="S", ios="S"),
+    G("Game of Thrones: Kingsroad", "Action", android="S", ios="S", steam="4214820"),
+    G("Dragonheir: Silent Gods", "Anime RPG", android="S", ios="S"),
+    G("Madoka Magica Magia Exedra", "Anime RPG", android="S", ios="S"),
+    G("MapleStory Worlds", "MMO", android="S", ios="S"),
 ]
 
 # Steam store IDs the upstream list doesn't have (used for cover art and store links).
@@ -334,6 +369,9 @@ COVER_URL = {
     "Star Citizen": "https://upload.wikimedia.org/wikipedia/en/9/91/Star_Citizen_logo.png",
     "StarCraft II": "https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/bltbe2068a317e02d9f/6966bac0fb2fd910dbda4a26/og_image.webp",
     "Teamfight Tactics": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/d63adacd93e313c1e61bbeb2eb37d8c4ca85848d-1920x1080.jpg",
+    "StarCraft: Remastered": "https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt9cbae43d0642e6ba/6a9b42028102310ecb81e0e3/OG_Image.png",
+    "Madoka Magica Magia Exedra": "https://madoka-exedra.com/ogp.jpg",
+    "MapleStory Worlds": "https://maplestoryworlds.nexon.com/msw.jpg",
     "Valorant": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Valorant_logo_-_pink_color_version.svg/500px-Valorant_logo_-_pink_color_version.svg.png",
     "WarCraft III: Reforged": "https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt806d59ff0b4e0508/6aa88158ad9209ba7f5629ef/rebirth_og.png",
     "World of Warcraft": "https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/bltb5a24e5ab1e2cfb0/6a88e3589b942efdb6f74110/wow-thumbnail-homepage.jpg",
@@ -376,6 +414,7 @@ def saved_cover(url, slug):
             from PIL import Image
             img = Image.open(BytesIO(raw))
             img.thumbnail((600, 600))
+            img.info = {}  # drop embedded comments/metadata
             keep_alpha = img.mode in ("RGBA", "LA", "P") and "A" in img.convert("RGBA").getbands()
             path = COVERS / f"{slug}.{'png' if keep_alpha else 'jpg'}"
             if keep_alpha:
