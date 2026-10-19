@@ -20,7 +20,18 @@ Anti-cheat decides whether a lot of online games run outside Windows. Will It La
 - Light and dark themes, works on phones, no build step.
 - **Private by design**: no accounts, cookies, analytics or tracking, and a strict Content Security Policy. See [SECURITY.md](SECURITY.md).
 
-## Run it
+## Help out
+
+You don't need to code to help:
+
+- [Request a game](../../issues/new?template=game-request.yml), or give a 👍 to [existing requests](../../issues?q=is%3Aissue+is%3Aopen+%22%5BRequest%5D%22+in%3Atitle+sort%3Areactions-%2B1-desc).
+- [Report a wrong status](../../issues/new?template=status-report.yml) if a game changed.
+
+## For developers: run your own copy
+
+The sections below are for people who want to run or change the code themselves.
+
+### Run it locally
 
 It's plain HTML, CSS and JavaScript. Open `index.html` in a browser, or serve the folder:
 
@@ -28,7 +39,7 @@ It's plain HTML, CSS and JavaScript. Open `index.html` in a browser, or serve th
 python3 -m http.server
 ```
 
-## Publish on GitHub Pages
+### Publish your own copy on GitHub Pages
 
 1. Push this folder to a GitHub repository.
 2. **Settings → Pages → Build and deployment**: deploy from the `main` branch, `/ (root)`.
@@ -36,7 +47,7 @@ python3 -m http.server
 
 The "Request a game" and "Something wrong? Tell us" links find your repository automatically on GitHub Pages. On a custom domain, set `repo` in `config.js`.
 
-## Game requests and voting
+### Game requests and voting
 
 There are two options:
 
@@ -58,7 +69,7 @@ A GitHub Action (`.github/workflows/update-data.yml`) pulls the latest Linux dat
 python3 tools/update_data.py
 ```
 
-## Add or fix a game
+### Add or fix a game
 
 1. Open `tools/update_data.py` and add a line to `GAMES`, for example:
    ```python
@@ -68,9 +79,7 @@ python3 tools/update_data.py
 2. Run `python3 tools/update_data.py`.
 3. Open a pull request.
 
-Not into code? [Request a game](../../issues/new?template=game-request.yml) or [report a wrong status](../../issues/new?template=status-report.yml).
-
-## Project layout
+### Project layout
 
 ```
 index.html          page
