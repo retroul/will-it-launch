@@ -1,5 +1,7 @@
 # Vote server (optional)
 
+> **The official Will It Launch? site already runs this server**, so there's nothing to do here for that site. This guide is for people who copy the project and want voting on their own version.
+
 Lets visitors request games and vote on the Requests page, with no account needed.
 It runs on Cloudflare Workers + D1. The free plan is plenty for a hobby site.
 

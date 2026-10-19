@@ -49,6 +49,8 @@ The "Request a game" and "Something wrong? Tell us" links find your repository a
 
 ### Game requests and voting
 
+> **Already set up on [the official site](https://retroul.github.io/will-it-launch/#requests).** Visitors can request and vote there now. The options below only matter if you run your own copy.
+
 There are two options:
 
 - **GitHub only (default).** The Requests page links to an issue form. People vote with 👍 on requests, one vote per GitHub account.
