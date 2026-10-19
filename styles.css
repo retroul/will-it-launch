@@ -264,8 +264,14 @@ h1 {
   width: 120px; aspect-ratio: 460 / 215; max-width: 100%;
   border-radius: 10px; overflow: hidden; background: var(--surface-2);
   display: grid; place-items: center;
+  position: relative; isolation: isolate;
 }
-.cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cover::before {
+  content: ""; position: absolute; inset: -12px; z-index: -1;
+  background: var(--img, none) center / cover;
+  filter: blur(12px) brightness(0.7);
+}
+.cover img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .monogram {
   width: 100%; height: 100%; display: grid; place-items: center;
   color: #fff; font: 800 1.25rem/1 var(--font-display); letter-spacing: 0.02em;

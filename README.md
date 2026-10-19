@@ -45,7 +45,7 @@ There are two options:
 | Linux & Steam Deck status, anti-cheat names, notes, timeline | [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) ([GitHub](https://github.com/AreWeAntiCheatYet/AreWeAntiCheatYet), MIT) |
 | Mac availability | Steam store data plus manual checks |
 | Windows, Android, iOS availability | Maintained by hand in `tools/update_data.py` |
-| Cover art | Steam's public image CDN |
+| Cover art | Steam store images; for games not on Steam, official share images, App Store screenshots or Wikipedia, saved in `images/covers/` |
 
 A GitHub Action (`.github/workflows/update-data.yml`) pulls the latest Linux data every Monday and commits it if anything changed. To run it yourself:
 

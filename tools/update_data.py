@@ -11,6 +11,8 @@ Usage:  python3 tools/update_data.py            (downloads the latest upstream l
 import json
 import re
 import sys
+import time
+import urllib.parse
 import urllib.request
 from datetime import date
 from pathlib import Path
@@ -290,6 +292,106 @@ GAMES = [
     G("NARUTO TO BORUTO: SHINOBI STRIKER", "Fighting", title="Naruto to Boruto: Shinobi Striker"),
 ]
 
+# Steam store IDs the upstream list doesn't have (used for cover art and store links).
+EXTRA_STEAM = {
+    "AFK Journey": "4195600", "Battlefield REDSEC": "3028330", "BLOODSTRIKE": "3199170",
+    "Blue Protocol: Star Resonance": "3681810", "Call of Duty: Modern Warfare III (2023)": "3595270",
+    "CarX Street": "1114150", "Chivalry 2": "1824220", "Delta Force: Hawk Ops": "2507950",
+    "Diablo® II: Resurrected": "2536520", "EA SPORTS FC™ 26": "3405690", "EFootball 2025": "1665460",
+    "Enlisted": "2051620", "Escape from Tarkov": "3932890", "F1® 25": "3059520",
+    "FANTASY LIFE i: The Girl Who Steals Time": "2993780", "Gears of War: Reloaded": "2523720",
+    "Girls' Frontline": "3887700", "Infinity Nikki": "3164330", "Killing Floor 3": "1430190",
+    "Lords of the Fallen (2023)": "1501750", "MIR4": "1623660", "Outriders": "680420",
+    "Pixel Gun 3D: PC Edition": "2524890", "Punishing: Gray Raven": "4125930", "REMATCH": "2138720",
+    "s&box": "590830", "skate.": "3354750", "Sniper Elite: Resistance": "2169200",
+    "Summoners War": "2426960", "Warhammer 40,000: Space Marine 2": "2183900",
+    "Watch Dogs®: Legion": "2239550", "Zenless Zone Zero": "4162040",
+}
+
+# Games not on Steam: a chosen cover image (official share image, App Store screenshot or Wikipedia),
+# downloaded once into images/covers/ so the site doesn't depend on other servers.
+COVER_URL = {
+    "2XKO": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/0d8da14d9cc0c69376e8fb42cc6344276bf937ad-1200x600.jpg",
+    "Blade & Soul NEO": "https://fizz-download.playnccdn.com/download/v2/buckets/marketing-platform/files/19fcb518a29-1423cb55-435c-46a7-ac98-e8535f1be781",
+    "CrossFire": "https://upload.wikimedia.org/wikipedia/en/b/bd/CrossFire_%28video_game%29_logo.png",
+    "Diablo® III": "https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blte3178c04d93773f1/67ce27f440e6651e27e17582/og_image.webp",
+    "Escape from Tarkov: Arena": "https://arena.tarkov.com/_nuxt/img/main.98acbc0.jpg",
+    "FiveM": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1765387725",
+    "Fortnite": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/bd/a7/e3/bda7e31a-7341-2cf8-d54f-880aec955620/EN_FNBR_42-00_C7S4_Shot_1_iOS_AppStore_Screenshot_iPhone_2868x1320.jpg/1000x460bb.jpg",
+    "Genshin Impact": "https://upload-static.hoyoverse.com/hk4e/upload/fb/common.jpg",
+    "Heroes of the Storm": "https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt8c01f980b76eb350/67ce291560fcdc2c6cfed487/og_image.webp",
+    "Honkai Star Rail": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260904hy5hcii9ds/upload/f0981b5c04af1c7a720d0bd65d958c52_1494770406828241360.png",
+    "League of Legends": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/565197caf987af4e4da307df6e2b235a28714736-837x469.jpg",
+    "Legends of Runeterra": "https://playruneterra.com/assets/ccc9b55ec5fec88d1a616e7dec4795282a3aba52/static/image/share-image.jpg",
+    "Lineage II": "https://fizz-download.playnccdn.com/download/v2/buckets/marketing-platform/files/1a12f0800cd-8c0443b1-524b-4e56-93a0-fc80a50831aa",
+    "Nikke: Goddess of Victory": "https://nikke-en.com/pc/ossweb-img/og_image.jpg",
+    "Path Of Titans": "https://alderongames.com/images/og/og-default-pot.png",
+    "Point Blank": "https://upload.wikimedia.org/wikipedia/en/5/57/Pointblanklogo.jpg",
+    "Princess Connect! Re:Dive": "https://dmg.priconne-redive.jp/ogp.jpg",
+    "Ragnarok Origin: ROO": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d0/e9/99/d0e99911-a695-ad4d-2a9d-d50f02cdb66a/004e4033-1606-4f40-a405-9bfb4cfb855a_1-_U8054_U52a8_U65f6_U88c5-2208X1242-_U82f1.jpg/1000x563bb.jpg",
+    "RF ONLINE NEXT": "https://sgimage.netmarble.com/images/netmarble/rfnext/20250122/uct91737511657458.jpg",
+    "Roblox": "https://images.rbxcdn.com/5348266ea6c5e67b19d6a814cbbb70f6.jpg",
+    "Star Citizen": "https://upload.wikimedia.org/wikipedia/en/9/91/Star_Citizen_logo.png",
+    "StarCraft II": "https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/bltbe2068a317e02d9f/6966bac0fb2fd910dbda4a26/og_image.webp",
+    "Teamfight Tactics": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/d63adacd93e313c1e61bbeb2eb37d8c4ca85848d-1920x1080.jpg",
+    "Valorant": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Valorant_logo_-_pink_color_version.svg/500px-Valorant_logo_-_pink_color_version.svg.png",
+    "WarCraft III: Reforged": "https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt806d59ff0b4e0508/6aa88158ad9209ba7f5629ef/rebirth_og.png",
+    "World of Warcraft": "https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/bltb5a24e5ab1e2cfb0/6a88e3589b942efdb6f74110/wow-thumbnail-homepage.jpg",
+}
+
+ROOT = Path(__file__).resolve().parent.parent
+COVERS = ROOT / "images" / "covers"
+USER_AGENT = "WillItLaunch/1.0 (https://github.com/retroul/will-it-launch)"
+
+
+def fetch(url):
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return resp.read()
+
+
+def steam_cover(appid):
+    """Steam's own header image URL (newer games use hashed paths, so don't guess it)."""
+    try:
+        info = json.loads(fetch(f"https://store.steampowered.com/api/appdetails?appids={appid}&filters=basic"))[appid]
+        if info.get("success") and info["data"].get("header_image"):
+            return info["data"]["header_image"]
+    except Exception as err:
+        print(f"  Steam lookup failed for {appid}: {err}")
+    finally:
+        time.sleep(0.4)  # stay well under Steam's rate limit
+    return f"https://cdn.cloudflare.steamstatic.com/steam/apps/{appid}/header.jpg"
+
+
+def saved_cover(url, slug):
+    """Download a cover once into images/covers/ (shrunk to 600px wide); returns its site path or ''."""
+    saved = sorted(COVERS.glob(f"{slug}.*"))
+    if saved:
+        return saved[0].relative_to(ROOT).as_posix()
+    try:
+        raw = fetch(url)
+        COVERS.mkdir(parents=True, exist_ok=True)
+        try:
+            from io import BytesIO
+            from PIL import Image
+            img = Image.open(BytesIO(raw))
+            img.thumbnail((600, 600))
+            keep_alpha = img.mode in ("RGBA", "LA", "P") and "A" in img.convert("RGBA").getbands()
+            path = COVERS / f"{slug}.{'png' if keep_alpha else 'jpg'}"
+            if keep_alpha:
+                img.convert("RGBA").save(path, optimize=True)
+            else:
+                img.convert("RGB").save(path, quality=82, optimize=True, progressive=True)
+        except ImportError:  # no Pillow: keep the original file
+            ext = Path(urllib.parse.urlparse(url).path).suffix.lower() or ".jpg"
+            path = COVERS / f"{slug}{ext}"
+            path.write_bytes(raw)
+        print(f"  Saved cover {path.name}")
+        return path.relative_to(ROOT).as_posix()
+    except Exception as err:
+        print(f"  Cover download failed for {slug}: {err}")
+        return ""
+
 
 def slugify(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
@@ -300,26 +402,38 @@ def platform(value):
     return {"status": STATUS[code], "notes": [{"text": note}] if note else []}
 
 
-def build(upstream):
+def build(upstream, previous):
     by_name = {g["name"]: g for g in upstream}
     missing = [g["name"] for g in GAMES if g["name"] not in by_name]
+    ours = {g["name"] for g in GAMES}
+    missing += [f"{n} (in EXTRA_STEAM/COVER_URL but not in GAMES)" for n in {*EXTRA_STEAM, *COVER_URL} - ours]
     if missing:
-        sys.exit("Not found upstream (fix the name in GAMES):\n  " + "\n  ".join(missing))
+        sys.exit("Not found (fix the name):\n  " + "\n  ".join(missing))
 
     games = []
     for cur in GAMES:
         up = by_name[cur["name"]]
         title = cur["title"] or up["name"]
+        slug = slugify(title)
+        steam = cur["steam"] or EXTRA_STEAM.get(cur["name"]) or up.get("storeIds", {}).get("steam") or ""
+        old = previous.get(slug, {})
+        if steam:
+            image = old["image"] if old.get("steam") == steam and old.get("image") else steam_cover(steam)
+        elif cur["name"] in COVER_URL:
+            image = saved_cover(COVER_URL[cur["name"]], slug)
+        else:
+            image = ""
         linux_notes = [{"text": t, "url": u} if u else {"text": t} for t, u in up.get("notes", [])]
         if up.get("native"):
             linux_notes.insert(0, {"text": "Native Linux version"})
         games.append({
-            "slug": slugify(title),
+            "slug": slug,
             "name": title,
             "genre": cur["genre"],
             "anticheats": up.get("anticheats", []),
             "url": cur["url"] or up.get("url") or "",
-            "steam": cur["steam"] or up.get("storeIds", {}).get("steam") or "",
+            "steam": steam,
+            "image": image,
             "updated": (up.get("dateChanged") or "")[:10],
             "history": [{"name": u["name"], "date": u["date"], "url": u.get("reference", "")}
                         for u in up.get("updates", [])],
@@ -340,9 +454,11 @@ def main():
     else:
         with urllib.request.urlopen(UPSTREAM, timeout=30) as resp:
             upstream = json.load(resp)
-    games = build(upstream)
+    current = {}
     if OUT.exists():
         current = json.loads(OUT.read_text(encoding="utf-8").split("=", 1)[1].rstrip().rstrip(";"))
+    games = build(upstream, {g["slug"]: g for g in current.get("games", [])})
+    if current:
         if current.get("games") == games:
             print(f"No changes ({len(games)} games)")
             return

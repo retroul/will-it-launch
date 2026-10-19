@@ -11,6 +11,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "",
+   "image": "images/covers/2xko.jpg",
    "updated": "2025-12-11",
    "history": [],
    "platforms": {
@@ -45,6 +46,7 @@ window.AC_DATA = {
    ],
    "url": "http://7daystodie.com/",
    "steam": "251570",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251570/header.jpg?t=1788209289",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -82,7 +84,8 @@ window.AC_DATA = {
     "NetEase Yidun"
    ],
    "url": "",
-   "steam": "",
+   "steam": "4195600",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4195600/8314c90ecae962febda7ab085222b237a078aff6/header.jpg?t=1790237524",
    "updated": "2025-12-15",
    "history": [],
    "platforms": {
@@ -118,6 +121,7 @@ window.AC_DATA = {
    ],
    "url": "https://albiononline.com/",
    "steam": "761890",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/761890/ff6acbb6e6a1d9c3a64a297dc3f772bc5481835d/header.jpg?t=1788194761",
    "updated": "2024-09-29",
    "history": [],
    "platforms": {
@@ -165,6 +169,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.ea.com/games/apex-legends",
    "steam": "1172470",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/6cf04767652d703b6050da84b82cfb1194258d7d/header.jpg?t=1790164440",
    "updated": "2024-10-31",
    "history": [
     {
@@ -218,6 +223,7 @@ window.AC_DATA = {
    ],
    "url": "https://arcraiders.com",
    "steam": "1808500",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1808500/29e8af9fbf06833558758f94cfb406746f338c45/header_alt_assets_8.jpg?t=1791401542",
    "updated": "2025-11-08",
    "history": [],
    "platforms": {
@@ -252,6 +258,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2073620",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2073620/eccc13f9398a6af599a78ec7a437d6540f43a3c5/header.jpg?t=1791983571",
    "updated": "2025-11-08",
    "history": [],
    "platforms": {
@@ -294,6 +301,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2399830",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2399830/d934813ca531af0fce69fe36bc972f1c90d1aa19/header.jpg?t=1779293241",
    "updated": "2024-02-20",
    "history": [],
    "platforms": {
@@ -329,6 +337,7 @@ window.AC_DATA = {
    ],
    "url": "https://playark.com/",
    "steam": "346110",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/346110/header.jpg?t=1765677889",
    "updated": "2024-08-11",
    "history": [
     {
@@ -391,6 +400,7 @@ window.AC_DATA = {
    ],
    "url": "https://arma3.com/",
    "steam": "107410",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/107410/header.jpg?t=1786458620",
    "updated": "2024-01-19",
    "history": [
     {
@@ -435,6 +445,7 @@ window.AC_DATA = {
    ],
    "url": "https://reforger.armaplatform.com/",
    "steam": "1874880",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1874880/header.jpg?t=1789052055",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -469,6 +480,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1888160",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888160/header.jpg?t=1748630736",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -503,6 +515,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.back4blood.com/",
    "steam": "924970",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/924970/header.jpg?t=1780594976",
    "updated": "2024-01-19",
    "history": [
     {
@@ -544,6 +557,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1238840",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238840/header.jpg?t=1777324289",
    "updated": "2024-08-30",
    "history": [],
    "platforms": {
@@ -578,6 +592,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1517290",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1517290/header.jpg?t=1777324359",
    "updated": "2024-11-04",
    "history": [],
    "platforms": {
@@ -613,6 +628,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.ea.com/games/battlefield/battlefield-4",
    "steam": "1238860",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238860/header.jpg?t=1777391884",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -647,6 +663,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2807960",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1792168547",
    "updated": "2025-07-16",
    "history": [],
    "platforms": {
@@ -680,7 +697,8 @@ window.AC_DATA = {
     "EA anticheat"
    ],
    "url": "",
-   "steam": "",
+   "steam": "3028330",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3028330/7f156ef258b0b34011363f8da61b7e2a714232c7/header.jpg?t=1792018418",
    "updated": "2025-12-17",
    "history": [],
    "platforms": {
@@ -716,6 +734,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1238810",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238810/header.jpg?t=1772707365",
    "updated": "2024-10-20",
    "history": [],
    "platforms": {
@@ -750,6 +769,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "582660",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582660/3c4172635738d9e5901e340b28136745fd9e491a/header_alt_assets_27.jpg?t=1786645008",
    "updated": "2024-01-19",
    "history": [
     {
@@ -798,6 +818,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "",
+   "image": "images/covers/blade-soul-neo.jpg",
    "updated": "2025-07-21",
    "history": [],
    "platforms": {
@@ -831,7 +852,8 @@ window.AC_DATA = {
     "NEAC Protect"
    ],
    "url": "",
-   "steam": "",
+   "steam": "3199170",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3199170/header.jpg?t=1788924245",
    "updated": "2024-11-10",
    "history": [],
    "platforms": {
@@ -866,6 +888,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "3557620",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3557620/b723141fa8cf93bb2bb56d03789561341a2cad62/header.jpg?t=1779773548",
    "updated": "2025-08-09",
    "history": [],
    "platforms": {
@@ -899,7 +922,8 @@ window.AC_DATA = {
     "Anti-Cheat Expert"
    ],
    "url": "",
-   "steam": "",
+   "steam": "3681810",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3681810/3a3427c763656ab0662f669470b178643e71ce21/header.jpg?t=1792404110",
    "updated": "2025-10-24",
    "history": [],
    "platforms": {
@@ -942,6 +966,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.brawlhalla.com",
    "steam": "291550",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/291550/f6dd1b0a6a2b6e161604b36788276b18d36909cf/header.jpg?t=1789564454",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -985,6 +1010,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2933620",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938090/23af6cf41e2d09620caa07700a4cb3288dbcbaa8/header.jpg?t=1792179713",
    "updated": "2024-12-27",
    "history": [],
    "platforms": {
@@ -1019,6 +1045,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "3606480",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3606480/d7041a15f572f7702d5f4bc97e498cd3e1cc62e2/header.jpg?t=1789747703",
    "updated": "2025-11-08",
    "history": [],
    "platforms": {
@@ -1066,6 +1093,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "311210",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311210/header.jpg?t=1780963650",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -1099,7 +1127,8 @@ window.AC_DATA = {
     "RICOCHET"
    ],
    "url": "",
-   "steam": "",
+   "steam": "3595270",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3595270/7d0f21912a075c33bbb5ea558100e187ceb234ac/header.jpg?t=1778886604",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -1134,6 +1163,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.callofduty.com/warzone",
    "steam": "1962663",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1962663/de90b98146b7f9153957d4ef686acdce23d87088/header_alt_assets_20.jpg?t=1789748005",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -1175,7 +1205,8 @@ window.AC_DATA = {
     "Easy Anti-Cheat"
    ],
    "url": "",
-   "steam": "",
+   "steam": "1114150",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1114150/6fc20cf105543214d99b83d72bec0c9bb6a6ed76/header.jpg?t=1791979645",
    "updated": "2025-12-11",
    "history": [],
    "platforms": {
@@ -1209,7 +1240,8 @@ window.AC_DATA = {
     "Easy Anti-Cheat"
    ],
    "url": "",
-   "steam": "",
+   "steam": "1824220",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1824220/header.jpg?t=1744201613",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -1249,6 +1281,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.conanexiles.com",
    "steam": "440900",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/440900/bae6def963ca0dbf5ee4b7768f3fcc0e99458380/header_alt_assets_9.jpg?t=1791363787",
    "updated": "2024-01-27",
    "history": [],
    "platforms": {
@@ -1284,6 +1317,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "835570",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/835570/78da23288e974e833dcd913bd9e6a4fdd9e17a3c/header.jpg?t=1789982309",
    "updated": "2024-10-13",
    "history": [],
    "platforms": {
@@ -1318,6 +1352,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.counter-strike.net/cs2",
    "steam": "730",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/162664aa5da85f418105350c5d67ca565f6c3713/header.jpg?t=1791824795",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -1361,6 +1396,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "",
+   "image": "images/covers/crossfire.png",
    "updated": "2024-10-05",
    "history": [],
    "platforms": {
@@ -1395,6 +1431,7 @@ window.AC_DATA = {
    ],
    "url": "https://crossout.net",
    "steam": "386180",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/386180/da1fb7f149fc7bbec3da1affd2fffe62421748ad/header.jpg?t=1790873569",
    "updated": "2024-01-19",
    "history": [
     {
@@ -1444,6 +1481,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2016590",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2016590/header.jpg?t=1791275491",
    "updated": "2024-05-23",
    "history": [],
    "platforms": {
@@ -1479,6 +1517,7 @@ window.AC_DATA = {
    ],
    "url": "https://dayz.com",
    "steam": "221100",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/221100/header.jpg?t=1792059745",
    "updated": "2024-08-11",
    "history": [
     {
@@ -1519,6 +1558,7 @@ window.AC_DATA = {
    ],
    "url": "https://deadbydaylight.com/",
    "steam": "381210",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/381210/23fed9f741423413769ad1617e41519d1a466cdc/header_alt_assets_10.jpg?t=1791302579",
    "updated": "2024-09-01",
    "history": [
     {
@@ -1590,6 +1630,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1422450",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1422450/aa249c5e8cc8f90941bd1dbdc311773cd1afe065/header.jpg?t=1790716179",
    "updated": "2024-08-26",
    "history": [],
    "platforms": {
@@ -1632,6 +1673,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.deadsidegame.com/",
    "steam": "895400",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/895400/b3667710eca8e8c00d3e22227b8eb66bf9fd57f5/header_alt_assets_4.jpg?t=1777456799",
    "updated": "2024-09-29",
    "history": [
     {
@@ -1676,7 +1718,8 @@ window.AC_DATA = {
     "Anti-Cheat Expert"
    ],
    "url": "https://www.playdeltaforce.com/",
-   "steam": "",
+   "steam": "2507950",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2507950/09ef134458549352e5b5a06ed7f97cf00d729b62/header_alt_assets_14.jpg?t=1790238079",
    "updated": "2025-05-26",
    "history": [],
    "platforms": {
@@ -1727,6 +1770,7 @@ window.AC_DATA = {
    ],
    "url": "http://www.destinythegame.com/",
    "steam": "1085660",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1085660/0ccf0dc0a8c4ec078db7ab99ddc820b2fa884441/header.jpg?t=1781815889",
    "updated": "2024-01-19",
    "history": [
     {
@@ -1771,7 +1815,8 @@ window.AC_DATA = {
     "Warden"
    ],
    "url": "",
-   "steam": "",
+   "steam": "2536520",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2536520/8cfd8f0d73075b10b3b58d9eccfee799baffab79/header.jpg?t=1774399170",
    "updated": "2024-09-20",
    "history": [],
    "platforms": {
@@ -1806,6 +1851,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "",
+   "image": "images/covers/diablo-iii.png",
    "updated": "2024-09-05",
    "history": [],
    "platforms": {
@@ -1840,6 +1886,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2344520",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2344520/80f21a42e378b93e8fbb68ee43103be8ab84891b/header.jpg?t=1789491624",
    "updated": "2024-09-23",
    "history": [],
    "platforms": {
@@ -1882,6 +1929,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.dota2.com",
    "steam": "570",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/header.jpg?t=1791407503",
    "updated": "2024-10-07",
    "history": [],
    "platforms": {
@@ -1920,6 +1968,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.bandainamcoent.com/games/dragon-ball-fighterz",
    "steam": "678950",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/678950/header.jpg?t=1776898545",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -1954,6 +2003,7 @@ window.AC_DATA = {
    ],
    "url": "https://en.bandainamcoent.eu/dragon-ball/dragon-ball-xenoverse-2",
    "steam": "454650",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/454650/header.jpg?t=1788407827",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -1988,6 +2038,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1790600",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1790600/header.jpg?t=1785726916",
    "updated": "2024-12-27",
    "history": [],
    "platforms": {
@@ -2022,6 +2073,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "11610",
+   "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/11610/header.jpg",
    "updated": "2024-10-26",
    "history": [],
    "platforms": {
@@ -2056,6 +2108,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1172710",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172710/c23906beee3fdf1cd48980f340a2b76a3590d765/header_alt_assets_9.jpg?t=1792072152",
    "updated": "2025-06-26",
    "history": [],
    "platforms": {
@@ -2092,6 +2145,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.dfoneople.com/",
    "steam": "495910",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/495910/eff8f6b74316448fcfbbcbcee9a38834fe85ee30/header.jpg?t=1785840765",
    "updated": "2024-11-11",
    "history": [],
    "platforms": {
@@ -2131,6 +2185,7 @@ window.AC_DATA = {
    ],
    "url": "https://dyinglightgame.com/dying-light/",
    "steam": "304430",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/304430/header.jpg?t=1761819581",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -2168,7 +2223,8 @@ window.AC_DATA = {
     "EA anticheat"
    ],
    "url": "",
-   "steam": "",
+   "steam": "3405690",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3405690/2d96aa1b06e453cd62dae9029d412f19e61932c3/header.jpg?t=1789751159",
    "updated": "2024-10-18",
    "history": [],
    "platforms": {
@@ -2215,6 +2271,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1849250",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1849250/header.jpg?t=1779987212",
    "updated": "2024-10-27",
    "history": [],
    "platforms": {
@@ -2248,7 +2305,8 @@ window.AC_DATA = {
     "Denuvo Anti-Cheat"
    ],
    "url": "",
-   "steam": "",
+   "steam": "1665460",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1665460/86619d0fb7126b3d5276004175f9a62181223c0f/header.jpg?t=1791424870",
    "updated": "2024-11-10",
    "history": [],
    "platforms": {
@@ -2291,6 +2349,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.bandainamcoent.com/games/elden-ring",
    "steam": "1245620",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043",
    "updated": "2024-09-08",
    "history": [],
    "platforms": {
@@ -2329,6 +2388,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2622380",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/header.jpg?t=1791488960",
    "updated": "2025-05-30",
    "history": [],
    "platforms": {
@@ -2363,6 +2423,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1011810",
+   "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1011810/header.jpg",
    "updated": "2024-02-24",
    "history": [],
    "platforms": {
@@ -2396,7 +2457,8 @@ window.AC_DATA = {
     "Easy Anti-Cheat"
    ],
    "url": "https://enlisted.net/",
-   "steam": "",
+   "steam": "2051620",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2051620/e457983f97e463dc065ecedbd00c8e306f4e4abc/header.jpg?t=1790873566",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -2430,7 +2492,8 @@ window.AC_DATA = {
     "BattlEye"
    ],
    "url": "https://www.escapefromtarkov.com/",
-   "steam": "",
+   "steam": "3932890",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3932890/4dd12ea3b00a4f8b67bfd629f3b9abbf8d5cab05/header_alt_assets_2.jpg?t=1785782094",
    "updated": "2024-01-19",
    "history": [
     {
@@ -2480,6 +2543,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "",
+   "image": "images/covers/escape-from-tarkov-arena.jpg",
    "updated": "2024-10-31",
    "history": [],
    "platforms": {
@@ -2513,7 +2577,8 @@ window.AC_DATA = {
     "EA anticheat"
    ],
    "url": "",
-   "steam": "",
+   "steam": "3059520",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3059520/76dc8ac45f1bd6dec26e04434ca1c8814e7bb330/header.jpg?t=1786646076",
    "updated": "2024-10-22",
    "history": [],
    "platforms": {
@@ -2552,6 +2617,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.fallguys.com/",
    "steam": "1097150",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1097150/header.jpg?t=1698763175",
    "updated": "2024-01-19",
    "history": [
     {
@@ -2596,6 +2662,7 @@ window.AC_DATA = {
    ],
    "url": "https://fallout.bethesda.net/",
    "steam": "1151340",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1151340/f85dc32bab9fe57807cf588150579a8b2ab409f4/header.jpg?t=1791379859",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -2629,7 +2696,8 @@ window.AC_DATA = {
     "Easy Anti-Cheat"
    ],
    "url": "",
-   "steam": "",
+   "steam": "2993780",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2993780/header.jpg?t=1749900924",
    "updated": "2025-06-16",
    "history": [],
    "platforms": {
@@ -2664,6 +2732,7 @@ window.AC_DATA = {
    ],
    "url": "https://farlight84.farlightgames.com/",
    "steam": "1928420",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1928420/70ff5e6b298092f6ad33c7bc5c985fcefb162a94/header.jpg?t=1776926334",
    "updated": "2025-09-17",
    "history": [
     {
@@ -2722,6 +2791,7 @@ window.AC_DATA = {
    ],
    "url": "https://freetrial.finalfantasyxiv.com/",
    "steam": "39210",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/39210/header.jpg?t=1782870674",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -2765,6 +2835,7 @@ window.AC_DATA = {
    ],
    "url": "https://fivem.net",
    "steam": "",
+   "image": "images/covers/fivem-gta-v-roleplay.jpg",
    "updated": "2024-02-27",
    "history": [],
    "platforms": {
@@ -2803,6 +2874,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.ubisoft.com/en-us/game/for-honor",
    "steam": "304390",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/304390/70c0a279707d99a4651c441386f77d8394ac58b9/header_alt_assets_12.jpg?t=1792089012",
    "updated": "2024-01-19",
    "history": [
     {
@@ -2858,6 +2930,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.fortnite.com/",
    "steam": "",
+   "image": "images/covers/fortnite.jpg",
    "updated": "2024-10-04",
    "history": [
     {
@@ -2930,6 +3003,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "505460",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/505460/3b4805691c442e4bd87a8437ee9e8e486274c29c/header_alt_assets_0.jpg?t=1785273455",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -2964,6 +3038,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2943650",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2943650/6dde17d97da9804dde09c325ddbbdfdfc9bf463a/header_alt_assets_8.jpg?t=1787797428",
    "updated": "2024-10-13",
    "history": [],
    "platforms": {
@@ -3002,6 +3077,7 @@ window.AC_DATA = {
    ],
    "url": "https://gmod.facepunch.com/",
    "steam": "4000",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg?t=1776868682",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -3040,6 +3116,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1097840",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1097840/header.jpg?t=1780003997",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -3073,7 +3150,8 @@ window.AC_DATA = {
     "Easy Anti-Cheat"
    ],
    "url": "",
-   "steam": "",
+   "steam": "2523720",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2523720/2ba5d8203b18c38fb2d10b14e92a285a850f08ab/header.jpg?t=1757024702",
    "updated": "2025-12-15",
    "history": [],
    "platforms": {
@@ -3108,6 +3186,7 @@ window.AC_DATA = {
    ],
    "url": "https://genshin.mihoyo.com/",
    "steam": "",
+   "image": "images/covers/genshin-impact.jpg",
    "updated": "2024-09-02",
    "history": [
     {
@@ -3160,6 +3239,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2215430",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/header.jpg?t=1763409398",
    "updated": "2025-07-19",
    "history": [],
    "platforms": {
@@ -3198,6 +3278,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.ubisoft.com/en-us/game/ghost-recon/breakpoint",
    "steam": "2231380",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2231380/3e05f31b9aa9fd29b9709f035e73761a908e9fbe/header.jpg?t=1790683796",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -3231,7 +3312,8 @@ window.AC_DATA = {
     "NetEase Yidun"
    ],
    "url": "",
-   "steam": "",
+   "steam": "3887700",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3887700/0b074382083f7662a34cd799cab517eec63048db/header.jpg?t=1763453229",
    "updated": "2025-12-17",
    "history": [],
    "platforms": {
@@ -3266,6 +3348,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1568590",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1568590/header.jpg?t=1778102536",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -3300,6 +3383,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "271590",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1765387725",
    "updated": "2025-08-05",
    "history": [
     {
@@ -3341,6 +3425,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2479810",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2479810/0992474ceeff2245228858446ccfb618a1d869ff/header.jpg?t=1791019595",
    "updated": "2024-09-22",
    "history": [],
    "platforms": {
@@ -3375,6 +3460,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1217060",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1217060/dd6c1906d262c38c183ccd711f192db187b5103f/header.jpg?t=1792125722",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -3410,6 +3496,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.halowaypoint.com/de-de/halo-infinite",
    "steam": "1240440",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1240440/2262ffb4f1659df1c1cbf2c70af40560b4fa12e4/header.jpg?t=1774464322",
    "updated": "2024-04-11",
    "history": [
     {
@@ -3455,6 +3542,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "976730",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976730/header.jpg?t=1791569963",
    "updated": "2024-01-19",
    "history": [
     {
@@ -3521,6 +3609,7 @@ window.AC_DATA = {
    ],
    "url": "https://heaven-burns-red.com/",
    "steam": "1973710",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1973710/b5b46ac662628b5e2836a830ad17686eb60df5cb/header.jpg?t=1788488228",
    "updated": "2025-05-30",
    "history": [
     {
@@ -3571,6 +3660,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.hellletloose.com/",
    "steam": "686810",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/686810/7655099ca004b09198b83713ad0d8215b98f7d5f/header_alt_assets_6.jpg?t=1790181050",
    "updated": "2024-01-19",
    "history": [
     {
@@ -3621,6 +3711,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "553850",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/850e2f9e5bb15c5706bb9a1edc832f4f782e8be5/header.jpg?t=1792146147",
    "updated": "2024-02-11",
    "history": [],
    "platforms": {
@@ -3655,6 +3746,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "",
+   "image": "images/covers/heroes-of-the-storm.jpg",
    "updated": "2024-07-02",
    "history": [],
    "platforms": {
@@ -3689,6 +3781,7 @@ window.AC_DATA = {
    ],
    "url": "https://honkaiimpact3.mihoyo.com/",
    "steam": "1671200",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1671200/header.jpg?t=1787203518",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -3727,6 +3820,7 @@ window.AC_DATA = {
    ],
    "url": "https://hsr.hoyoverse.com/",
    "steam": "",
+   "image": "images/covers/honkai-star-rail.jpg",
    "updated": "2025-05-26",
    "history": [],
    "platforms": {
@@ -3769,6 +3863,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "594650",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/594650/8cf55bcd74fc14c93f3a9cc7d0a442afabab6f88/header_alt_assets_29.jpg?t=1791385253",
    "updated": "2024-09-22",
    "history": [
     {
@@ -3829,6 +3924,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2799860",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2799860/d7e5240b6182e4a085a365503b22aefd2e6ae6cf/header.jpg?t=1764296831",
    "updated": "2024-11-10",
    "history": [],
    "platforms": {
@@ -3862,7 +3958,8 @@ window.AC_DATA = {
     "Anti-Cheat Expert"
    ],
    "url": "https://infinitynikki.infoldgames.com/",
-   "steam": "",
+   "steam": "3164330",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3164330/f8cad1c409c8f0f09d1b5689ce929f84b252a672/header.jpg?t=1790219437",
    "updated": "2024-12-06",
    "history": [],
    "platforms": {
@@ -3904,6 +4001,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.focus-entmt.com/en-us/games/insurgency-sandstorm",
    "steam": "581320",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/581320/header_alt_assets_3.jpg?t=1791994390",
    "updated": "2024-01-19",
    "history": [
     {
@@ -3944,6 +4042,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.iracing.com/",
    "steam": "266410",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/266410/header.jpg?t=1792424038",
    "updated": "2024-09-29",
    "history": [],
    "platforms": {
@@ -3985,6 +4084,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "232090",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/232090/header.jpg?t=1774538987",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -4018,7 +4118,8 @@ window.AC_DATA = {
     "VAC"
    ],
    "url": "",
-   "steam": "",
+   "steam": "1430190",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1430190/42f4f45ebfc31ccb895565aaa215c047a9c8bb7f/header_alt_assets_2.jpg?t=1791841264",
    "updated": "2024-10-28",
    "history": [],
    "platforms": {
@@ -4057,6 +4158,7 @@ window.AC_DATA = {
    ],
    "url": "https://leagueoflegends.com",
    "steam": "",
+   "image": "images/covers/league-of-legends.jpg",
    "updated": "2024-09-16",
    "history": [],
    "platforms": {
@@ -4107,6 +4209,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "550",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550/header.jpg?t=1772742214",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -4145,6 +4248,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "",
+   "image": "images/covers/legends-of-runeterra.jpg",
    "updated": "2024-11-10",
    "history": [],
    "platforms": {
@@ -4182,6 +4286,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "",
+   "image": "images/covers/lineage-ii.png",
    "updated": "2024-11-11",
    "history": [],
    "platforms": {
@@ -4215,7 +4320,8 @@ window.AC_DATA = {
     "Easy Anti-Cheat"
    ],
    "url": "",
-   "steam": "",
+   "steam": "1501750",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1501750/c793d85dc133f22112c7283b79dd89e2c0aa58a4/header.jpg?t=1786951564",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -4251,6 +4357,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.playlostark.com/",
    "steam": "1599340",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1599340/header.jpg?t=1763571534",
    "updated": "2025-07-17",
    "history": [],
    "platforms": {
@@ -4289,6 +4396,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.lostlight.game/",
    "steam": "1797880",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1797880/header.jpg?t=1711521041",
    "updated": "2024-07-31",
    "history": [],
    "platforms": {
@@ -4331,6 +4439,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "212200",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212200/cbc3c06a31e66a5505054bf9f86f3265b777f610/header_alt_assets_21.jpg?t=1792084832",
    "updated": "2025-05-29",
    "history": [],
    "platforms": {
@@ -4365,6 +4474,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "3230400",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3230400/979a5bffcde6f49d7e56ca9db6980256d3a96ad6/header.jpg?t=1784225783",
    "updated": "2024-10-24",
    "history": [],
    "platforms": {
@@ -4403,6 +4513,7 @@ window.AC_DATA = {
    ],
    "url": "https://maplestory.nexon.net",
    "steam": "216150",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/216150/header.jpg?t=1792111844",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -4445,6 +4556,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "3065800",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065800/c3093fec19fed6eb0750a87261c53743a5757827/header.jpg?t=1786061300",
    "updated": "2024-11-03",
    "history": [],
    "platforms": {
@@ -4483,6 +4595,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2767030",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767030/c61f65c5968af5d85b0393005991ecee0184fcaf/header.jpg?t=1792140776",
    "updated": "2025-02-02",
    "history": [],
    "platforms": {
@@ -4518,6 +4631,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2452280",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2452280/b0f7a13ab9fe3984ffdb1ce951bf155dd4639c69/header.jpg?t=1791949072",
    "updated": "2025-03-02",
    "history": [],
    "platforms": {
@@ -4557,6 +4671,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "550900",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550900/header.jpg?t=1660770073",
    "updated": "2024-11-11",
    "history": [],
    "platforms": {
@@ -4590,7 +4705,8 @@ window.AC_DATA = {
     "nProtect GameGuard"
    ],
    "url": "",
-   "steam": "",
+   "steam": "1623660",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623660/header.jpg?t=1720200587",
    "updated": "2024-02-28",
    "history": [],
    "platforms": {
@@ -4625,6 +4741,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "3077390",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3077390/header.jpg?t=1753692631",
    "updated": "2024-10-26",
    "history": [],
    "platforms": {
@@ -4663,6 +4780,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.taleworlds.com/en/Games/Bannerlord/",
    "steam": "261550",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/261550/header.jpg?t=1764252300",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -4697,6 +4815,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1607250",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1607250/609881717ea2123b86cc44909a60ebbc790e7c39/header.jpg?t=1790820130",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -4731,6 +4850,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.narakathegame.com/",
    "steam": "1203220",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1203220/7db37ea18e8ee1d1b929fe9ef4c4f9f46ac22623/header.jpg?t=1791518965",
    "updated": "2024-01-19",
    "history": [
     {
@@ -4771,6 +4891,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.bandainamcoent.com/games/naruto-to-boruto-shinobi-striker",
    "steam": "633230",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/633230/header.jpg?t=1790561704",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -4805,6 +4926,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2878980",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2878980/header.jpg?t=1790956803",
    "updated": "2025-05-29",
    "history": [],
    "platforms": {
@@ -4839,6 +4961,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1724660",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1724660/header.jpg?t=1725651064",
    "updated": "2024-11-04",
    "history": [],
    "platforms": {
@@ -4873,6 +4996,7 @@ window.AC_DATA = {
    ],
    "url": "https://nikke-en.com/",
    "steam": "",
+   "image": "images/covers/nikke-goddess-of-victory.jpg",
    "updated": "2026-08-21",
    "history": [],
    "platforms": {
@@ -4912,6 +5036,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2139460",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2139460/c18b08a2f93dec32fcc5fa71bc2da44ee42de1f0/header.jpg?t=1792202672",
    "updated": "2024-09-22",
    "history": [],
    "platforms": {
@@ -4953,7 +5078,8 @@ window.AC_DATA = {
     "Easy Anti-Cheat"
    ],
    "url": "https://outriders.square-enix-games.com",
-   "steam": "",
+   "steam": "680420",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/680420/header.jpg?t=1774022529",
    "updated": "2024-01-19",
    "history": [
     {
@@ -4994,6 +5120,7 @@ window.AC_DATA = {
    ],
    "url": "https://overwatch2.playoverwatch.com/en-us/trailer",
    "steam": "2357570",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/5c208b2699cd38ed6125d039be388fa744db54a4/header_alt_assets_23.jpg?t=1791576843",
    "updated": "2024-01-19",
    "history": [
     {
@@ -5034,6 +5161,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "444090",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/444090/header.jpg?t=1713560419",
    "updated": "2025-04-05",
    "history": [
     {
@@ -5108,6 +5236,7 @@ window.AC_DATA = {
    ],
    "url": "https://pathoftitans.com/",
    "steam": "",
+   "image": "images/covers/path-of-titans.jpg",
    "updated": "2025-03-02",
    "history": [],
    "platforms": {
@@ -5146,6 +5275,7 @@ window.AC_DATA = {
    ],
    "url": "http://vankrupt.com/#pavlov-vr",
    "steam": "555160",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/555160/header.jpg?t=1770745729",
    "updated": "2024-07-30",
    "history": [],
    "platforms": {
@@ -5180,6 +5310,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1056640",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1056640/10c2c4df29004d5397c01e1819d209a464332ead/header.jpg?t=1789697731",
    "updated": "2025-12-11",
    "history": [],
    "platforms": {
@@ -5214,6 +5345,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "739630",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/739630/6283e4bf96c6e8160492ae12016f0c9a308a75d9/header_alt_assets_13.jpg?t=1791632508",
    "updated": "2024-11-10",
    "history": [],
    "platforms": {
@@ -5247,7 +5379,8 @@ window.AC_DATA = {
     "Easy Anti-Cheat"
    ],
    "url": "",
-   "steam": "",
+   "steam": "2524890",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2524890/7230af207a5a3d4107d4969ac66fd2093dd6dfdf/header.jpg?t=1792184403",
    "updated": "2024-03-13",
    "history": [],
    "platforms": {
@@ -5291,6 +5424,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "",
+   "image": "images/covers/point-blank.jpg",
    "updated": "2024-09-26",
    "history": [],
    "platforms": {
@@ -5325,6 +5459,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.predecessorgame.com/",
    "steam": "961200",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/961200/fdbbe821eb9f1c6f075062b0a1adad90a92534ac/header.jpg?t=1790074284",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -5359,6 +5494,7 @@ window.AC_DATA = {
    ],
    "url": "https://dmg.priconne-redive.jp",
    "steam": "",
+   "image": "images/covers/princess-connect-re-dive.jpg",
    "updated": "2024-10-18",
    "history": [],
    "platforms": {
@@ -5403,6 +5539,7 @@ window.AC_DATA = {
    ],
    "url": "https://pubg.com/",
    "steam": "578080",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/841ea38bc58cabb70aef65365cf50bc2d79329d9/header.jpg?t=1786493086",
    "updated": "2024-01-19",
    "history": [
     {
@@ -5450,7 +5587,8 @@ window.AC_DATA = {
     "Anti-Cheat Expert"
    ],
    "url": "https://pgr.kurogame.net",
-   "steam": "",
+   "steam": "4125930",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4125930/e0cd59cbb04f2849de8219ead2b25878950508b1/header.jpg?t=1790215880",
    "updated": "2024-10-02",
    "history": [
     {
@@ -5496,6 +5634,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "215100",
+   "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/215100/header.jpg",
    "updated": "2024-10-05",
    "history": [],
    "platforms": {
@@ -5530,6 +5669,7 @@ window.AC_DATA = {
    ],
    "url": "https://lna.roglobal.com/",
    "steam": "",
+   "image": "images/covers/ragnarok-origin.jpg",
    "updated": "2025-06-14",
    "history": [],
    "platforms": {
@@ -5566,6 +5706,7 @@ window.AC_DATA = {
    ],
    "url": "https://ubisoft.com/en-us/game/rainbow-six/siege",
    "steam": "359550",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/555b5051d332c5f6b86f88ba5dfd80404dc91aaa/header_alt_assets_27.jpg?t=1792001976",
    "updated": "2025-08-07",
    "history": [],
    "platforms": {
@@ -5608,6 +5749,7 @@ window.AC_DATA = {
    ],
    "url": "https://recroom.com/",
    "steam": "471710",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/471710/header.jpg?t=1780346660",
    "updated": "2025-06-20",
    "history": [],
    "platforms": {
@@ -5641,7 +5783,8 @@ window.AC_DATA = {
     "Easy Anti-Cheat"
    ],
    "url": "",
-   "steam": "",
+   "steam": "2138720",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2138720/cafe24aa9b3c329c4a083b017cbdd7965b6e23c3/header_alt_assets_1.jpg?t=1791561528",
    "updated": "2025-05-26",
    "history": [],
    "platforms": {
@@ -5680,6 +5823,7 @@ window.AC_DATA = {
    ],
    "url": "https://re1999.bluepoch.com/",
    "steam": "3092660",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3092660/a4e4ea66e8b6210c00a2a9711b2c3e0647971a88/header.jpg?t=1790144350",
    "updated": "2025-05-28",
    "history": [
     {
@@ -5727,6 +5871,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "",
+   "image": "images/covers/rf-online-next.jpg",
    "updated": "2024-11-18",
    "history": [],
    "platforms": {
@@ -5765,6 +5910,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.ubisoft.com/en-us/game/riders-republic",
    "steam": "2290180",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2290180/67fdaa60403fcb99374576f41d2e46707beed80d/header_alt_assets_4.jpg?t=1791385214",
    "updated": "2024-01-19",
    "history": [
     {
@@ -5810,6 +5956,7 @@ window.AC_DATA = {
    ],
    "url": "http://www.risingstorm2.com/",
    "steam": "418460",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/418460/header.jpg?t=1789745392",
    "updated": "2025-04-05",
    "history": [],
    "platforms": {
@@ -5844,6 +5991,7 @@ window.AC_DATA = {
    ],
    "url": "https://roblox.com",
    "steam": "",
+   "image": "images/covers/roblox.jpg",
    "updated": "2024-09-08",
    "history": [
     {
@@ -5910,6 +6058,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "252950",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252950/3abd9ab079c8896a4762dbe34a853d89b7f704df/header_alt_assets_17.jpg?t=1791210513",
    "updated": "2026-04-28",
    "history": [],
    "platforms": {
@@ -5953,6 +6102,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.roguecompany.com/",
    "steam": "872200",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/872200/header.jpg?t=1702321005",
    "updated": "2024-01-19",
    "history": [
     {
@@ -6004,6 +6154,7 @@ window.AC_DATA = {
    ],
    "url": "https://rust.facepunch.com/",
    "steam": "252490",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg?t=1781536981",
    "updated": "2024-08-11",
    "history": [
     {
@@ -6068,7 +6219,8 @@ window.AC_DATA = {
     "VAC"
    ],
    "url": "https://sbox.game/",
-   "steam": "",
+   "steam": "590830",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/590830/0f64b7e4f9628fdcff7e1f86696d08b9d280de5e/header.jpg?t=1791282405",
    "updated": "2024-06-30",
    "history": [],
    "platforms": {
@@ -6110,6 +6262,7 @@ window.AC_DATA = {
    ],
    "url": "https://scpslgame.com/",
    "steam": "700330",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/700330/c2b932822ae2dba51825c258fd2fb847f32c151f/header_alt_assets_1.jpg?t=1792263389",
    "updated": "2024-09-29",
    "history": [],
    "platforms": {
@@ -6149,6 +6302,7 @@ window.AC_DATA = {
    ],
    "url": "https://scumgame.com/",
    "steam": "513710",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/513710/a33eb72f52841f591b296f78e46824d7aabb2c87/header.jpg?t=1791209009",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -6183,6 +6337,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1172620",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172620/579c6d544424019a032f4add98e8f923925c1cef/header.jpg?t=1789650456",
    "updated": "2024-03-12",
    "history": [],
    "platforms": {
@@ -6216,7 +6371,8 @@ window.AC_DATA = {
     "EA anticheat"
    ],
    "url": "",
-   "steam": "",
+   "steam": "3354750",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3354750/79c5a87b61a396cc6e6b69e3a083727f175dea83/header.jpg?t=1788891347",
    "updated": "2025-12-11",
    "history": [],
    "platforms": {
@@ -6251,6 +6407,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2437170",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2437170/c4d54412b27c5cad84d513cea3d3a86a278a2343/header_alt_assets_28.jpg?t=1791236076",
    "updated": "2024-02-24",
    "history": [],
    "platforms": {
@@ -6285,6 +6442,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1029690",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1029690/header.jpg?t=1770633150",
    "updated": "2024-10-28",
    "history": [],
    "platforms": {
@@ -6319,7 +6477,8 @@ window.AC_DATA = {
     "Easy Anti-Cheat"
    ],
    "url": "",
-   "steam": "",
+   "steam": "2169200",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2169200/header.jpg?t=1765448187",
    "updated": "2025-12-15",
    "history": [],
    "platforms": {
@@ -6354,6 +6513,7 @@ window.AC_DATA = {
    ],
    "url": "https://snowbreak.amazingseasun.com/",
    "steam": "2668080",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2668080/065403315ab5a3ebbd3c07f85b6a3f40a1eb4ccd/header.jpg?t=1769627290",
    "updated": "2024-07-31",
    "history": [],
    "platforms": {
@@ -6388,6 +6548,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2373990",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2373990/018068a74847b3953278efacca07cfbe537a46c7/header.jpg?t=1781758887",
    "updated": "2025-11-08",
    "history": [],
    "platforms": {
@@ -6431,6 +6592,7 @@ window.AC_DATA = {
    ],
    "url": "https://joinsquad.com/",
    "steam": "393380",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/393380/0b19b50aabea356bd8f534fbe7d6db9bd227810a/header.jpg?t=1792423549",
    "updated": "2024-08-14",
    "history": [
     {
@@ -6476,6 +6638,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "736220",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/736220/header.jpg?t=1790967343",
    "updated": "2025-04-05",
    "history": [],
    "platforms": {
@@ -6510,6 +6673,7 @@ window.AC_DATA = {
    ],
    "url": "https://robertsspaceindustries.com/",
    "steam": "",
+   "image": "images/covers/star-citizen.png",
    "updated": "2024-09-08",
    "history": [
     {
@@ -6555,6 +6719,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "",
+   "image": "images/covers/starcraft-ii.jpg",
    "updated": "2024-05-25",
    "history": [],
    "platforms": {
@@ -6589,6 +6754,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.strinova.com/",
    "steam": "1282270",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1282270/477fa284fa4e2601943207cd22d10726078bb726/header.jpg?t=1789649157",
    "updated": "2025-05-26",
    "history": [],
    "platforms": {
@@ -6630,7 +6796,8 @@ window.AC_DATA = {
     "nProtect GameGuard"
    ],
    "url": "",
-   "steam": "",
+   "steam": "2426960",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426960/aff09e5b6524828ef6902009f5de3d78bd79c443/header.jpg?t=1787886556",
    "updated": "2024-10-18",
    "history": [],
    "platforms": {
@@ -6665,6 +6832,7 @@ window.AC_DATA = {
    ],
    "url": "https://animalroyale.com",
    "steam": "843380",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/843380/17701fe1f209bcbb2489a46b167998bb4253a59e/header_alt_assets_23.jpg?t=1791919216",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -6699,6 +6867,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.teamfortress.com/",
    "steam": "440",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/440/header.jpg?t=1757348372",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -6741,6 +6910,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "",
+   "image": "images/covers/teamfight-tactics.jpg",
    "updated": "2024-02-23",
    "history": [],
    "platforms": {
@@ -6790,6 +6960,7 @@ window.AC_DATA = {
    ],
    "url": "https://testdriveunlimited.com",
    "steam": "1249970",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1249970/0019588f5e579727a0f653c97dc7cb62e8e4de00/header.jpg?t=1788364521",
    "updated": "2025-06-29",
    "history": [],
    "platforms": {
@@ -6824,6 +6995,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.ubisoft.com/en-us/game/the-crew/the-crew-2",
    "steam": "646910",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/646910/header.jpg?t=1787130932",
    "updated": "2024-10-13",
    "history": [],
    "platforms": {
@@ -6858,6 +7030,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2698940",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2698940/4e51b5d3593569eb2214bf5277c5c5aded6d05be/header_alt_assets_3.jpg?t=1791551745",
    "updated": "2025-10-30",
    "history": [
     {
@@ -6903,6 +7076,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.ubisoft.com/en-us/game/the-division/the-division-2",
    "steam": "2221490",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2221490/cbba91ad5e65bce519fca6297c61f14e7e8af6ea/header_alt_assets_12.jpg?t=1791884938",
    "updated": "2024-01-19",
    "history": [
     {
@@ -6955,6 +7129,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.reachthefinals.com/",
    "steam": "2073850",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2073850/61f55ef49a74c76bf9fda9ec35bc3101eeee2b3e/header.jpg?t=1789034839",
    "updated": "2025-11-08",
    "history": [],
    "platforms": {
@@ -6990,6 +7165,7 @@ window.AC_DATA = {
    ],
    "url": "https://tfd.nexon.com",
    "steam": "2074920",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2074920/dc8ac02c8328d66f2f78ea8b83472bdd7e281a62/header.jpg?t=1789716956",
    "updated": "2024-07-02",
    "history": [],
    "platforms": {
@@ -7025,6 +7201,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2285150",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2285150/7a625692b42e4ebfce79e723b8f6a846aa4241a2/header.jpg?t=1779699935",
    "updated": "2024-10-07",
    "history": [],
    "platforms": {
@@ -7059,6 +7236,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "376210",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/376210/header.jpg?t=1653237914",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -7098,6 +7276,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.txchainsawgame.com/",
    "steam": "1433140",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1433140/header.jpg?t=1790794420",
    "updated": "2024-07-10",
    "history": [],
    "platforms": {
@@ -7132,6 +7311,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2429640",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2429640/497cc638fa3186f1aeefddaff89eaaf6f0c2e7dd/header.jpg?t=1787851215",
    "updated": "2024-10-05",
    "history": [],
    "platforms": {
@@ -7166,6 +7346,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1237970",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237970/header.jpg?t=1779987598",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -7200,6 +7381,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1827180",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1827180/header.jpg?t=1779961808",
    "updated": "2024-10-19",
    "history": [],
    "platforms": {
@@ -7234,6 +7416,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.toweroffantasy-global.com/",
    "steam": "2064650",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2064650/9d1884cad51adb615d0fd9958e715e5c98027e5a/header.jpg?t=1792393433",
    "updated": "2025-04-30",
    "history": [
     {
@@ -7283,6 +7466,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "3224770",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3224770/d7ddfe8985d7be8db7a0195d5c482c4438ed929d/header.jpg?t=1773306345",
    "updated": "2025-07-12",
    "history": [],
    "platforms": {
@@ -7317,6 +7501,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1549250",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1549250/e11d9acd35ad263506649d9c537a5c62a5b7fa61/header_alt_assets_8.jpg?t=1789007178",
    "updated": "2024-08-24",
    "history": [],
    "platforms": {
@@ -7352,6 +7537,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "304930",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/304930/161ec2d6ace8a03afdb7a423510ff8f7d8b301ba/header.jpg?t=1783436894",
    "updated": "2024-01-19",
    "history": [
     {
@@ -7396,6 +7582,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1604030",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1604030/be49834ab147ad22ba17005fb847c93917d18b97/header.jpg?t=1787038382",
    "updated": "2024-11-10",
    "history": [],
    "platforms": {
@@ -7430,6 +7617,7 @@ window.AC_DATA = {
    ],
    "url": "https://playvalorant.com",
    "steam": "",
+   "image": "images/covers/valorant.png",
    "updated": "2024-09-02",
    "history": [
     {
@@ -7478,6 +7666,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "2818260",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2818260/b094a53f163355afd252d36feee13e75f94dc4ae/header.jpg?t=1771426885",
    "updated": "2024-10-27",
    "history": [],
    "platforms": {
@@ -7512,6 +7701,7 @@ window.AC_DATA = {
    ],
    "url": "https://vindictus.nexon.net/",
    "steam": "212160",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212160/456e1fd3b007e1ade6ac029c49164e1ed74e14ac/header.jpg?t=1787104224",
    "updated": "2024-09-08",
    "history": [],
    "platforms": {
@@ -7546,6 +7736,7 @@ window.AC_DATA = {
    ],
    "url": "https://hello.vrchat.com/",
    "steam": "438100",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438100/header.jpg?t=1762366454",
    "updated": "2024-01-20",
    "history": [
     {
@@ -7598,6 +7789,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "767560",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/767560/0d291b863576b43b588ab30a49d9991aea694ed8/header.jpg?t=1790758165",
    "updated": "2024-10-25",
    "history": [],
    "platforms": {
@@ -7632,6 +7824,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1491000",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1491000/652a3f62eab64537ac38d483c6fc3cf5d2036ff1/header.jpg?t=1776768151",
    "updated": "2024-10-13",
    "history": [],
    "platforms": {
@@ -7666,6 +7859,7 @@ window.AC_DATA = {
    ],
    "url": "https://warthunder.com/",
    "steam": "236390",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236390/38881c549e623fe432af4e7b4bc3952b443906f5/header.jpg?t=1791988478",
    "updated": "2024-12-27",
    "history": [
     {
@@ -7718,6 +7912,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "",
+   "image": "images/covers/warcraft-iii-reforged.jpg",
    "updated": "2024-07-04",
    "history": [],
    "platforms": {
@@ -7753,6 +7948,7 @@ window.AC_DATA = {
    ],
    "url": "https://ru.warface.com",
    "steam": "291480",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/291480/a5d53fd96d3f04a4d92e3c71a74e5061db8cc186/header.jpg?t=1772125417",
    "updated": "2024-09-22",
    "history": [],
    "platforms": {
@@ -7787,6 +7983,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "230410",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/230410/1a3e7c2a05ce4e5cad5ac4c7e858cf5b0934704e/header.jpg?t=1790176468",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -7833,6 +8030,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "1361210",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1361210/6f8919b0183f24d271650c6dca958fb91edd5849/header_alt_assets_20.jpg?t=1790691939",
    "updated": "2024-12-27",
    "history": [],
    "platforms": {
@@ -7866,7 +8064,8 @@ window.AC_DATA = {
     "Easy Anti-Cheat"
    ],
    "url": "",
-   "steam": "",
+   "steam": "2183900",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2183900/c0da5cad512f85a006abb9181cb3f45107fb0223/header_alt_assets_14.jpg?t=1790874369",
    "updated": "2024-10-05",
    "history": [],
    "platforms": {
@@ -7901,6 +8100,7 @@ window.AC_DATA = {
    ],
    "url": "https://www.vermintide.com/",
    "steam": "552500",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552500/header.jpg?t=1764008361",
    "updated": "2025-04-05",
    "history": [
     {
@@ -7945,7 +8145,8 @@ window.AC_DATA = {
     "BattlEye"
    ],
    "url": "https://www.ubisoft.com/en-us/game/watch-dogs/legion",
-   "steam": "",
+   "steam": "2239550",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2239550/header.jpg?t=1788548571",
    "updated": "2024-11-04",
    "history": [
     {
@@ -7991,6 +8192,7 @@ window.AC_DATA = {
    ],
    "url": "https://wargaming.net/worldoftanks/",
    "steam": "1407200",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1407200/77abf4cf5822818d81603512d8c747c618177189/header_alt_assets_26.jpg?t=1792410541",
    "updated": "2024-02-27",
    "history": [],
    "platforms": {
@@ -8033,6 +8235,7 @@ window.AC_DATA = {
    ],
    "url": "",
    "steam": "",
+   "image": "images/covers/world-of-warcraft.jpg",
    "updated": "2024-03-13",
    "history": [],
    "platforms": {
@@ -8071,6 +8274,7 @@ window.AC_DATA = {
    ],
    "url": "https://wutheringwaves.kurogames.com/en/",
    "steam": "3513350",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3513350/fb969539fb0373bd5ee07c767bf9dafa4afae5c3/header.jpg?t=1791864800",
    "updated": "2025-07-04",
    "history": [
     {
@@ -8131,7 +8335,8 @@ window.AC_DATA = {
     "miHoYo Protect"
    ],
    "url": "https://zenless.hoyoverse.com/",
-   "steam": "",
+   "steam": "4162040",
+   "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4162040/285a6967d0efc7e37dad0e6a2d5ec3f0139915fc/header_alt_assets_1.jpg?t=1788905636",
    "updated": "2024-07-31",
    "history": [],
    "platforms": {

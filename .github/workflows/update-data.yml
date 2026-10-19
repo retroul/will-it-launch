@@ -17,11 +17,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: pip install pillow
       - run: python3 tools/update_data.py
       - name: Commit changes
         run: |
-          if git diff --quiet; then echo "Nothing changed."; exit 0; fi
+          if [ -z "$(git status --porcelain)" ]; then echo "Nothing changed."; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -am "Update game data"
+          git add -A
+          git commit -m "Update game data"
           git push

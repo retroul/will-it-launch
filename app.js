@@ -76,9 +76,9 @@
     const words = g.name.replace(/[^\p{L}\p{N} ]/gu, "").split(" ").filter(Boolean);
     const initials = (words.length > 1 ? words.slice(0, 2).map((w) => [...w][0]).join("") : [...(words[0] || "?")].slice(0, 2).join("")).toUpperCase();
     const mono = `<span class="monogram" style="background:linear-gradient(135deg,hsl(${hue(g.name)} 55% 46%),hsl(${(hue(g.name) + 40) % 360} 60% 36%))">${esc(initials)}</span>`;
-    if (!g.steam) return mono;
-    const src = `https://cdn.cloudflare.steamstatic.com/steam/apps/${encodeURIComponent(g.steam)}/header.jpg`;
-    return `<img src="${src}" alt="" loading="lazy" decoding="async" data-fallback="${esc(mono)}">`;
+    if (!g.image) return `<span class="cover">${mono}</span>`;
+    // --img paints a blurred copy behind art that isn't wide (logos, square key art).
+    return `<span class="cover" style="--img:url(&quot;${esc(g.image)}&quot;)"><img src="${esc(g.image)}" alt="" loading="lazy" decoding="async" data-fallback="${esc(mono)}"></span>`;
   }
 
   // GitHub repo: config wins, otherwise derive it from a GitHub Pages address.
@@ -203,7 +203,7 @@
     const s = statusOf(g);
     return `<li class="game${open ? " open" : ""}" id="${esc(g.slug)}">
       <button type="button" class="row" data-slug="${esc(g.slug)}" aria-expanded="${open}" aria-controls="detail-${esc(g.slug)}">
-        <span class="cover">${cover(g)}</span>
+        ${cover(g)}
         <span class="g-text"><span class="g-name">${esc(g.name)}</span><span class="g-meta">${esc(g.genre)} · ${esc(g.anticheats.join(", ") || "No anti-cheat listed")}</span></span>
         <span class="badges">${badges}</span>
         <span class="verdict" data-status="${s}">${verdict(s, state.platform)}</span>
