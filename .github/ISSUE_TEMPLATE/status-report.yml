@@ -1,0 +1,47 @@
+name: Report a wrong status
+description: A game's status is out of date or wrong on one of the platforms.
+title: "[Status] "
+labels: ["status-report"]
+body:
+  - type: input
+    id: game
+    attributes:
+      label: Game
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Linux / Steam Deck
+        - Mac
+        - Android
+        - iPhone / iPad
+        - Windows
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: What should it say?
+      options:
+        - Works (officially supported)
+        - Works unofficially
+        - Coming soon
+        - Doesn't work
+        - Blocked by devs
+        - Not released on this platform
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: A link (patch notes, developer post, news article, ProtonDB report) or what you saw yourself.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Linux / Steam Deck statuses come from [Are We Anti-Cheat Yet?](https://github.com/AreWeAntiCheatYet/AreWeAntiCheatYet). Reporting Linux changes there too helps everyone.

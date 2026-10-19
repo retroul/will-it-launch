@@ -1,0 +1,38 @@
+name: Request a game
+description: Ask for a popular online game to be added.
+title: "[Request] "
+labels: ["game-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! Before posting, search the open requests and give a 👍 to an existing one instead. Requests with the most 👍 get added first.
+  - type: input
+    id: game
+    attributes:
+      label: Game name
+      placeholder: Deep Rock Galactic
+    validations:
+      required: true
+  - type: input
+    id: store
+    attributes:
+      label: Store or official link
+      description: Steam page, official site, or similar.
+      placeholder: https://store.steampowered.com/app/...
+  - type: dropdown
+    id: platforms
+    attributes:
+      label: Which platforms do you care about?
+      multiple: true
+      options:
+        - Linux / Steam Deck
+        - Mac
+        - Android
+        - iPhone / iPad
+        - Windows
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: Anti-cheat it uses, whether it works for you, links to news, etc.

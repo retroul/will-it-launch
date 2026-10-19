@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Linux / Steam Deck data source
+    url: https://github.com/AreWeAntiCheatYet/AreWeAntiCheatYet
+    about: Linux statuses come from Are We Anti-Cheat Yet? You can report Linux changes there too.

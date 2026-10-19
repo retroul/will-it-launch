@@ -1,0 +1,16 @@
+name = "will-it-launch-votes"
+main = "worker.js"
+compatibility_date = "2025-09-01"
+
+[vars]
+# Your site's address (comma-separated if there are several). No trailing slash.
+ALLOWED_ORIGINS = "https://retroul.github.io"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "will-it-launch-votes"
+database_id = "PASTE-THE-ID-FROM-wrangler-d1-create"
+
+# Secrets (set with `npx wrangler secret put NAME`, never commit them):
+#   VOTER_SECRET  random text used to hash IPs
+#   ADMIN_TOKEN   lets you delete spam requests
