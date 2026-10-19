@@ -697,8 +697,13 @@ window.AC_DATA = {
      "notes": []
     },
     "linux": {
-     "status": "supported",
-     "notes": []
+     "status": "running",
+     "notes": [
+      {
+       "text": "Online play needs a manual PunkBuster update first.",
+       "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+     ]
     },
     "android": {
      "status": "unavailable",
@@ -3377,7 +3382,7 @@ window.AC_DATA = {
    "url": "https://www.ubisoft.com/en-us/game/for-honor",
    "steam": "304390",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/304390/70c0a279707d99a4651c441386f77d8394ac58b9/header_alt_assets_12.jpg?t=1792089012",
-   "updated": "2024-01-19",
+   "updated": "2026-09-10",
    "history": [
     {
      "name": "EasyAntiCheat.so added!",
@@ -3393,6 +3398,11 @@ window.AC_DATA = {
      "name": "Steam Deck Support",
      "date": "Jul 27, 2023, 0:00 AM",
      "url": "https://www.ubisoft.com/en-us/game/for-honor/news-updates/6jz99oXbJUVyK5h17fp6B8/patch-notes-2451-for-honor"
+    },
+    {
+     "name": "Ubisoft blocks Linux and Steam Deck",
+     "date": "2026-09-10",
+     "url": "https://www.digitalcitizen.life/ubisoft-will-block-for-honor-on-linux-and-steam-deck-from-september-10/"
     }
    ],
    "platforms": {
@@ -3405,8 +3415,12 @@ window.AC_DATA = {
      "notes": []
     },
     "linux": {
-     "status": "supported",
+     "status": "denied",
      "notes": [
+      {
+       "text": "Ubisoft blocked Linux and Steam Deck from September 10, 2026, saying it can't get the anti-cheat protection it needs there.",
+       "url": "https://steamdeckhq.com/news/for-honor-drops-linux-support/"
+      },
       {
        "text": "Recommended Tweaks",
        "url": "https://www.protondb.com/app/304390#EYb2Q93_MH"
@@ -3433,7 +3447,7 @@ window.AC_DATA = {
    "url": "https://www.fortnite.com/",
    "steam": "",
    "image": "images/covers/fortnite.jpg",
-   "updated": "2024-10-04",
+   "updated": "2026-10-14",
    "history": [
     {
      "name": "Not confident in anti-cheat",
@@ -3454,6 +3468,11 @@ window.AC_DATA = {
      "name": "Removed BattlEye",
      "date": "Jun 11, 2024, 5:34 PM GMT+1",
      "url": "https://x.com/ShiinaBR/status/1800567329870537171"
+    },
+    {
+     "name": "Epic announces Fortnite for Linux",
+     "date": "2026-10-14",
+     "url": "https://onlineservices.epicgames.com/news/introducing-easy-anti-cheat-linux-v2"
     }
    ],
    "platforms": {
@@ -3470,8 +3489,16 @@ window.AC_DATA = {
      ]
     },
     "linux": {
-     "status": "denied",
+     "status": "planned",
      "notes": [
+      {
+       "text": "Epic confirmed Fortnite is coming to Linux via the Epic Games Launcher with Easy Anti-Cheat Linux v2. No release date yet.",
+       "url": "https://onlineservices.epicgames.com/news/introducing-easy-anti-cheat-linux-v2"
+      },
+      {
+       "text": "Needs Secure Boot, TPM 2.0 and a signed kernel. Steam Deck isn't supported yet; Epic is talking with Valve.",
+       "url": "https://www.gamingonlinux.com/2026/10/epic-games-launcher-preview-arrives-native-linux-support-fortnite-for-linux-is-coming-and-upgraded-easy-anti-cheat/"
+      },
       {
        "text": "Works on Xbox-Cloud",
        "url": "https://news.xbox.com/en-us/2022/05/05/play-fortnite-with-xbox-cloud-gaming-for-free/"
@@ -7318,8 +7345,14 @@ window.AC_DATA = {
    "url": "",
    "steam": "3354750",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3354750/79c5a87b61a396cc6e6b69e3a083727f175dea83/header.jpg?t=1788891347",
-   "updated": "2025-12-11",
-   "history": [],
+   "updated": "2026-10-02",
+   "history": [
+    {
+     "name": "ReSkate fan project released",
+     "date": "2026-10-02",
+     "url": "https://www.pcgamer.com/games/sports/reskate-modding-platform-released/"
+    }
+   ],
    "platforms": {
     "windows": {
      "status": "supported",
@@ -7331,7 +7364,12 @@ window.AC_DATA = {
     },
     "linux": {
      "status": "denied",
-     "notes": []
+     "notes": [
+      {
+       "text": "Unofficial: the ReSkate fan project runs skate. on Linux and Steam Deck (offline and community servers, without EA's anti-cheat). Not supported by EA.",
+       "url": "https://github.com/Dingo-Shenanigans/ReSkate"
+      }
+     ]
     },
     "android": {
      "status": "unavailable",

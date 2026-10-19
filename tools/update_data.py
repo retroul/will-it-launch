@@ -24,11 +24,11 @@ STATUS = {"S": "supported", "R": "running", "P": "planned", "B": "broken", "D": 
 COD_MOBILE = ("S", "Separate game: Call of Duty: Mobile")
 
 
-def G(name, genre, mac="U", android="U", ios="U", title=None, steam=None, url=None, linux_note=None):
+def G(name, genre, mac="U", android="U", ios="U", title=None, steam=None, url=None):
     """One curated game. `name` must match the upstream entry exactly.
     Platform values are a status letter (see STATUS) or (letter, note)."""
     return dict(name=name, genre=genre, mac=mac, android=android, ios=ios,
-                title=title, steam=steam, url=url, linux_note=linux_note)
+                title=title, steam=steam, url=url)
 
 
 # Popular games (roughly 100k+ monthly players) that ship with an anti-cheat.
@@ -343,6 +343,29 @@ EXTRA_STEAM = {
     "Watch Dogs®: Legion": "2239550", "Zenless Zone Zero": "4162040",
 }
 
+# Linux news newer than the upstream list. Overrides its status and adds notes and timeline entries.
+# Each fix: status letter (or None to keep upstream), notes [(text, url)], history [(event, "YYYY-MM-DD", url)].
+LINUX_FIXES = {
+    "Fortnite": ("P", [
+        ("Epic confirmed Fortnite is coming to Linux via the Epic Games Launcher with Easy Anti-Cheat Linux v2. No release date yet.",
+         "https://onlineservices.epicgames.com/news/introducing-easy-anti-cheat-linux-v2"),
+        ("Needs Secure Boot, TPM 2.0 and a signed kernel. Steam Deck isn't supported yet; Epic is talking with Valve.",
+         "https://www.gamingonlinux.com/2026/10/epic-games-launcher-preview-arrives-native-linux-support-fortnite-for-linux-is-coming-and-upgraded-easy-anti-cheat/"),
+    ], [("Epic announces Fortnite for Linux", "2026-10-14",
+         "https://onlineservices.epicgames.com/news/introducing-easy-anti-cheat-linux-v2")]),
+    "skate.": (None, [
+        ("Unofficial: the ReSkate fan project runs skate. on Linux and Steam Deck (offline and community servers, without EA's anti-cheat). Not supported by EA.",
+         "https://github.com/Dingo-Shenanigans/ReSkate"),
+    ], [("ReSkate fan project released", "2026-10-02", "https://www.pcgamer.com/games/sports/reskate-modding-platform-released/")]),
+    "For Honor": ("D", [
+        ("Ubisoft blocked Linux and Steam Deck from September 10, 2026, saying it can't get the anti-cheat protection it needs there.",
+         "https://steamdeckhq.com/news/for-honor-drops-linux-support/"),
+    ], [("Ubisoft blocks Linux and Steam Deck", "2026-09-10", "https://www.digitalcitizen.life/ubisoft-will-block-for-honor-on-linux-and-steam-deck-from-september-10/")]),
+    "Battlefield 4": ("R", [
+        ("Online play needs a manual PunkBuster update first.", "https://www.gamingonlinux.com/anticheat/"),
+    ], []),
+}
+
 # Games not on Steam: a chosen cover image (official share image, App Store screenshot or Wikipedia),
 # downloaded once into images/covers/ so the site doesn't depend on other servers.
 COVER_URL = {
@@ -445,7 +468,7 @@ def build(upstream, previous):
     by_name = {g["name"]: g for g in upstream}
     missing = [g["name"] for g in GAMES if g["name"] not in by_name]
     ours = {g["name"] for g in GAMES}
-    missing += [f"{n} (in EXTRA_STEAM/COVER_URL but not in GAMES)" for n in {*EXTRA_STEAM, *COVER_URL} - ours]
+    missing += [f"{n} (in EXTRA_STEAM/COVER_URL/LINUX_FIXES but not in GAMES)" for n in {*EXTRA_STEAM, *COVER_URL, *LINUX_FIXES} - ours]
     if missing:
         sys.exit("Not found (fix the name):\n  " + "\n  ".join(missing))
 
@@ -465,6 +488,15 @@ def build(upstream, previous):
         linux_notes = [{"text": t, "url": u} if u else {"text": t} for t, u in up.get("notes", [])]
         if up.get("native"):
             linux_notes.insert(0, {"text": "Native Linux version"})
+        linux_status = up["status"].lower()
+        history = [{"name": u["name"], "date": u["date"], "url": u.get("reference", "")} for u in up.get("updates", [])]
+        updated = (up.get("dateChanged") or "")[:10]
+        if cur["name"] in LINUX_FIXES:
+            code, notes, events = LINUX_FIXES[cur["name"]]
+            linux_status = STATUS[code] if code else linux_status
+            linux_notes = [{"text": t, "url": u} for t, u in notes] + linux_notes
+            history += [{"name": n, "date": d, "url": u} for n, d, u in events]
+            updated = max([updated] + [d for _, d, _ in events])
         games.append({
             "slug": slug,
             "name": title,
@@ -473,13 +505,12 @@ def build(upstream, previous):
             "url": cur["url"] or up.get("url") or "",
             "steam": steam,
             "image": image,
-            "updated": (up.get("dateChanged") or "")[:10],
-            "history": [{"name": u["name"], "date": u["date"], "url": u.get("reference", "")}
-                        for u in up.get("updates", [])],
+            "updated": updated,
+            "history": history,
             "platforms": {
                 "windows": {"status": "supported", "notes": []},
                 "macos": platform(cur["mac"]),
-                "linux": {"status": up["status"].lower(), "notes": linux_notes},
+                "linux": {"status": linux_status, "notes": linux_notes},
                 "android": platform(cur["android"]),
                 "ios": platform(cur["ios"]),
             },
