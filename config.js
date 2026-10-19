@@ -8,5 +8,5 @@ window.AC_CONFIG = {
   // "https://will-it-launch-votes.your-name.workers.dev".
   // Leave empty and the Requests page uses GitHub issues instead.
   // If it is not on *.workers.dev, also add its address to connect-src in index.html.
-  voteApi: "",
+  voteApi: "https://will-it-launch-votes.will-it-launch.workers.dev",
 };
