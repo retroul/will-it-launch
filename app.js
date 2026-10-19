@@ -33,6 +33,9 @@
     set(key, value) { try { localStorage.setItem("will-it-launch:" + key, value); } catch { /* storage blocked */ } },
   };
 
+  function readJson(key, fallback) {
+    try { return JSON.parse(store.get(key)) ?? fallback; } catch { return fallback; }
+  }
   const savedPlatform = store.get("platform");
   const state = {
     platform: PLATFORMS.some((p) => p.id === savedPlatform) ? savedPlatform : "linux",
@@ -42,6 +45,8 @@
     anticheat: "",
     sort: "name",
     open: new Set(),
+    starredOnly: false,
+    favorites: new Set(readJson("favorites", [])),
   };
 
   // ---- helpers ---------------------------------------------------------------
@@ -56,6 +61,8 @@
   const fullName = (p) => p.full || p.name;
   const statusOf = (g, p = state.platform) => g.platforms[p].status;
   const verdict = (status, p) => (status === "unavailable" ? `Not on ${platform(p).short}` : LABEL[status]);
+  const DECK = { verified: "Verified", playable: "Playable", unsupported: "Unsupported" };
+  const formatDay = (day) => (day ? new Date(day + "T00:00:00Z").toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" }) : "");
   const reach = (g) => PLATFORMS.filter((p) => PLAYABLE.has(statusOf(g, p.id))).length;
   const countBy = (list, p) => {
     const c = Object.fromEntries(STATUSES.map((s) => [s.id, 0]));
@@ -138,7 +145,8 @@
     if (state.anticheat && !g.anticheats.includes(state.anticheat)) return false;
     return true;
   }
-  const isShown = (g) => matchesBase(g) && (!state.statuses.size || state.statuses.has(statusOf(g)));
+  const isShown = (g) => matchesBase(g) && (!state.statuses.size || state.statuses.has(statusOf(g)))
+    && (!state.starredOnly || state.favorites.has(g.slug));
 
   const SORTS = {
     name: (a, b) => a.name.localeCompare(b.name),
@@ -150,7 +158,8 @@
 
   function renderChips(base) {
     const c = countBy(base, state.platform);
-    $("#status-chips").innerHTML = STATUSES.map((s) => {
+    const starred = base.filter((g) => state.favorites.has(g.slug)).length;
+    $("#status-chips").innerHTML = `<button type="button" class="chip chip-star" id="starred-only" aria-pressed="${state.starredOnly}" ${starred || state.starredOnly ? "" : "disabled"}>${icon("star")}Starred <span class="n">${starred}</span></button>` + STATUSES.map((s) => {
       const on = state.statuses.has(s.id);
       return `<button type="button" class="chip" data-status="${s.id}" aria-pressed="${on}" ${c[s.id] || on ? "" : "disabled"}>${s.label} <span class="n">${c[s.id]}</span></button>`;
     }).join("");
@@ -160,9 +169,13 @@
     const blocks = PLATFORMS.map((p) => {
       const pl = g.platforms[p.id];
       const notes = pl.notes.length ? `<ul>${pl.notes.map((n) => `<li>${link(n.url, n.text)}</li>`).join("")}</ul>` : "";
+      const ratings = p.id === "linux" && (g.deck || g.protondb)
+        ? `<div class="ratings">${g.deck ? `<span class="rating" data-deck="${esc(g.deck)}">Steam Deck: ${DECK[g.deck] || esc(g.deck)}</span>` : ""}${g.protondb
+          ? `<a class="rating" data-tier="${esc(g.protondb)}" href="https://www.protondb.com/app/${encodeURIComponent(g.steam)}" target="_blank" rel="noopener noreferrer">ProtonDB: ${esc(g.protondb[0].toUpperCase() + g.protondb.slice(1))}</a>` : ""}</div>`
+        : "";
       return `<div class="dp${p.id === state.platform ? " current" : ""}" data-status="${pl.status}">
         <div class="dp-head">${icon(p.icon)}${p.name}</div>
-        <span class="dp-verdict">${verdict(pl.status, p.id)}</span>${notes}</div>`;
+        <span class="dp-verdict">${verdict(pl.status, p.id)}</span>${ratings}${notes}</div>`;
     }).join("");
 
     const links = [
@@ -174,12 +187,13 @@
 
     const timeline = g.history.length
       ? `<div><span class="label">Linux timeline</span><ol class="timeline">${g.history.slice().reverse()
-          .map((h) => `<li><time>${esc(h.date)}</time>${link(h.url, h.name)}</li>`).join("")}</ol></div>`
+          .map((h) => `<li><time datetime="${esc(h.day)}">${esc(formatDay(h.day) || h.date)}</time>${link(h.url, h.name)}</li>`).join("")}</ol></div>`
       : "";
     const report = repo
       ? `<a class="report" href="${esc(issueUrl("status-report.yml", { title: `[Status] ${g.name}`, game: g.name }))}" target="_blank" rel="noopener">${icon("flag")}Something wrong here? Tell us</a>`
       : "";
 
+    const share = `<button type="button" class="btn btn-small share" data-share="${esc(g.slug)}">${icon("share")}Share</button>`;
     return `<div class="detail" id="detail-${esc(g.slug)}">
       <div class="detail-platforms">${blocks}</div>
       <div class="facts">
@@ -189,7 +203,7 @@
         ${links ? `<div><span class="label">Links</span><div class="links">${links}</div></div>` : ""}
       </div>
       ${timeline}
-      ${report}
+      <div class="detail-actions">${share}${report}</div>
     </div>`;
   }
 
@@ -201,10 +215,14 @@
       return `<span class="badge${p.id === state.platform ? " current" : ""}" data-status="${s}" title="${esc(tip)}">${icon(p.icon)}<span class="sr-only">${esc(tip)}</span></span>`;
     }).join("");
     const s = statusOf(g);
+    const fav = state.favorites.has(g.slug);
+    const deck = state.platform === "linux" && g.deck
+      ? `<span class="deck-tag" data-deck="${esc(g.deck)}">Deck ${DECK[g.deck] || esc(g.deck)}</span>` : "";
     return `<li class="game${open ? " open" : ""}" id="${esc(g.slug)}">
+      <button type="button" class="star" data-star="${esc(g.slug)}" aria-pressed="${fav}" aria-label="${fav ? "Unstar" : "Star"} ${esc(g.name)}" title="${fav ? "Remove from your starred games" : "Star this game"}">${icon("star")}</button>
       <button type="button" class="row" data-slug="${esc(g.slug)}" aria-expanded="${open}" aria-controls="detail-${esc(g.slug)}">
         ${cover(g)}
-        <span class="g-text"><span class="g-name">${esc(g.name)}</span><span class="g-meta">${esc(g.genre)} · ${esc(g.anticheats.join(", ") || "No anti-cheat listed")}</span></span>
+        <span class="g-text"><span class="g-name">${esc(g.name)}</span>${deck}<span class="g-meta">${esc(g.genre)} · ${esc(g.anticheats.join(", ") || "No anti-cheat listed")}</span></span>
         <span class="badges">${badges}</span>
         <span class="verdict" data-status="${s}">${verdict(s, state.platform)}</span>
       </button>
@@ -215,7 +233,8 @@
   function renderGames() {
     const base = games.filter(matchesBase);
     renderChips(base);
-    const shown = base.filter(isShown).sort(SORTS[state.sort]);
+    const shown = base.filter(isShown).sort((a, b) =>
+      (state.favorites.has(b.slug) - state.favorites.has(a.slug)) || SORTS[state.sort](a, b));
     $("#game-list").innerHTML = shown.map(rowHtml).join("");
     $("#empty").hidden = shown.length > 0;
     const works = shown.filter((g) => PLAYABLE.has(statusOf(g))).length;
@@ -242,6 +261,20 @@
       }).join("");
   }
 
+  // ---- updates ---------------------------------------------------------------
+  function renderUpdates() {
+    const items = data.news || [];
+    let month = "";
+    $("#update-list").innerHTML = items.map((n) => {
+      const m = new Date(n.day + "T00:00:00Z").toLocaleDateString(undefined, { year: "numeric", month: "long", timeZone: "UTC" });
+      const head = m !== month ? `<li class="update-month">${esc((month = m))}</li>` : "";
+      return `${head}<li class="update">
+        <time datetime="${esc(n.day)}">${esc(formatDay(n.day))}</time>
+        <div><a class="update-game" href="#${esc(n.slug)}">${esc(n.name)}</a> <span>${esc(n.text)}</span>${safeUrl(n.url) ? ` ${link(n.url, "Source")}` : ""}</div>
+      </li>`;
+    }).join("") || `<li class="request-empty">Nothing yet.</li>`;
+  }
+
   // ---- requests --------------------------------------------------------------
   const votes = {
     api: (config.voteApi || "").replace(/\/+$/, ""),
@@ -259,6 +292,44 @@
     },
   };
 
+  // Cloudflare Turnstile bot check: loaded only on the Requests page, invisible unless Cloudflare is unsure.
+  const turnstile = {
+    key: config.turnstileSiteKey || "",
+    ready: null,
+    widget: null,
+    pending: null,
+    load() {
+      if (!this.key) return Promise.resolve();
+      this.ready ||= new Promise((resolve, reject) => {
+        window.onTurnstileLoad = () => {
+          this.widget = window.turnstile.render("#turnstile", {
+            sitekey: this.key,
+            execution: "execute",
+            appearance: "interaction-only",
+            callback: (token) => this.pending?.resolve(token),
+            "error-callback": () => this.pending?.reject(new Error("The bot check failed. Reload the page and try again.")),
+          });
+          resolve();
+        };
+        const s = document.createElement("script");
+        s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad";
+        s.async = true;
+        s.onerror = () => { this.ready = null; reject(new Error("The bot check couldn't load. An ad blocker may be blocking challenges.cloudflare.com.")); };
+        document.head.append(s);
+      });
+      return this.ready;
+    },
+    async token() {
+      if (!this.key) return undefined;
+      await this.load();
+      return new Promise((resolve, reject) => {
+        this.pending = { resolve, reject };
+        window.turnstile.reset(this.widget);
+        window.turnstile.execute(this.widget);
+      });
+    },
+  };
+
   function initRequests() {
     if (votes.api) {
       $("#requests-live").hidden = false;
@@ -273,6 +344,7 @@
 
   async function loadRequests() {
     if (!votes.api || votes.loaded) return;
+    turnstile.load().catch(() => { /* reported when the visitor votes */ });
     votes.loaded = true;
     $("#request-list").innerHTML = `<li class="request-empty">Loading requests…</li>`;
     try {
@@ -314,7 +386,7 @@
   }
 
   // ---- routing (bare #tokens only) -----------------------------------------
-  const VIEWS = ["games", "anticheats", "requests"];
+  const VIEWS = ["games", "anticheats", "updates", "requests"];
   function route() {
     const token = decodeURIComponent(location.hash.slice(1));
     const view = VIEWS.includes(token) ? token : "games";
@@ -339,6 +411,25 @@
     state.statuses.clear();
     $("#search").value = ""; $("#genre").value = ""; $("#anticheat").value = "";
     if (rerender) renderGames();
+  }
+
+  // ---- share -----------------------------------------------------------------
+  async function shareGame(btn) {
+    const g = bySlug.get(btn.dataset.share);
+    const url = `${location.origin}${location.pathname}#${g.slug}`;
+    const done = (text) => {
+      btn.lastChild.textContent = text;
+      setTimeout(() => { btn.lastChild.textContent = "Share"; }, 2000);
+    };
+    if (navigator.share && matchMedia("(pointer: coarse)").matches) {
+      try { await navigator.share({ title: `${g.name} on Will It Launch?`, url }); return; } catch { /* cancelled */ }
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      done("Link copied");
+    } catch {
+      window.prompt("Copy this link:", url);
+    }
   }
 
   // ---- theme -----------------------------------------------------------------
@@ -388,6 +479,10 @@
     $("#status-chips").addEventListener("click", (e) => {
       const chip = e.target.closest(".chip");
       if (!chip) return;
+      if (chip.id === "starred-only") {
+        state.starredOnly = !state.starredOnly;
+        return renderGames();
+      }
       const s = chip.dataset.status;
       state.statuses.has(s) ? state.statuses.delete(s) : state.statuses.add(s);
       renderGames();
@@ -395,6 +490,17 @@
 
     const list = $("#game-list");
     list.addEventListener("click", (e) => {
+      const star = e.target.closest(".star");
+      if (star) {
+        const slug = star.dataset.star;
+        state.favorites.has(slug) ? state.favorites.delete(slug) : state.favorites.add(slug);
+        store.set("favorites", JSON.stringify([...state.favorites]));
+        renderGames();
+        document.querySelector(`.star[data-star="${CSS.escape(slug)}"]`)?.focus({ preventScroll: true });
+        return;
+      }
+      const shareBtn = e.target.closest(".share");
+      if (shareBtn) return shareGame(shareBtn);
       const tag = e.target.closest(".tag");
       if (tag) {
         state.anticheat = tag.dataset.ac;
@@ -430,7 +536,7 @@
       const btn = e.target.querySelector("button");
       btn.disabled = true;
       try {
-        const r = await votes.call("POST", "/requests", { name });
+        const r = await votes.call("POST", "/requests", { name, token: await turnstile.token() });
         upsertRequest(r);
         input.value = "";
         hint(r.existed ? `${esc(r.name)} was already requested, so we counted your vote.` : `Thanks! ${esc(r.name)} is on the list.`);
@@ -447,7 +553,9 @@
       const voted = btn.getAttribute("aria-pressed") === "true";
       btn.disabled = true;
       try {
-        upsertRequest(await votes.call(voted ? "DELETE" : "POST", `/requests/${id}/vote`));
+        upsertRequest(voted
+          ? await votes.call("DELETE", `/requests/${id}/vote`)
+          : await votes.call("POST", `/requests/${id}/vote`, { token: await turnstile.token() }));
         hint("");
       } catch (err) {
         hint(esc(err.message), true);
@@ -469,6 +577,11 @@
   const savedTheme = store.get("theme");
   if (savedTheme === "light" || savedTheme === "dark") document.documentElement.dataset.theme = savedTheme;
 
+  // Offline support: only over https (GitHub Pages), never for local files.
+  if ("serviceWorker" in navigator && location.protocol === "https:") {
+    navigator.serviceWorker.register("sw.js").catch(() => { /* offline mode is optional */ });
+  }
+
   initStatic();
   initRequests();
   bind();
@@ -476,5 +589,6 @@
   renderHero();
   renderGames();
   renderAnticheats();
+  renderUpdates();
   route();
 })();

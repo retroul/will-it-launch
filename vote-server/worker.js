@@ -6,6 +6,9 @@
 //   DELETE /requests/:id/vote    remove your vote
 //   DELETE /requests/:id         remove a request (needs "Authorization: Bearer <ADMIN_TOKEN>")
 //
+// Abuse protection: writes need a Cloudflare Turnstile token (when TURNSTILE_SECRET is set) and are
+// rate limited per voter (when the WRITE_LIMITER binding exists).
+//
 // Privacy: the raw IP is never stored. Each voter is an HMAC of their IP with a
 // secret (VOTER_SECRET), so votes can be limited to one per IP without keeping
 // anything that identifies a person.
@@ -40,11 +43,18 @@ async function route(request, env, cors) {
   if (parts[0] !== "requests") throw new HttpError(404, "Not found.");
 
   const voter = await voterId(request, env.VOTER_SECRET);
+  const body = request.method === "POST" ? await readBody(request) : {};
+  if (request.method !== "GET") {
+    if (env.WRITE_LIMITER && !(await env.WRITE_LIMITER.limit({ key: voter })).success) {
+      throw new HttpError(429, "Too many votes in a short time. Wait a minute and try again.");
+    }
+    if (request.method === "POST") await checkHuman(env, request, body.token);
+  }
   const id = parts[1] === undefined ? null : Number(parts[1]);
   if (parts[1] !== undefined && !Number.isInteger(id)) throw new HttpError(404, "Not found.");
 
   if (parts.length === 1 && request.method === "GET") return json({ requests: await list(env.DB, voter) }, 200, cors);
-  if (parts.length === 1 && request.method === "POST") return json(await create(env.DB, voter, await readName(request)), 200, cors);
+  if (parts.length === 1 && request.method === "POST") return json(await create(env.DB, voter, cleanName(body.name)), 200, cors);
   if (parts.length === 3 && parts[2] === "vote" && request.method === "POST") return json(await vote(env.DB, voter, id), 200, cors);
   if (parts.length === 3 && parts[2] === "vote" && request.method === "DELETE") return json(await unvote(env.DB, voter, id), 200, cors);
   if (parts.length === 2 && request.method === "DELETE") return json(await remove(env, request, id), 200, cors);
@@ -122,10 +132,32 @@ async function requireRequest(db, id) {
 
 // ---- input ------------------------------------------------------------------
 
-async function readName(request) {
-  let body;
-  try { body = await request.json(); } catch { throw new HttpError(400, "Send JSON like {\"name\": \"Game name\"}."); }
-  return cleanName(body && body.name);
+async function readBody(request) {
+  const text = await request.text();
+  if (!text) return {};
+  try {
+    const body = JSON.parse(text);
+    if (body && typeof body === "object" && !Array.isArray(body)) return body;
+  } catch { /* fall through */ }
+  throw new HttpError(400, "Send JSON like {\"name\": \"Game name\"}.");
+}
+
+async function checkHuman(env, request, token) {
+  if (!env.TURNSTILE_SECRET) return;
+  if (typeof token !== "string" || !token || token.length > 2048) throw new HttpError(403, "Please complete the check that you're not a bot.");
+  const form = new FormData();
+  form.append("secret", env.TURNSTILE_SECRET);
+  form.append("response", token);
+  const ip = request.headers.get("CF-Connecting-IP");
+  if (ip) form.append("remoteip", ip);
+  let result;
+  try {
+    const res = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", { method: "POST", body: form });
+    result = await res.json();
+  } catch {
+    throw new HttpError(503, "Couldn't check that you're not a bot. Try again in a minute.");
+  }
+  if (!result.success) throw new HttpError(403, "The bot check failed. Reload the page and try again.");
 }
 
 export function cleanName(raw) {

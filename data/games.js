@@ -12,6 +12,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/2xko.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2025-12-11",
    "history": [],
    "platforms": {
@@ -47,6 +49,8 @@ window.AC_DATA = {
    "url": "http://7daystodie.com/",
    "steam": "251570",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251570/header.jpg?t=1788209289",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -86,6 +90,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "4195600",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4195600/8314c90ecae962febda7ab085222b237a078aff6/header.jpg?t=1790237524",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2025-12-15",
    "history": [],
    "platforms": {
@@ -122,6 +128,8 @@ window.AC_DATA = {
    "url": "https://albiononline.com/",
    "steam": "761890",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/761890/ff6acbb6e6a1d9c3a64a297dc3f772bc5481835d/header.jpg?t=1788194761",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-09-29",
    "history": [],
    "platforms": {
@@ -170,17 +178,21 @@ window.AC_DATA = {
    "url": "https://www.ea.com/games/apex-legends",
    "steam": "1172470",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/6cf04767652d703b6050da84b82cfb1194258d7d/header.jpg?t=1790164440",
+   "deck": "unsupported",
+   "protondb": "bronze",
    "updated": "2024-10-31",
    "history": [
     {
      "name": "Enabled Linux support shortly after SteamDeck launch",
      "date": "2022-03-01T18:00:27+00:00",
-     "url": "https://steamdb.info/patchnotes/8270674/"
+     "url": "https://steamdb.info/patchnotes/8270674/",
+     "day": "2022-03-01"
     },
     {
      "name": "Linux support disabled",
      "date": "Oct 31, 2024, 4:07 PM UTC",
-     "url": "https://x.com/PlayApex/status/1852019667315102151"
+     "url": "https://x.com/PlayApex/status/1852019667315102151",
+     "day": "2024-10-31"
     }
    ],
    "platforms": {
@@ -224,6 +236,8 @@ window.AC_DATA = {
    "url": "https://arcraiders.com",
    "steam": "1808500",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1808500/29e8af9fbf06833558758f94cfb406746f338c45/header_alt_assets_8.jpg?t=1791401542",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2025-11-08",
    "history": [],
    "platforms": {
@@ -259,6 +273,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2073620",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2073620/eccc13f9398a6af599a78ec7a437d6540f43a3c5/header.jpg?t=1791983571",
+   "deck": "unsupported",
+   "protondb": "borked",
    "updated": "2025-11-08",
    "history": [],
    "platforms": {
@@ -302,6 +318,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2399830",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2399830/d934813ca531af0fce69fe36bc972f1c90d1aa19/header.jpg?t=1779293241",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2024-02-20",
    "history": [],
    "platforms": {
@@ -338,22 +356,27 @@ window.AC_DATA = {
    "url": "https://playark.com/",
    "steam": "346110",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/346110/header.jpg?t=1765677889",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2024-08-11",
    "history": [
     {
      "name": "Native on Linux",
      "date": "Feb 11, 2016, 9:11 AM UTC",
-     "url": "https://store.steampowered.com/news/group/4145017/view/3104663180636096966"
+     "url": "https://store.steampowered.com/news/group/4145017/view/3104663180636096966",
+     "day": "2016-02-11"
     },
     {
      "name": "Activated BattlEye in Proton",
      "date": "Nov 06, 2021, 2:15 AM",
-     "url": "https://store.steampowered.com/news/group/4145017/view/3104663180636096966"
+     "url": "https://store.steampowered.com/news/group/4145017/view/3104663180636096966",
+     "day": "2021-11-06"
     },
     {
      "name": "Native Build deprecated",
      "date": "Jul 11, 2022, 10:13 AM",
-     "url": "https://www.gamingonlinux.com/2022/07/ark-survival-evolved-switches-away-from-linux-native-to-use-proton/"
+     "url": "https://www.gamingonlinux.com/2022/07/ark-survival-evolved-switches-away-from-linux-native-to-use-proton/",
+     "day": "2022-07-11"
     }
    ],
    "platforms": {
@@ -401,12 +424,15 @@ window.AC_DATA = {
    "url": "https://arma3.com/",
    "steam": "107410",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/107410/header.jpg?t=1786458620",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Activated BattlEye in Proton",
      "date": "Nov 06, 2021, 2:15 AM",
-     "url": "https://store.steampowered.com/news/group/4145017/view/3104663180636096966"
+     "url": "https://store.steampowered.com/news/group/4145017/view/3104663180636096966",
+     "day": "2021-11-06"
     }
    ],
    "platforms": {
@@ -446,6 +472,8 @@ window.AC_DATA = {
    "url": "https://reforger.armaplatform.com/",
    "steam": "1874880",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1874880/header.jpg?t=1789052055",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -481,6 +509,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1888160",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888160/header.jpg?t=1748630736",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -516,12 +546,15 @@ window.AC_DATA = {
    "url": "https://www.back4blood.com/",
    "steam": "924970",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/924970/header.jpg?t=1780594976",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Back 4 Blood on Steam Deck, Linux PCs with WINE/Proton",
      "date": "Apr 12, 2022, 0:00 AM",
-     "url": "https://back4blood.com/en-us/patch-notes/april-2022-update"
+     "url": "https://back4blood.com/en-us/patch-notes/april-2022-update",
+     "day": "2022-04-12"
     }
    ],
    "platforms": {
@@ -558,17 +591,21 @@ window.AC_DATA = {
    "url": "",
    "steam": "671860",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/671860/header.jpg?t=1730393449",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Devs commit to supporting EAC on Linux.",
      "date": "Jul 14, 2023",
-     "url": "https://www.reddit.com/r/pcgaming/comments/14zhjb1/battlebit_ama/jrxva4o/"
+     "url": "https://www.reddit.com/r/pcgaming/comments/14zhjb1/battlebit_ama/jrxva4o/",
+     "day": "2023-07-14"
     },
     {
      "name": "Devs announce FACEIT Linux support via official Discord",
      "date": "Jul 15, 2023",
-     "url": "https://i.postimg.cc/DZ4Ty8Wb/battlebit-mod-post.png"
+     "url": "https://i.postimg.cc/DZ4Ty8Wb/battlebit-mod-post.png",
+     "day": "2023-07-15"
     }
    ],
    "platforms": {
@@ -614,6 +651,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1238840",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238840/header.jpg?t=1777324289",
+   "deck": "unsupported",
+   "protondb": "borked",
    "updated": "2024-08-30",
    "history": [],
    "platforms": {
@@ -649,6 +688,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1517290",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1517290/header.jpg?t=1777324359",
+   "deck": "unsupported",
+   "protondb": "borked",
    "updated": "2024-11-04",
    "history": [],
    "platforms": {
@@ -685,6 +726,8 @@ window.AC_DATA = {
    "url": "https://www.ea.com/games/battlefield/battlefield-4",
    "steam": "1238860",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238860/header.jpg?t=1777391884",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -725,6 +768,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2807960",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1792168547",
+   "deck": "unsupported",
+   "protondb": "borked",
    "updated": "2025-07-16",
    "history": [],
    "platforms": {
@@ -760,6 +805,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "3028330",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3028330/7f156ef258b0b34011363f8da61b7e2a714232c7/header.jpg?t=1792018418",
+   "deck": "",
+   "protondb": "borked",
    "updated": "2025-12-17",
    "history": [],
    "platforms": {
@@ -796,6 +843,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1238810",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238810/header.jpg?t=1772707365",
+   "deck": "unsupported",
+   "protondb": "borked",
    "updated": "2024-10-20",
    "history": [],
    "platforms": {
@@ -831,12 +880,15 @@ window.AC_DATA = {
    "url": "",
    "steam": "582660",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582660/3c4172635738d9e5901e340b28136745fd9e491a/header_alt_assets_27.jpg?t=1786645008",
+   "deck": "unsupported",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "No comment since Verge Article",
      "date": "Nov 09, 2021, 5:55 PM EST",
-     "url": "https://www.theverge.com/2021/10/5/22709918/valve-steam-deck-supported-games-anti-cheat-proton-eac-battleye-epic"
+     "url": "https://www.theverge.com/2021/10/5/22709918/valve-steam-deck-supported-games-anti-cheat-proton-eac-battleye-epic",
+     "day": "2021-11-09"
     }
    ],
    "platforms": {
@@ -881,12 +933,15 @@ window.AC_DATA = {
    "url": "",
    "steam": "550650",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550650/header.jpg?t=1756315059",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "BattlEye Support enabled",
      "date": "Mon Nov 15 2021 17:40:07 GMT+0000",
-     "url": "https://www.protondb.com/app/550650#sxxv_1dLa4"
+     "url": "https://www.protondb.com/app/550650#sxxv_1dLa4",
+     "day": "2021-11-15"
     }
    ],
    "platforms": {
@@ -926,6 +981,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/blade-soul-neo.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2025-07-21",
    "history": [],
    "platforms": {
@@ -961,6 +1018,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "3199170",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3199170/header.jpg?t=1788924245",
+   "deck": "unsupported",
+   "protondb": "platinum",
    "updated": "2024-11-10",
    "history": [],
    "platforms": {
@@ -996,6 +1055,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "3557620",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3557620/b723141fa8cf93bb2bb56d03789561341a2cad62/header.jpg?t=1779773548",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2025-08-09",
    "history": [],
    "platforms": {
@@ -1031,6 +1092,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "3681810",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3681810/3a3427c763656ab0662f669470b178643e71ce21/header.jpg?t=1792404110",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2025-10-24",
    "history": [],
    "platforms": {
@@ -1074,6 +1137,8 @@ window.AC_DATA = {
    "url": "https://www.brawlhalla.com",
    "steam": "291550",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/291550/f6dd1b0a6a2b6e161604b36788276b18d36909cf/header.jpg?t=1789564454",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -1117,6 +1182,8 @@ window.AC_DATA = {
    "url": "https://www.breachersvr.com/",
    "steam": "1922010",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1922010/29e5fa6079fd9a551073a0a11cbdc78b7dbb0f2b/header_alt_assets_0.jpg?t=1791211713",
+   "deck": "unsupported",
+   "protondb": "borked",
    "updated": "2025-12-17",
    "history": [],
    "platforms": {
@@ -1153,6 +1220,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2933620",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938090/23af6cf41e2d09620caa07700a4cb3288dbcbaa8/header.jpg?t=1792179713",
+   "deck": "",
+   "protondb": "borked",
    "updated": "2024-12-27",
    "history": [],
    "platforms": {
@@ -1188,6 +1257,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "3606480",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3606480/d7041a15f572f7702d5f4bc97e498cd3e1cc62e2/header.jpg?t=1789747703",
+   "deck": "",
+   "protondb": "",
    "updated": "2025-11-08",
    "history": [],
    "platforms": {
@@ -1236,6 +1307,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "311210",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311210/header.jpg?t=1780963650",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -1271,6 +1344,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "3595270",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3595270/7d0f21912a075c33bbb5ea558100e187ceb234ac/header.jpg?t=1778886604",
+   "deck": "unsupported",
+   "protondb": "bronze",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -1306,6 +1381,8 @@ window.AC_DATA = {
    "url": "https://www.callofduty.com/warzone",
    "steam": "1962663",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1962663/de90b98146b7f9153957d4ef686acdce23d87088/header_alt_assets_20.jpg?t=1789748005",
+   "deck": "",
+   "protondb": "borked",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -1349,6 +1426,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1114150",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1114150/6fc20cf105543214d99b83d72bec0c9bb6a6ed76/header.jpg?t=1791979645",
+   "deck": "verified",
+   "protondb": "silver",
    "updated": "2025-12-11",
    "history": [],
    "platforms": {
@@ -1384,6 +1463,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1824220",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1824220/header.jpg?t=1744201613",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -1424,6 +1505,8 @@ window.AC_DATA = {
    "url": "https://www.conanexiles.com",
    "steam": "440900",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/440900/bae6def963ca0dbf5ee4b7768f3fcc0e99458380/header_alt_assets_9.jpg?t=1791363787",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-27",
    "history": [],
    "platforms": {
@@ -1460,6 +1543,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "835570",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/835570/78da23288e974e833dcd913bd9e6a4fdd9e17a3c/header.jpg?t=1789982309",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-10-13",
    "history": [],
    "platforms": {
@@ -1495,6 +1580,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "10",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/10/header.jpg?t=1745368572",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-11-10",
    "history": [],
    "platforms": {
@@ -1530,6 +1617,8 @@ window.AC_DATA = {
    "url": "https://www.counter-strike.net/cs2",
    "steam": "730",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/162664aa5da85f418105350c5d67ca565f6c3713/header.jpg?t=1791824795",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -1573,6 +1662,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "240",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/240/header.jpg?t=1745368575",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -1613,6 +1704,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/crossfire.png",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-10-05",
    "history": [],
    "platforms": {
@@ -1648,12 +1741,15 @@ window.AC_DATA = {
    "url": "https://crossout.net",
    "steam": "386180",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/386180/da1fb7f149fc7bbec3da1affd2fffe62421748ad/header.jpg?t=1790873569",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Steam Deck verified",
      "date": "Oct 10, 2022, 13:21 UTC",
-     "url": "https://steamdb.info/app/386180/history/?changeid=16318055"
+     "url": "https://steamdb.info/app/386180/history/?changeid=16318055",
+     "day": "2022-10-10"
     }
    ],
    "platforms": {
@@ -1698,6 +1794,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2016590",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2016590/header.jpg?t=1791275491",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-05-23",
    "history": [],
    "platforms": {
@@ -1733,6 +1831,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "300",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/300/header.jpg?t=1763407002",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -1773,12 +1873,15 @@ window.AC_DATA = {
    "url": "https://dayz.com",
    "steam": "221100",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/221100/header.jpg?t=1792059745",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-08-11",
    "history": [
     {
      "name": "Activated BattlEye in Proton",
      "date": "Nov 06, 2021, 2:15 AM",
-     "url": "https://store.steampowered.com/news/group/4145017/view/3104663180636096966"
+     "url": "https://store.steampowered.com/news/group/4145017/view/3104663180636096966",
+     "day": "2021-11-06"
     }
    ],
    "platforms": {
@@ -1814,27 +1917,33 @@ window.AC_DATA = {
    "url": "https://deadbydaylight.com/",
    "steam": "381210",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/381210/23fed9f741423413769ad1617e41519d1a466cdc/header_alt_assets_10.jpg?t=1791302579",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2024-09-01",
    "history": [
     {
      "name": "Plans to support Steam Deck",
      "date": "Nov 9, 2021, 5:55 PM EST",
-     "url": "https://www.theverge.com/2021/10/5/22709918/valve-steam-deck-supported-games-anti-cheat-proton-eac-battleye-epic"
+     "url": "https://www.theverge.com/2021/10/5/22709918/valve-steam-deck-supported-games-anti-cheat-proton-eac-battleye-epic",
+     "day": "2021-11-09"
     },
     {
      "name": "Runs with workarounds",
      "date": "Nov 15, 2022, 11:55 AM GMT+1",
-     "url": "https://forum.deadbydaylight.com/en/discussion/comment/3265222/#Comment_3265222"
+     "url": "https://forum.deadbydaylight.com/en/discussion/comment/3265222/#Comment_3265222",
+     "day": "2022-11-15"
     },
     {
      "name": "Previous forum link deleted",
      "date": "Feb 22, 2023, 1:44 PM GMT+1",
-     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/1151"
+     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/1151",
+     "day": "2023-02-22"
     },
     {
      "name": "Dead by Daylight is Steam Deck Verified!",
      "date": "May 10, 2023, 12:27 PM CDT",
-     "url": "https://store.steampowered.com/news/app/381210/view/3723958226061651097"
+     "url": "https://store.steampowered.com/news/app/381210/view/3723958226061651097",
+     "day": "2023-05-10"
     }
    ],
    "platforms": {
@@ -1886,6 +1995,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1422450",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1422450/aa249c5e8cc8f90941bd1dbdc311773cd1afe065/header.jpg?t=1790716179",
+   "deck": "",
+   "protondb": "gold",
    "updated": "2024-08-26",
    "history": [],
    "platforms": {
@@ -1929,17 +2040,21 @@ window.AC_DATA = {
    "url": "https://www.deadsidegame.com/",
    "steam": "895400",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/895400/b3667710eca8e8c00d3e22227b8eb66bf9fd57f5/header_alt_assets_4.jpg?t=1777456799",
+   "deck": "unsupported",
+   "protondb": "borked",
    "updated": "2024-09-29",
    "history": [
     {
      "name": "EAC Support enabled",
      "date": "Apr 12, 2022, 9:16 AM GMT+2",
-     "url": "https://steamcommunity.com/app/895400/discussions/3/3283695222735434723/"
+     "url": "https://steamcommunity.com/app/895400/discussions/3/3283695222735434723/",
+     "day": "2022-04-12"
     },
     {
      "name": "Game seemingly still broken",
      "date": "Mar 10, 2022 4:42:19 PM",
-     "url": "https://www.protondb.com/app/895400"
+     "url": "https://www.protondb.com/app/895400",
+     "day": "2022-03-10"
     }
    ],
    "platforms": {
@@ -1975,6 +2090,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2064870",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2064870/c7b9c187581f8e968e1e7c0c494cbd856b66ea56/header.jpg?t=1788775010",
+   "deck": "playable",
+   "protondb": "silver",
    "updated": "2025-06-18",
    "history": [],
    "platforms": {
@@ -2010,6 +2127,8 @@ window.AC_DATA = {
    "url": "https://www.playdeltaforce.com/",
    "steam": "2507950",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2507950/09ef134458549352e5b5a06ed7f97cf00d729b62/header_alt_assets_14.jpg?t=1790238079",
+   "deck": "unsupported",
+   "protondb": "silver",
    "updated": "2025-05-26",
    "history": [],
    "platforms": {
@@ -2061,12 +2180,15 @@ window.AC_DATA = {
    "url": "http://www.destinythegame.com/",
    "steam": "1085660",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1085660/0ccf0dc0a8c4ec078db7ab99ddc820b2fa884441/header.jpg?t=1781815889",
+   "deck": "unsupported",
+   "protondb": "borked",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Destiny 2 is not supported for play on the Steam Deck or on any system utilizing Steam Play's Proton",
      "date": "Mar 02, 2022, 12:10 AM UTC",
-     "url": "https://www.gamingonlinux.com/2022/03/bungie-say-a-big-fat-no-to-proton-and-steam-deck-for-destiny-2/"
+     "url": "https://www.gamingonlinux.com/2022/03/bungie-say-a-big-fat-no-to-proton-and-steam-deck-for-destiny-2/",
+     "day": "2022-03-02"
     }
    ],
    "platforms": {
@@ -2107,6 +2229,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2536520",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2536520/8cfd8f0d73075b10b3b58d9eccfee799baffab79/header.jpg?t=1774399170",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2024-09-20",
    "history": [],
    "platforms": {
@@ -2142,6 +2266,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/diablo-iii.png",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-09-05",
    "history": [],
    "platforms": {
@@ -2177,6 +2303,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2344520",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2344520/80f21a42e378b93e8fbb68ee43103be8ab84891b/header.jpg?t=1789491624",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2024-09-23",
    "history": [],
    "platforms": {
@@ -2220,6 +2348,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "690790",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/690790/7a10c1ff13373845ff5c0bc4fc2421838043601e/header.jpg?t=1789553676",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-11-04",
    "history": [],
    "platforms": {
@@ -2255,6 +2385,8 @@ window.AC_DATA = {
    "url": "https://www.dota2.com",
    "steam": "570",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/header.jpg?t=1791407503",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-10-07",
    "history": [],
    "platforms": {
@@ -2294,6 +2426,8 @@ window.AC_DATA = {
    "url": "https://www.bandainamcoent.com/games/dragon-ball-fighterz",
    "steam": "678950",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/678950/header.jpg?t=1776898545",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -2329,6 +2463,8 @@ window.AC_DATA = {
    "url": "https://en.bandainamcoent.eu/dragon-ball/dragon-ball-xenoverse-2",
    "steam": "454650",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/454650/header.jpg?t=1788407827",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -2364,6 +2500,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1790600",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1790600/header.jpg?t=1785726916",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-12-27",
    "history": [],
    "platforms": {
@@ -2399,6 +2537,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "11610",
    "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/11610/header.jpg",
+   "deck": "",
+   "protondb": "platinum",
    "updated": "2024-10-26",
    "history": [],
    "platforms": {
@@ -2434,6 +2574,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2203070",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2203070/f7f02854bc3b0c39e8392c9d74844330cd1a4f3e/header.jpg?t=1789474301",
+   "deck": "playable",
+   "protondb": "silver",
    "updated": "2025-08-08",
    "history": [],
    "platforms": {
@@ -2469,6 +2611,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1172710",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172710/c23906beee3fdf1cd48980f340a2b76a3590d765/header_alt_assets_9.jpg?t=1792072152",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2025-06-26",
    "history": [],
    "platforms": {
@@ -2506,6 +2650,8 @@ window.AC_DATA = {
    "url": "https://www.dfoneople.com/",
    "steam": "495910",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/495910/eff8f6b74316448fcfbbcbcee9a38834fe85ee30/header.jpg?t=1785840765",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-11-11",
    "history": [],
    "platforms": {
@@ -2546,6 +2692,8 @@ window.AC_DATA = {
    "url": "https://dyinglightgame.com/dying-light/",
    "steam": "304430",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/304430/header.jpg?t=1761819581",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -2585,6 +2733,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "3405690",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3405690/2d96aa1b06e453cd62dae9029d412f19e61932c3/header.jpg?t=1789751159",
+   "deck": "unsupported",
+   "protondb": "platinum",
    "updated": "2024-10-18",
    "history": [],
    "platforms": {
@@ -2632,6 +2782,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1849250",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1849250/header.jpg?t=1779987212",
+   "deck": "unsupported",
+   "protondb": "borked",
    "updated": "2024-10-27",
    "history": [],
    "platforms": {
@@ -2667,6 +2819,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1665460",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1665460/86619d0fb7126b3d5276004175f9a62181223c0f/header.jpg?t=1791424870",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-11-10",
    "history": [],
    "platforms": {
@@ -2710,6 +2864,8 @@ window.AC_DATA = {
    "url": "https://www.bandainamcoent.com/games/elden-ring",
    "steam": "1245620",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2024-09-08",
    "history": [],
    "platforms": {
@@ -2749,6 +2905,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2622380",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/header.jpg?t=1791488960",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2025-05-30",
    "history": [],
    "platforms": {
@@ -2784,6 +2942,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1011810",
    "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1011810/header.jpg",
+   "deck": "",
+   "protondb": "pending",
    "updated": "2024-02-24",
    "history": [],
    "platforms": {
@@ -2819,6 +2979,8 @@ window.AC_DATA = {
    "url": "https://enlisted.net/",
    "steam": "2051620",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2051620/e457983f97e463dc065ecedbd00c8e306f4e4abc/header.jpg?t=1790873566",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -2854,17 +3016,21 @@ window.AC_DATA = {
    "url": "https://www.escapefromtarkov.com/",
    "steam": "3932890",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3932890/4dd12ea3b00a4f8b67bfd629f3b9abbf8d5cab05/header_alt_assets_2.jpg?t=1785782094",
+   "deck": "unsupported",
+   "protondb": "silver",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Emailed BattlEye",
      "date": "Apr 27, 2022, 6:10 PM GMT+2",
-     "url": "https://discord.com/channels/891628783176650773/891637148007141387/958009681119428648"
+     "url": "https://discord.com/channels/891628783176650773/891637148007141387/958009681119428648",
+     "day": "2022-04-27"
     },
     {
      "name": "BattlEye have not yet activated support",
      "date": "Oct 12, 2022, 11:46 AM GMT+2",
-     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/859"
+     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/859",
+     "day": "2022-10-12"
     }
    ],
    "platforms": {
@@ -2904,6 +3070,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/escape-from-tarkov-arena.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-10-31",
    "history": [],
    "platforms": {
@@ -2940,6 +3108,8 @@ window.AC_DATA = {
    "url": "https://playeternalreturn.com/main",
    "steam": "528010",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/528010/header.jpg?t=1772728537",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -2975,6 +3145,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1286320",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1286320/header.jpg?t=1733977429",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-11-03",
    "history": [],
    "platforms": {
@@ -3010,6 +3182,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "3059520",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3059520/76dc8ac45f1bd6dec26e04434ca1c8814e7bb330/header.jpg?t=1786646076",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-10-22",
    "history": [],
    "platforms": {
@@ -3049,12 +3223,15 @@ window.AC_DATA = {
    "url": "https://www.fallguys.com/",
    "steam": "1097150",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1097150/header.jpg?t=1698763175",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Enabled Linux Support",
      "date": "Mon 28, March 2022, 8:38:44 PM GMT+02:00",
-     "url": "https://www.protondb.com/app/1097150#aRzxJIFk7c"
+     "url": "https://www.protondb.com/app/1097150#aRzxJIFk7c",
+     "day": "2022-03-28"
     }
    ],
    "platforms": {
@@ -3094,6 +3271,8 @@ window.AC_DATA = {
    "url": "https://fallout.bethesda.net/",
    "steam": "1151340",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1151340/f85dc32bab9fe57807cf588150579a8b2ab409f4/header.jpg?t=1791379859",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -3129,6 +3308,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2993780",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2993780/header.jpg?t=1749900924",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2025-06-16",
    "history": [],
    "platforms": {
@@ -3164,12 +3345,15 @@ window.AC_DATA = {
    "url": "",
    "steam": "552520",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552520/0dbbd22689fafc2b5b86996257a8e115ff935e81/header.jpg?t=1785365694",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-08-18",
    "history": [
     {
      "name": "Removed EAC",
      "date": "26 November 2019 13:54:44 UTC",
-     "url": "https://steamdb.info/depot/552521/history/?changeid=M:7117179758041625493"
+     "url": "https://steamdb.info/depot/552521/history/?changeid=M:7117179758041625493",
+     "day": "2019-11-26"
     }
    ],
    "platforms": {
@@ -3205,22 +3389,27 @@ window.AC_DATA = {
    "url": "https://farlight84.farlightgames.com/",
    "steam": "1928420",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1928420/70ff5e6b298092f6ad33c7bc5c985fcefb162a94/header.jpg?t=1776926334",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2025-09-17",
    "history": [
     {
      "name": "EAC replaced by NetEase Yidun",
      "date": "Sep 11, 2024, 4:00 AM GMT",
-     "url": "https://steamdb.info/depot/1928421/history/?changeid=M:5622484311305688663"
+     "url": "https://steamdb.info/depot/1928421/history/?changeid=M:5622484311305688663",
+     "day": "2024-09-11"
     },
     {
      "name": "Game started apply 1 day account ban with explicit linux denied message",
      "date": "Aug 21, 2025, 4:00 AM GMT",
-     "url": "https://www.protondb.com/app/1928420/?device=any"
+     "url": "https://www.protondb.com/app/1928420/?device=any",
+     "day": "2025-08-21"
     },
     {
      "name": "Developer divided linux into abnormal environments",
      "date": "Sep 25, 2025, 4:00 AM GMT",
-     "url": "https://www.youtube.com/watch?v=hdo8vCJU0gw&t=134s"
+     "url": "https://www.youtube.com/watch?v=hdo8vCJU0gw&t=134s",
+     "day": "2025-09-25"
     }
    ],
    "platforms": {
@@ -3264,6 +3453,8 @@ window.AC_DATA = {
    "url": "https://www.playfellowship.com/en/",
    "steam": "2352620",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2352620/9a614f739249e84fb74fe986cd6ccfc0edcee2bb/header.jpg?t=1782140326",
+   "deck": "unsupported",
+   "protondb": "platinum",
    "updated": "2025-12-11",
    "history": [],
    "platforms": {
@@ -3299,6 +3490,8 @@ window.AC_DATA = {
    "url": "https://freetrial.finalfantasyxiv.com/",
    "steam": "39210",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/39210/header.jpg?t=1782870674",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -3343,6 +3536,8 @@ window.AC_DATA = {
    "url": "https://fivem.net",
    "steam": "",
    "image": "images/covers/fivem-gta-v-roleplay.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-02-27",
    "history": [],
    "platforms": {
@@ -3382,27 +3577,33 @@ window.AC_DATA = {
    "url": "https://www.ubisoft.com/en-us/game/for-honor",
    "steam": "304390",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/304390/70c0a279707d99a4651c441386f77d8394ac58b9/header_alt_assets_12.jpg?t=1792089012",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2026-09-10",
    "history": [
     {
      "name": "EasyAntiCheat.so added!",
      "date": "Jul 28, 2022, 0:00 AM",
-     "url": "https://steamdb.info/patchnotes/9148911/"
+     "url": "https://steamdb.info/patchnotes/9148911/",
+     "day": "2022-07-28"
     },
     {
      "name": "Support Finalized",
      "date": "Apr 27, 2023, 0:00 AM",
-     "url": "https://steamdb.info/patchnotes/10988960/"
+     "url": "https://steamdb.info/patchnotes/10988960/",
+     "day": "2023-04-27"
     },
     {
      "name": "Steam Deck Support",
      "date": "Jul 27, 2023, 0:00 AM",
-     "url": "https://www.ubisoft.com/en-us/game/for-honor/news-updates/6jz99oXbJUVyK5h17fp6B8/patch-notes-2451-for-honor"
+     "url": "https://www.ubisoft.com/en-us/game/for-honor/news-updates/6jz99oXbJUVyK5h17fp6B8/patch-notes-2451-for-honor",
+     "day": "2023-07-27"
     },
     {
      "name": "Ubisoft blocks Linux and Steam Deck",
      "date": "2026-09-10",
-     "url": "https://www.digitalcitizen.life/ubisoft-will-block-for-honor-on-linux-and-steam-deck-from-september-10/"
+     "url": "https://www.digitalcitizen.life/ubisoft-will-block-for-honor-on-linux-and-steam-deck-from-september-10/",
+     "day": "2026-09-10"
     }
    ],
    "platforms": {
@@ -3447,32 +3648,39 @@ window.AC_DATA = {
    "url": "https://www.fortnite.com/",
    "steam": "",
    "image": "images/covers/fortnite.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2026-10-14",
    "history": [
     {
      "name": "Not confident in anti-cheat",
      "date": "Feb 07, 2022, 6:59 AM GMT+2",
-     "url": "https://twitter.com/TimSweeneyEpic/status/1490565925648715781"
+     "url": "https://twitter.com/TimSweeneyEpic/status/1490565925648715781",
+     "day": "2022-02-07"
     },
     {
      "name": "Removed Hyperion",
      "date": "Nov 1, 2022, 6:43 PM GMT+1",
-     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/918"
+     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/918",
+     "day": "2022-11-01"
     },
     {
      "name": "Was running for a short period of time",
      "date": "Nov 2, 2022, 8:04 AM GMT+1",
-     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/918#issuecomment-1299673303"
+     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/918#issuecomment-1299673303",
+     "day": "2022-11-02"
     },
     {
      "name": "Removed BattlEye",
      "date": "Jun 11, 2024, 5:34 PM GMT+1",
-     "url": "https://x.com/ShiinaBR/status/1800567329870537171"
+     "url": "https://x.com/ShiinaBR/status/1800567329870537171",
+     "day": "2024-06-11"
     },
     {
      "name": "Epic announces Fortnite for Linux",
      "date": "2026-10-14",
-     "url": "https://onlineservices.epicgames.com/news/introducing-easy-anti-cheat-linux-v2"
+     "url": "https://onlineservices.epicgames.com/news/introducing-easy-anti-cheat-linux-v2",
+     "day": "2026-10-14"
     }
    ],
    "platforms": {
@@ -3533,6 +3741,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "505460",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/505460/3b4805691c442e4bd87a8437ee9e8e486274c29c/header_alt_assets_0.jpg?t=1785273455",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -3568,6 +3778,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2943650",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2943650/6dde17d97da9804dde09c325ddbbdfdfc9bf463a/header_alt_assets_8.jpg?t=1787797428",
+   "deck": "unsupported",
+   "protondb": "silver",
    "updated": "2024-10-13",
    "history": [],
    "platforms": {
@@ -3607,6 +3819,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "4214820",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4214820/160ee31fd542a319a8daddb4bc18460139b164b7/header.jpg?t=1791937741",
+   "deck": "playable",
+   "protondb": "pending",
    "updated": "2025-12-15",
    "history": [],
    "platforms": {
@@ -3642,6 +3856,8 @@ window.AC_DATA = {
    "url": "https://gmod.facepunch.com/",
    "steam": "4000",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg?t=1776868682",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -3681,6 +3897,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1097840",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1097840/header.jpg?t=1780003997",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -3716,6 +3934,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2523720",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2523720/2ba5d8203b18c38fb2d10b14e92a285a850f08ab/header.jpg?t=1757024702",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2025-12-15",
    "history": [],
    "platforms": {
@@ -3751,17 +3971,21 @@ window.AC_DATA = {
    "url": "https://genshin.mihoyo.com/",
    "steam": "",
    "image": "images/covers/genshin-impact.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-09-02",
    "history": [
     {
      "name": "v3.8: Game Anti-Cheat is allowing Proton on clean installs, on update release.",
      "date": "Jul 5, 2023, 11:00:00 UTC+8",
-     "url": "https://www.reddit.com/r/linux_gaming/comments/15sskjh/"
+     "url": "https://www.reddit.com/r/linux_gaming/comments/15sskjh/",
+     "day": "2023-07-05"
     },
     {
      "name": "v3.5: Game Anti-Cheat observed allowing Proton in restricted scenarios, 2 business weeks after update launch.",
      "date": "Mar 3, 2023, 11:00:00 UTC+8",
-     "url": "https://www.reddit.com/r/linux_gaming/comments/123zllz/"
+     "url": "https://www.reddit.com/r/linux_gaming/comments/123zllz/",
+     "day": "2023-03-03"
     }
    ],
    "platforms": {
@@ -3804,6 +4028,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2215430",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/header.jpg?t=1763409398",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2025-07-19",
    "history": [],
    "platforms": {
@@ -3843,6 +4069,8 @@ window.AC_DATA = {
    "url": "https://www.ubisoft.com/en-us/game/ghost-recon/breakpoint",
    "steam": "2231380",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2231380/3e05f31b9aa9fd29b9709f035e73761a908e9fbe/header.jpg?t=1790683796",
+   "deck": "unsupported",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -3875,9 +4103,11 @@ window.AC_DATA = {
    "anticheats": [
     "Easy Anti-Cheat"
    ],
-   "url": "https://www.ubisoft.com/en-us/game/ghost-recon/breakpoint/wildlands",
+   "url": "https://www.ubisoft.com/en-us/game/ghost-recon/wildlands",
    "steam": "460930",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/36ca0e082902bb8b6f4f0f3ae20de41b1a3c54c6/header.jpg?t=1790268185",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -3913,6 +4143,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1957780",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1957780/603bbfc5b960364ccbf709be475bb2aa25562131/header.jpg?t=1788933700",
+   "deck": "unsupported",
+   "protondb": "bronze",
    "updated": "2025-12-11",
    "history": [],
    "platforms": {
@@ -3948,6 +4180,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "3887700",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3887700/0b074382083f7662a34cd799cab517eec63048db/header.jpg?t=1763453229",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2025-12-17",
    "history": [],
    "platforms": {
@@ -3983,6 +4217,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1568590",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1568590/header.jpg?t=1778102536",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -4018,12 +4254,15 @@ window.AC_DATA = {
    "url": "",
    "steam": "271590",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1765387725",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2025-08-05",
    "history": [
     {
      "name": "BattlEye added",
      "date": "Tue Sep 17 2024 09:35:47 UTC",
-     "url": "https://support.rockstargames.com/articles/1nenwhZlVrJY6CTFeSS2Fx/grand-theft-auto-online-battleye-faq"
+     "url": "https://support.rockstargames.com/articles/1nenwhZlVrJY6CTFeSS2Fx/grand-theft-auto-online-battleye-faq",
+     "day": "2024-09-17"
     }
    ],
    "platforms": {
@@ -4060,6 +4299,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2479810",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2479810/0992474ceeff2245228858446ccfb618a1d869ff/header.jpg?t=1791019595",
+   "deck": "unsupported",
+   "protondb": "platinum",
    "updated": "2024-09-22",
    "history": [],
    "platforms": {
@@ -4095,6 +4336,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1217060",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1217060/dd6c1906d262c38c183ccd711f192db187b5103f/header.jpg?t=1792125722",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -4131,12 +4374,15 @@ window.AC_DATA = {
    "url": "https://www.halowaypoint.com/de-de/halo-infinite",
    "steam": "1240440",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1240440/2262ffb4f1659df1c1cbf2c70af40560b4fa12e4/header.jpg?t=1774464322",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-04-11",
    "history": [
     {
      "name": "No longer requires workaround",
      "date": "Dec 18, 2022, 3:18 AM GMT+1",
-     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/1022"
+     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/1022",
+     "day": "2022-12-18"
     }
    ],
    "platforms": {
@@ -4177,27 +4423,33 @@ window.AC_DATA = {
    "url": "",
    "steam": "976730",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976730/header.jpg?t=1791569963",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Tried to enable EAC",
      "date": "Apr 12, 2022, 8:10 AM GMT+2",
-     "url": "https://www.xda-developers.com/halo-mcc-broken-steam-deck/"
+     "url": "https://www.xda-developers.com/halo-mcc-broken-steam-deck/",
+     "day": "2022-04-12"
     },
     {
      "name": "Updated Linux EAC Files",
      "date": "Aug 31, 2022, 17:00:12 UTC",
-     "url": "https://steamdb.info/patchnotes/9367265/"
+     "url": "https://steamdb.info/patchnotes/9367265/",
+     "day": "2022-08-31"
     },
     {
      "name": "Still actively working on it",
      "date": "Dec 15, 2022, 4:15 PM GMT+1",
-     "url": "https://www.theverge.com/23499215/valve-steam-deck-interview-late-2022"
+     "url": "https://www.theverge.com/23499215/valve-steam-deck-interview-late-2022",
+     "day": "2022-12-15"
     },
     {
      "name": "Steam Deck Support",
      "date": "Apr 6, 2023, 8:00 PM UTC",
-     "url": "https://support.halowaypoint.com/hc/en-us/articles/14589112499348"
+     "url": "https://support.halowaypoint.com/hc/en-us/articles/14589112499348",
+     "day": "2023-04-06"
     }
    ],
    "platforms": {
@@ -4244,12 +4496,15 @@ window.AC_DATA = {
    "url": "https://heaven-burns-red.com/",
    "steam": "1973710",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1973710/b5b46ac662628b5e2836a830ad17686eb60df5cb/header.jpg?t=1788488228",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2025-05-30",
    "history": [
     {
      "name": "As of Wine-Staging 10.5, Heaven Burns Red is playable on Linux.",
      "date": "May 28, 2025, 13:15:00 UTC",
-     "url": "https://www.protondb.com/app/1973710"
+     "url": "https://www.protondb.com/app/1973710",
+     "day": "2025-05-28"
     }
    ],
    "platforms": {
@@ -4295,22 +4550,27 @@ window.AC_DATA = {
    "url": "https://www.hellletloose.com/",
    "steam": "686810",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/686810/7655099ca004b09198b83713ad0d8215b98f7d5f/header_alt_assets_6.jpg?t=1790181050",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Linux EAC files added",
      "date": "1 March 2022 11:00:12 UTC",
-     "url": "https://steamdb.info/depot/686811/"
+     "url": "https://steamdb.info/depot/686811/",
+     "day": "2022-03-01"
     },
     {
      "name": "Steam Deck Support Planned",
      "date": "Apr 3, 2023, 0:00 AM UTC",
-     "url": "https://youtu.be/DJqh61nfuTs?t=386"
+     "url": "https://youtu.be/DJqh61nfuTs?t=386",
+     "day": "2023-04-03"
     },
     {
      "name": "No official acknowledgement, but widespread reports that the game works now.",
      "date": "Sep 29, 2023, 0:00 AM UTC",
-     "url": "https://www.reddit.com/r/linux_gaming/comments/16v2ula/hell_let_loose_works_on_linux_now/"
+     "url": "https://www.reddit.com/r/linux_gaming/comments/16v2ula/hell_let_loose_works_on_linux_now/",
+     "day": "2023-09-29"
     }
    ],
    "platforms": {
@@ -4346,6 +4606,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "553850",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/850e2f9e5bb15c5706bb9a1edc832f4f782e8be5/header.jpg?t=1792146147",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-02-11",
    "history": [],
    "platforms": {
@@ -4381,6 +4643,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/heroes-of-the-storm.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-07-02",
    "history": [],
    "platforms": {
@@ -4416,6 +4680,8 @@ window.AC_DATA = {
    "url": "https://honkaiimpact3.mihoyo.com/",
    "steam": "1671200",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1671200/header.jpg?t=1787203518",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -4455,6 +4721,8 @@ window.AC_DATA = {
    "url": "https://hsr.hoyoverse.com/",
    "steam": "",
    "image": "images/covers/honkai-star-rail.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2025-05-26",
    "history": [],
    "platforms": {
@@ -4498,32 +4766,39 @@ window.AC_DATA = {
    "url": "",
    "steam": "594650",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/594650/8cf55bcd74fc14c93f3a9cc7d0a442afabab6f88/header_alt_assets_29.jpg?t=1791385253",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-09-22",
    "history": [
     {
      "name": "Crytek didn't respond to repeated requests for comment.",
      "date": "Nov 9, 2021, 5:55 PM EST",
-     "url": "https://www.theverge.com/2021/10/5/22709918/valve-steam-deck-supported-games-anti-cheat-proton-eac-battleye-epic"
+     "url": "https://www.theverge.com/2021/10/5/22709918/valve-steam-deck-supported-games-anti-cheat-proton-eac-battleye-epic",
+     "day": "2021-11-09"
     },
     {
      "name": "We are not confirming that it won't be ever supported, however we don't plan on this in the near future.",
      "date": "May 11, 2022, 2:30 AM GMT+2",
-     "url": "https://www.protondb.com/app/594650#lMZ4hnX6A"
+     "url": "https://www.protondb.com/app/594650#lMZ4hnX6A",
+     "day": "2022-05-11"
     },
     {
      "name": "Multiple reports of game working",
      "date": "Feb 15, 2023, 5:33 PM GMT+1",
-     "url": "https://www.gamingonlinux.com/2023/02/hunt-showdown-added-easy-anti-cheat-for-steam-deck-linux/"
+     "url": "https://www.gamingonlinux.com/2023/02/hunt-showdown-added-easy-anti-cheat-for-steam-deck-linux/",
+     "day": "2023-02-15"
     },
     {
      "name": "Widespread reports of anticheat breaking following November 16th 2023 update",
      "date": "Nov 16, 2023, 07:24 PM GMT+1",
-     "url": "https://www.reddit.com/r/linux_gaming/comments/17wtqu1/hunt_showdown_not_working_anymore/"
+     "url": "https://www.reddit.com/r/linux_gaming/comments/17wtqu1/hunt_showdown_not_working_anymore/",
+     "day": "2023-11-16"
     },
     {
      "name": "Anticheat appears to be fixed following the official acknowledgment of anticheat issues by Crytek.",
      "date": "Nov 23, 2023, 11:54 UTC",
-     "url": "https://www.gamingonlinux.com/2023/11/hunt-showdown-anti-cheat-now-fixed-for-steam-deck-linux/"
+     "url": "https://www.gamingonlinux.com/2023/11/hunt-showdown-anti-cheat-now-fixed-for-steam-deck-linux/",
+     "day": "2023-11-23"
     }
    ],
    "platforms": {
@@ -4559,6 +4834,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2799860",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2799860/d7e5240b6182e4a085a365503b22aefd2e6ae6cf/header.jpg?t=1764296831",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2024-11-10",
    "history": [],
    "platforms": {
@@ -4594,6 +4871,8 @@ window.AC_DATA = {
    "url": "https://infinitynikki.infoldgames.com/",
    "steam": "3164330",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3164330/f8cad1c409c8f0f09d1b5689ce929f84b252a672/header.jpg?t=1790219437",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-12-06",
    "history": [],
    "platforms": {
@@ -4637,12 +4916,15 @@ window.AC_DATA = {
    "url": "",
    "steam": "222880",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/222880/header.jpg?t=1758742858",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Works with BattlEye in Proton",
      "date": "Sun Jan 02 2022 19:54:10 GMT+0000",
-     "url": "https://www.protondb.com/app/222880#YD21dwFjsq"
+     "url": "https://www.protondb.com/app/222880#YD21dwFjsq",
+     "day": "2022-01-02"
     }
    ],
    "platforms": {
@@ -4682,12 +4964,15 @@ window.AC_DATA = {
    "url": "https://www.focus-entmt.com/en-us/games/insurgency-sandstorm",
    "steam": "581320",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/581320/header_alt_assets_3.jpg?t=1791994390",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Added Linux support",
      "date": "Mar 02, 2022, 7:16 AM EST",
-     "url": "https://www.reddit.com/r/linux_gaming/comments/t56f5r/insurgency_sandstorm_works_on_linux/"
+     "url": "https://www.reddit.com/r/linux_gaming/comments/t56f5r/insurgency_sandstorm_works_on_linux/",
+     "day": "2022-03-02"
     }
    ],
    "platforms": {
@@ -4723,6 +5008,8 @@ window.AC_DATA = {
    "url": "https://www.iracing.com/",
    "steam": "266410",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/266410/header.jpg?t=1792424038",
+   "deck": "",
+   "protondb": "silver",
    "updated": "2024-09-29",
    "history": [],
    "platforms": {
@@ -4765,6 +5052,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "232090",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/232090/header.jpg?t=1774538987",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -4800,6 +5089,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1430190",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1430190/42f4f45ebfc31ccb895565aaa215c047a9c8bb7f/header_alt_assets_2.jpg?t=1791841264",
+   "deck": "unsupported",
+   "protondb": "platinum",
    "updated": "2024-10-28",
    "history": [],
    "platforms": {
@@ -4839,6 +5130,8 @@ window.AC_DATA = {
    "url": "https://leagueoflegends.com",
    "steam": "",
    "image": "images/covers/league-of-legends.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-09-16",
    "history": [],
    "platforms": {
@@ -4890,6 +5183,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "550",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550/header.jpg?t=1772742214",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -4929,6 +5224,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/legends-of-runeterra.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-11-10",
    "history": [],
    "platforms": {
@@ -4967,6 +5264,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/lineage-ii.png",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-11-11",
    "history": [],
    "platforms": {
@@ -5002,6 +5301,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1501750",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1501750/c793d85dc133f22112c7283b79dd89e2c0aa58a4/header.jpg?t=1786951564",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -5038,6 +5339,8 @@ window.AC_DATA = {
    "url": "https://www.playlostark.com/",
    "steam": "1599340",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1599340/header.jpg?t=1763571534",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2025-07-17",
    "history": [],
    "platforms": {
@@ -5077,6 +5380,8 @@ window.AC_DATA = {
    "url": "https://www.lostlight.game/",
    "steam": "1797880",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1797880/header.jpg?t=1711521041",
+   "deck": "unsupported",
+   "protondb": "borked",
    "updated": "2024-07-31",
    "history": [],
    "platforms": {
@@ -5120,6 +5425,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "212200",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212200/cbc3c06a31e66a5505054bf9f86f3265b777f610/header_alt_assets_21.jpg?t=1792084832",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2025-05-29",
    "history": [],
    "platforms": {
@@ -5155,6 +5462,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "3230400",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3230400/979a5bffcde6f49d7e56ca9db6980256d3a96ad6/header.jpg?t=1784225783",
+   "deck": "unsupported",
+   "protondb": "borked",
    "updated": "2024-10-24",
    "history": [],
    "platforms": {
@@ -5194,6 +5503,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/madoka-magica-magia-exedra.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2025-12-15",
    "history": [],
    "platforms": {
@@ -5229,6 +5540,8 @@ window.AC_DATA = {
    "url": "https://maplestory.nexon.net",
    "steam": "216150",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/216150/header.jpg?t=1792111844",
+   "deck": "unsupported",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -5272,6 +5585,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/maplestory-worlds.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-10-31",
    "history": [],
    "platforms": {
@@ -5307,6 +5622,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "3065800",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065800/c3093fec19fed6eb0750a87261c53743a5757827/header.jpg?t=1786061300",
+   "deck": "unsupported",
+   "protondb": "borked",
    "updated": "2024-11-03",
    "history": [],
    "platforms": {
@@ -5346,6 +5663,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2767030",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767030/c61f65c5968af5d85b0393005991ecee0184fcaf/header.jpg?t=1792140776",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2025-02-02",
    "history": [],
    "platforms": {
@@ -5382,6 +5701,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2452280",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2452280/b0f7a13ab9fe3984ffdb1ce951bf155dd4639c69/header.jpg?t=1791949072",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2025-03-02",
    "history": [],
    "platforms": {
@@ -5422,6 +5743,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "550900",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550900/header.jpg?t=1660770073",
+   "deck": "",
+   "protondb": "gold",
    "updated": "2024-11-11",
    "history": [],
    "platforms": {
@@ -5457,6 +5780,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1623660",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623660/header.jpg?t=1720200587",
+   "deck": "unsupported",
+   "protondb": "platinum",
    "updated": "2024-02-28",
    "history": [],
    "platforms": {
@@ -5492,6 +5817,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "629760",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/629760/header.jpg?t=1777933284",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -5527,6 +5854,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "3077390",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3077390/header.jpg?t=1753692631",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-10-26",
    "history": [],
    "platforms": {
@@ -5566,6 +5895,8 @@ window.AC_DATA = {
    "url": "https://www.taleworlds.com/en/Games/Bannerlord/",
    "steam": "261550",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/261550/header.jpg?t=1764252300",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -5601,6 +5932,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1607250",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1607250/609881717ea2123b86cc44909a60ebbc790e7c39/header.jpg?t=1790820130",
+   "deck": "unsupported",
+   "protondb": "bronze",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -5636,6 +5969,8 @@ window.AC_DATA = {
    "url": "https://www.mythofempires.com/",
    "steam": "1371580",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1371580/header.jpg?t=1783469343",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-08-29",
    "history": [],
    "platforms": {
@@ -5671,12 +6006,15 @@ window.AC_DATA = {
    "url": "https://www.narakathegame.com/",
    "steam": "1203220",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1203220/7db37ea18e8ee1d1b929fe9ef4c4f9f46ac22623/header.jpg?t=1791518965",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Seems to work ootb now",
      "date": "Thu Nov 17 2022 05:57:43 GMT+0000",
-     "url": "https://www.protondb.com/app/1203220#2_AueeZeaM"
+     "url": "https://www.protondb.com/app/1203220#2_AueeZeaM",
+     "day": "2022-11-17"
     }
    ],
    "platforms": {
@@ -5712,6 +6050,8 @@ window.AC_DATA = {
    "url": "https://www.bandainamcoent.com/games/naruto-to-boruto-shinobi-striker",
    "steam": "633230",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/633230/header.jpg?t=1790561704",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -5747,6 +6087,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2878980",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2878980/header.jpg?t=1790956803",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2025-05-29",
    "history": [],
    "platforms": {
@@ -5782,6 +6124,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1724660",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1724660/header.jpg?t=1725651064",
+   "deck": "",
+   "protondb": "borked",
    "updated": "2024-11-04",
    "history": [],
    "platforms": {
@@ -5817,6 +6161,8 @@ window.AC_DATA = {
    "url": "https://nikke-en.com/",
    "steam": "",
    "image": "images/covers/nikke-goddess-of-victory.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2026-08-21",
    "history": [],
    "platforms": {
@@ -5857,6 +6203,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2139460",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2139460/c18b08a2f93dec32fcc5fa71bc2da44ee42de1f0/header.jpg?t=1792202672",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-09-22",
    "history": [],
    "platforms": {
@@ -5900,6 +6248,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "496240",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/496240/df9a63717fe3bee4ccaad33717e6bdaed4435c42/header.jpg?t=1745345271",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-10-27",
    "history": [],
    "platforms": {
@@ -5935,12 +6285,15 @@ window.AC_DATA = {
    "url": "https://outriders.square-enix-games.com",
    "steam": "680420",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/680420/header.jpg?t=1774022529",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Playable Steam Deck rating",
      "date": "Jul 29, 2022, 11:01 AM",
-     "url": "https://www.gamingonlinux.com/2022/07/outriders-officially-gets-a-playable-steam-deck-rating/"
+     "url": "https://www.gamingonlinux.com/2022/07/outriders-officially-gets-a-playable-steam-deck-rating/",
+     "day": "2022-07-29"
     }
    ],
    "platforms": {
@@ -5973,15 +6326,18 @@ window.AC_DATA = {
    "anticheats": [
     "Warden"
    ],
-   "url": "https://overwatch2.playoverwatch.com/en-us/trailer",
+   "url": "https://overwatch.blizzard.com/",
    "steam": "2357570",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/5c208b2699cd38ed6125d039be388fa744db54a4/header_alt_assets_23.jpg?t=1791576843",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Playing on Linux or even a Mac while on an emulated Windows environment is not bannable",
      "date": "Fri Apr 20 2018 23:26:33 GMT+0000",
-     "url": "https://us.forums.blizzard.com/en/overwatch/en/overwatch/t/can-we-get-banned-for-playing-on-linux/70929/4"
+     "url": "https://us.forums.blizzard.com/en/overwatch/en/overwatch/t/can-we-get-banned-for-playing-on-linux/70929/4",
+     "day": "2018-04-20"
     }
    ],
    "platforms": {
@@ -6017,42 +6373,51 @@ window.AC_DATA = {
    "url": "",
    "steam": "444090",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/444090/header.jpg?t=1713560419",
+   "deck": "unsupported",
+   "protondb": "bronze",
    "updated": "2025-04-05",
    "history": [
     {
      "name": "Hope to provide such support in the near future",
      "date": "Nov 09, 2021, 5:55 PM EST",
-     "url": "https://www.theverge.com/2021/10/5/22709918/valve-steam-deck-supported-games-anti-cheat-proton-eac-battleye-epic"
+     "url": "https://www.theverge.com/2021/10/5/22709918/valve-steam-deck-supported-games-anti-cheat-proton-eac-battleye-epic",
+     "day": "2021-11-09"
     },
     {
      "name": "Running with Proton GE, Anti-Cheat may not be intentionally enabled",
      "date": "Sat May 14 2022 23:57:51 GMT+0000",
-     "url": "https://www.protondb.com/app/444090#7U2uy5DZzc"
+     "url": "https://www.protondb.com/app/444090#7U2uy5DZzc",
+     "day": "2022-05-14"
     },
     {
      "name": "Proton Experimental - Now Playable: Paladins",
      "date": "Thu Jun 30 2022 16:00:00 GMT+0000",
-     "url": "https://github.com/ValveSoftware/Proton/wiki/Changelog"
+     "url": "https://github.com/ValveSoftware/Proton/wiki/Changelog",
+     "day": "2022-06-30"
     },
     {
      "name": "Reports of game not working",
      "date": "Jul 13, 2022, 2:29 AM GMT+2",
-     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/581"
+     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/581",
+     "day": "2022-07-13"
     },
     {
      "name": "Previously working most likely due to fluke in EAC Config",
      "date": "Aug 05, 2022, 9:57 PM",
-     "url": "https://github.com/ValveSoftware/Proton/issues/6062#issuecomment-1206809079"
+     "url": "https://github.com/ValveSoftware/Proton/issues/6062#issuecomment-1206809079",
+     "day": "2022-08-05"
     },
     {
      "name": "No plans to dedicate time for steam deck / linux compatibility",
      "date": "Feb 14, 2023, 02:13 AM",
-     "url": "https://www.reddit.com/r/paladinsgame/comments/110mcuf/with_em_striving_to_do_better_how_about_some/j8g2nam/"
+     "url": "https://www.reddit.com/r/paladinsgame/comments/110mcuf/with_em_striving_to_do_better_how_about_some/j8g2nam/",
+     "day": "2023-02-14"
     },
     {
      "name": "EAC updated, and Linux allowed after Evil Mojo layoffs",
      "date": "April 1, 2025, 12:00 AM",
-     "url": "https://www.protondb.com/app/444090/1000#JBFivnOCC-"
+     "url": "https://www.protondb.com/app/444090/1000#JBFivnOCC-",
+     "day": "2025-04-01"
     }
    ],
    "platforms": {
@@ -6092,6 +6457,8 @@ window.AC_DATA = {
    "url": "https://pathoftitans.com/",
    "steam": "",
    "image": "images/covers/path-of-titans.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2025-03-02",
    "history": [],
    "platforms": {
@@ -6131,6 +6498,8 @@ window.AC_DATA = {
    "url": "http://vankrupt.com/#pavlov-vr",
    "steam": "555160",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/555160/header.jpg?t=1770745729",
+   "deck": "unsupported",
+   "protondb": "silver",
    "updated": "2024-07-30",
    "history": [],
    "platforms": {
@@ -6166,6 +6535,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1056640",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1056640/10c2c4df29004d5397c01e1819d209a464332ead/header.jpg?t=1789697731",
+   "deck": "unsupported",
+   "protondb": "platinum",
    "updated": "2025-12-11",
    "history": [],
    "platforms": {
@@ -6201,6 +6572,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "739630",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/739630/6283e4bf96c6e8160492ae12016f0c9a308a75d9/header_alt_assets_13.jpg?t=1791632508",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-11-10",
    "history": [],
    "platforms": {
@@ -6236,6 +6609,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2524890",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2524890/7230af207a5a3d4107d4969ac66fd2093dd6dfdf/header.jpg?t=1792184403",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2024-03-13",
    "history": [],
    "platforms": {
@@ -6280,6 +6655,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/point-blank.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-09-26",
    "history": [],
    "platforms": {
@@ -6315,6 +6692,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1556200",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1556200/header.jpg?t=1788366223",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-09-01",
    "history": [],
    "platforms": {
@@ -6350,6 +6729,8 @@ window.AC_DATA = {
    "url": "https://www.predecessorgame.com/",
    "steam": "961200",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/961200/fdbbe821eb9f1c6f075062b0a1adad90a92534ac/header.jpg?t=1790074284",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -6385,6 +6766,8 @@ window.AC_DATA = {
    "url": "https://dmg.priconne-redive.jp",
    "steam": "",
    "image": "images/covers/princess-connect-re-dive.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-10-18",
    "history": [],
    "platforms": {
@@ -6430,12 +6813,15 @@ window.AC_DATA = {
    "url": "https://pubg.com/",
    "steam": "578080",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/841ea38bc58cabb70aef65365cf50bc2d79329d9/header.jpg?t=1786493086",
+   "deck": "unsupported",
+   "protondb": "borked",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "The team does not have a comment for this",
      "date": "Nov 09, 2021, 5:55 PM EST",
-     "url": "https://www.theverge.com/2021/10/5/22709918/valve-steam-deck-supported-games-anti-cheat-proton-eac-battleye-epic"
+     "url": "https://www.theverge.com/2021/10/5/22709918/valve-steam-deck-supported-games-anti-cheat-proton-eac-battleye-epic",
+     "day": "2021-11-09"
     }
    ],
    "platforms": {
@@ -6479,12 +6865,15 @@ window.AC_DATA = {
    "url": "https://pgr.kurogame.net",
    "steam": "4125930",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4125930/e0cd59cbb04f2849de8219ead2b25878950508b1/header.jpg?t=1790215880",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-10-02",
    "history": [
     {
      "name": "As of Wine-Staging 10.5, Punishing: Gray Raven is playable on Linux.",
      "date": "May 28, 2025, 13:15:00 UTC",
-     "url": "https://github.com/AreWeAntiCheatYet/AreWeAntiCheatYet/issues/1792"
+     "url": "https://github.com/AreWeAntiCheatYet/AreWeAntiCheatYet/issues/1792",
+     "day": "2025-05-28"
     }
    ],
    "platforms": {
@@ -6524,12 +6913,15 @@ window.AC_DATA = {
    "url": "https://quake.bethesda.net",
    "steam": "611500",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/611500/header.jpg?t=1790187617",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "\"Offically Supported through Proton\"",
      "date": "July 14, 2022, 2:09 PM CDT",
-     "url": "https://steamcommunity.com/games/611500/announcements/detail/5349730511804644555"
+     "url": "https://steamcommunity.com/games/611500/announcements/detail/5349730511804644555",
+     "day": "2022-07-14"
     }
    ],
    "platforms": {
@@ -6566,6 +6958,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "215100",
    "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/215100/header.jpg",
+   "deck": "",
+   "protondb": "silver",
    "updated": "2024-10-05",
    "history": [],
    "platforms": {
@@ -6601,6 +6995,8 @@ window.AC_DATA = {
    "url": "https://lna.roglobal.com/",
    "steam": "",
    "image": "images/covers/ragnarok-origin.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2025-06-14",
    "history": [],
    "platforms": {
@@ -6636,12 +7032,15 @@ window.AC_DATA = {
    "url": "https://www.ubisoft.com/en-us/game/rainbow-six/extraction",
    "steam": "2379390",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2379390/header.jpg?t=1765569459",
+   "deck": "playable",
+   "protondb": "silver",
    "updated": "2024-01-27",
    "history": [
     {
      "name": "Proton Experimental fixes Rainbow Six Extraction, EA App, Immortals of Aveum",
      "date": "Aug 23, 2023, 4:44 PM UTC",
-     "url": "https://www.gamingonlinux.com/2023/08/proton-experimental-fixes-rainbow-six-extraction-ea-app-immortals-of-aveum/"
+     "url": "https://www.gamingonlinux.com/2023/08/proton-experimental-fixes-rainbow-six-extraction-ea-app-immortals-of-aveum/",
+     "day": "2023-08-23"
     }
    ],
    "platforms": {
@@ -6679,6 +7078,8 @@ window.AC_DATA = {
    "url": "https://ubisoft.com/en-us/game/rainbow-six/siege",
    "steam": "359550",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/555b5051d332c5f6b86f88ba5dfd80404dc91aaa/header_alt_assets_27.jpg?t=1792001976",
+   "deck": "unsupported",
+   "protondb": "bronze",
    "updated": "2025-08-07",
    "history": [],
    "platforms": {
@@ -6722,6 +7123,8 @@ window.AC_DATA = {
    "url": "https://recroom.com/",
    "steam": "471710",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/471710/header.jpg?t=1780346660",
+   "deck": "playable",
+   "protondb": "silver",
    "updated": "2025-06-20",
    "history": [],
    "platforms": {
@@ -6757,6 +7160,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2138720",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2138720/cafe24aa9b3c329c4a083b017cbdd7965b6e23c3/header_alt_assets_1.jpg?t=1791561528",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2025-05-26",
    "history": [],
    "platforms": {
@@ -6796,12 +7201,15 @@ window.AC_DATA = {
    "url": "https://re1999.bluepoch.com/",
    "steam": "3092660",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3092660/a4e4ea66e8b6210c00a2a9711b2c3e0647971a88/header.jpg?t=1790144350",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2025-05-28",
    "history": [
     {
      "name": "As of Wine-Staging 10.5, Reverse: 1999 is playable on Linux.",
      "date": "May 28, 2025, 13:15:00 UTC",
-     "url": "https://www.protondb.com/app/3092660"
+     "url": "https://www.protondb.com/app/3092660",
+     "day": "2025-05-28"
     }
    ],
    "platforms": {
@@ -6844,6 +7252,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/rf-online-next.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-11-18",
    "history": [],
    "platforms": {
@@ -6883,12 +7293,15 @@ window.AC_DATA = {
    "url": "https://www.ubisoft.com/en-us/game/riders-republic",
    "steam": "2290180",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2290180/67fdaa60403fcb99374576f41d2e46707beed80d/header_alt_assets_4.jpg?t=1791385214",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Developers are looking into Steam Deck compatibility",
      "date": "Jun 9, 2023, 3:15 PM UTC-5",
-     "url": "https://store.steampowered.com/news/app/2290180?emclan=103582791473516299&emgid=3665413967455070747"
+     "url": "https://store.steampowered.com/news/app/2290180?emclan=103582791473516299&emgid=3665413967455070747",
+     "day": "2023-06-09"
     }
    ],
    "platforms": {
@@ -6929,6 +7342,8 @@ window.AC_DATA = {
    "url": "http://www.risingstorm2.com/",
    "steam": "418460",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/418460/header.jpg?t=1789745392",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2025-04-05",
    "history": [],
    "platforms": {
@@ -6964,22 +7379,27 @@ window.AC_DATA = {
    "url": "https://roblox.com",
    "steam": "",
    "image": "images/covers/roblox.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-09-08",
    "history": [
     {
      "name": "Future Wine Support",
      "date": "May 13, 2023, 2:29 PM CDT",
-     "url": "https://user-images.githubusercontent.com/29169102/238155523-b6d53f64-81a1-49a8-be6d-d02d1e784dfb.png"
+     "url": "https://user-images.githubusercontent.com/29169102/238155523-b6d53f64-81a1-49a8-be6d-d02d1e784dfb.png",
+     "day": "2023-05-13"
     },
     {
      "name": "Wine Support Yanked",
      "date": "Fri, 01 Mar 2024 20:45:14 GMT",
-     "url": "https://vinegarhq.org/Home/rol_faq.html"
+     "url": "https://vinegarhq.org/Home/rol_faq.html",
+     "day": "2024-03-01"
     },
     {
      "name": "Game can now run using a proprietary runtime environment without the need for Wine.",
      "date": "Fri, 01 August 2024 1:30:13 GMT",
-     "url": "https://sober.vinegarhq.org/"
+     "url": "https://sober.vinegarhq.org/",
+     "day": "2024-08-01"
     }
    ],
    "platforms": {
@@ -7031,6 +7451,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "252950",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252950/3abd9ab079c8896a4762dbe34a853d89b7f704df/header_alt_assets_17.jpg?t=1791210513",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2026-04-28",
    "history": [],
    "platforms": {
@@ -7075,17 +7497,21 @@ window.AC_DATA = {
    "url": "https://www.roguecompany.com/",
    "steam": "872200",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/872200/header.jpg?t=1702321005",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "EAC enabled for Linux",
      "date": "Apr 19, 2022, 11:09 AM GMT+2",
-     "url": "https://github.com/ValveSoftware/Proton/issues/5214#issuecomment-1120110276"
+     "url": "https://github.com/ValveSoftware/Proton/issues/5214#issuecomment-1120110276",
+     "day": "2022-04-19"
     },
     {
      "name": "Issues with glibc",
      "date": "May 22, 2022, 01:42 AM GMT+2",
-     "url": "https://github.com/ValveSoftware/Proton/issues/5214#issuecomment-1133784284"
+     "url": "https://github.com/ValveSoftware/Proton/issues/5214#issuecomment-1133784284",
+     "day": "2022-05-22"
     }
    ],
    "platforms": {
@@ -7127,37 +7553,45 @@ window.AC_DATA = {
    "url": "https://rust.facepunch.com/",
    "steam": "252490",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg?t=1781536981",
+   "deck": "unsupported",
+   "protondb": "silver",
    "updated": "2024-08-11",
    "history": [
     {
      "name": "Working with EAC",
      "date": "Tue Jul 27 2021 06:07:00 GMT+0000",
-     "url": "https://www.gamingonlinux.com/2021/07/garry-newman-of-facepunch-mentions-working-with-eac-for-rust-on-linux-with-proton/"
+     "url": "https://www.gamingonlinux.com/2021/07/garry-newman-of-facepunch-mentions-working-with-eac-for-rust-on-linux-with-proton/",
+     "day": "2021-07-27"
     },
     {
      "name": "May be ready in a month!",
      "date": "Mon May 30 2022 01:26:00 GMT+0200",
-     "url": "https://twitter.com/garrynewman/status/1531235676653510657"
+     "url": "https://twitter.com/garrynewman/status/1531235676653510657",
+     "day": "2022-05-30"
     },
     {
      "name": "sooo... any updates? - Tomorrow",
      "date": "Tue Jun 28 2022 15:20:00 GMT+0200",
-     "url": "https://twitter.com/garrynewman/status/1541773484015161347"
+     "url": "https://twitter.com/garrynewman/status/1541773484015161347",
+     "day": "2022-06-28"
     },
     {
      "name": "Client & Server Update Postponed",
      "date": "Tue Jun 29 2022 10:55:00 GMT+0200",
-     "url": "https://twitter.com/garrynewman/status/1541773484015161347"
+     "url": "https://twitter.com/garrynewman/status/1541773484015161347",
+     "day": "2022-06-29"
     },
     {
      "name": "Problems with update to EOS SDK",
      "date": "Sun Jul 24 2022 09:01:00 GMT+0200",
-     "url": "https://twitter.com/garrynewman/status/1551100275884171270"
+     "url": "https://twitter.com/garrynewman/status/1551100275884171270",
+     "day": "2022-07-24"
     },
     {
      "name": "Well, maybe no support for Linux after all",
      "date": "Sep 26, 2022, 8:29 PM GMT+2",
-     "url": "https://twitter.com/garrynewman/status/1574466250167787520"
+     "url": "https://twitter.com/garrynewman/status/1574466250167787520",
+     "day": "2022-09-26"
     }
    ],
    "platforms": {
@@ -7193,6 +7627,8 @@ window.AC_DATA = {
    "url": "https://sbox.game/",
    "steam": "590830",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/590830/0f64b7e4f9628fdcff7e1f86696d08b9d280de5e/header.jpg?t=1791282405",
+   "deck": "unsupported",
+   "protondb": "silver",
    "updated": "2024-06-30",
    "history": [],
    "platforms": {
@@ -7235,6 +7671,8 @@ window.AC_DATA = {
    "url": "https://scpslgame.com/",
    "steam": "700330",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/700330/c2b932822ae2dba51825c258fd2fb847f32c151f/header_alt_assets_1.jpg?t=1792263389",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-09-29",
    "history": [],
    "platforms": {
@@ -7275,6 +7713,8 @@ window.AC_DATA = {
    "url": "https://scumgame.com/",
    "steam": "513710",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/513710/a33eb72f52841f591b296f78e46824d7aabb2c87/header.jpg?t=1791209009",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -7310,6 +7750,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1172620",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172620/579c6d544424019a032f4add98e8f923925c1cef/header.jpg?t=1789650456",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2024-03-12",
    "history": [],
    "platforms": {
@@ -7345,12 +7787,15 @@ window.AC_DATA = {
    "url": "",
    "steam": "3354750",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3354750/79c5a87b61a396cc6e6b69e3a083727f175dea83/header.jpg?t=1788891347",
+   "deck": "unsupported",
+   "protondb": "bronze",
    "updated": "2026-10-02",
    "history": [
     {
      "name": "ReSkate fan project released",
      "date": "2026-10-02",
-     "url": "https://www.pcgamer.com/games/sports/reskate-modding-platform-released/"
+     "url": "https://www.pcgamer.com/games/sports/reskate-modding-platform-released/",
+     "day": "2026-10-02"
     }
    ],
    "platforms": {
@@ -7391,6 +7836,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2853730",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2853730/b0e631853f8a6dda7c841d6a74df9dae4598fb0f/header.jpg?t=1792053411",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2024-09-01",
    "history": [],
    "platforms": {
@@ -7426,17 +7873,21 @@ window.AC_DATA = {
    "url": "https://www.smitegame.com/",
    "steam": "386360",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/386360/header.jpg?t=1764627618",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Previously working most likely due to fluke in EAC Config",
      "date": "Aug 05, 2022, 9:57 PM",
-     "url": "https://github.com/ValveSoftware/Proton/issues/6062#issuecomment-1206809079"
+     "url": "https://github.com/ValveSoftware/Proton/issues/6062#issuecomment-1206809079",
+     "day": "2022-08-05"
     },
     {
      "name": "Linux Support!",
      "date": "Jun 7, 2023, 12:00 PM CDT",
-     "url": "https://www.smitegame.com/news/the-season-of-souls-10-6-update-notes/"
+     "url": "https://www.smitegame.com/news/the-season-of-souls-10-6-update-notes/",
+     "day": "2023-06-07"
     }
    ],
    "platforms": {
@@ -7472,6 +7923,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2437170",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2437170/c4d54412b27c5cad84d513cea3d3a86a278a2343/header_alt_assets_28.jpg?t=1791236076",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-02-24",
    "history": [],
    "platforms": {
@@ -7507,6 +7960,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "312660",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312660/header.jpg?t=1681207252",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2024-10-18",
    "history": [],
    "platforms": {
@@ -7542,6 +7997,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1029690",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1029690/header.jpg?t=1770633150",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-10-28",
    "history": [],
    "platforms": {
@@ -7578,6 +8035,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2169200",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2169200/header.jpg?t=1765448187",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2025-12-15",
    "history": [],
    "platforms": {
@@ -7613,6 +8072,8 @@ window.AC_DATA = {
    "url": "https://snowbreak.amazingseasun.com/",
    "steam": "2668080",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2668080/065403315ab5a3ebbd3c07f85b6a3f40a1eb4ccd/header.jpg?t=1769627290",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-07-31",
    "history": [],
    "platforms": {
@@ -7648,6 +8109,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2373990",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2373990/018068a74847b3953278efacca07cfbe537a46c7/header.jpg?t=1781758887",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2025-11-08",
    "history": [],
    "platforms": {
@@ -7691,6 +8154,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2951690",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2951690/b5b043746584be58c2064bfa23dd1569529c4153/header.jpg?t=1787628064",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2025-07-10",
    "history": [],
    "platforms": {
@@ -7731,17 +8196,21 @@ window.AC_DATA = {
    "url": "https://joinsquad.com/",
    "steam": "393380",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/393380/0b19b50aabea356bd8f534fbe7d6db9bd227810a/header.jpg?t=1792423549",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-08-14",
    "history": [
     {
      "name": "Added Linux support",
      "date": "Feb 15, 2019, 9:30 AM EST",
-     "url": "https://www.reddit.com/r/joinsquad/comments/aquk3u/happy_to_see_squad_now_works_on_linux/"
+     "url": "https://www.reddit.com/r/joinsquad/comments/aquk3u/happy_to_see_squad_now_works_on_linux/",
+     "day": "2019-02-15"
     },
     {
      "name": "Workaround no longer required",
      "date": "Jan 12, 2023, 10:46 PM GMT+1",
-     "url": "https://github.com/ValveSoftware/Proton/issues/938#issuecomment-1381029311"
+     "url": "https://github.com/ValveSoftware/Proton/issues/938#issuecomment-1381029311",
+     "day": "2023-01-12"
     }
    ],
    "platforms": {
@@ -7777,6 +8246,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "736220",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/736220/header.jpg?t=1790967343",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2025-04-05",
    "history": [],
    "platforms": {
@@ -7812,12 +8283,15 @@ window.AC_DATA = {
    "url": "https://robertsspaceindustries.com/",
    "steam": "",
    "image": "images/covers/star-citizen.png",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-09-08",
    "history": [
     {
      "name": "\"Linux/Wine does not work currently, we are investigating a solution to the problem\"",
      "date": "Nov 16, 2021, 11:59 PM GMT+2",
-     "url": "https://robertsspaceindustries.com/spectrum/community/SC/forum/190048/thread/star-citizen-alpha-3-15-1e-ptu-7876811-patch-notes"
+     "url": "https://robertsspaceindustries.com/spectrum/community/SC/forum/190048/thread/star-citizen-alpha-3-15-1e-ptu-7876811-patch-notes",
+     "day": "2021-11-16"
     }
    ],
    "platforms": {
@@ -7858,6 +8332,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/starcraft-ii.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-05-25",
    "history": [],
    "platforms": {
@@ -7893,6 +8369,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/starcraft-remastered.png",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-09-12",
    "history": [],
    "platforms": {
@@ -7928,6 +8406,8 @@ window.AC_DATA = {
    "url": "https://www.strinova.com/",
    "steam": "1282270",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1282270/477fa284fa4e2601943207cd22d10726078bb726/header.jpg?t=1789649157",
+   "deck": "unsupported",
+   "protondb": "platinum",
    "updated": "2025-05-26",
    "history": [],
    "platforms": {
@@ -7971,6 +8451,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2426960",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426960/aff09e5b6524828ef6902009f5de3d78bd79c443/header.jpg?t=1787886556",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2024-10-18",
    "history": [],
    "platforms": {
@@ -8006,6 +8488,8 @@ window.AC_DATA = {
    "url": "https://animalroyale.com",
    "steam": "843380",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/843380/17701fe1f209bcbb2489a46b167998bb4253a59e/header_alt_assets_23.jpg?t=1791919216",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -8041,6 +8525,8 @@ window.AC_DATA = {
    "url": "https://www.teamfortress.com/",
    "steam": "440",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/440/header.jpg?t=1757348372",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -8084,6 +8570,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/teamfight-tactics.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-02-23",
    "history": [],
    "platforms": {
@@ -8134,6 +8622,8 @@ window.AC_DATA = {
    "url": "https://testdriveunlimited.com",
    "steam": "1249970",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1249970/0019588f5e579727a0f653c97dc7cb62e8e4de00/header.jpg?t=1788364521",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2025-06-29",
    "history": [],
    "platforms": {
@@ -8169,6 +8659,8 @@ window.AC_DATA = {
    "url": "https://www.ubisoft.com/en-us/game/the-crew/the-crew-2",
    "steam": "646910",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/646910/header.jpg?t=1787130932",
+   "deck": "unsupported",
+   "protondb": "borked",
    "updated": "2024-10-13",
    "history": [],
    "platforms": {
@@ -8204,17 +8696,21 @@ window.AC_DATA = {
    "url": "",
    "steam": "2698940",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2698940/4e51b5d3593569eb2214bf5277c5c5aded6d05be/header_alt_assets_3.jpg?t=1791551745",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2025-10-30",
    "history": [
     {
      "name": "Running on Proton",
      "date": "Jun 5, 2025, 0:00 AM GMT",
-     "url": "https://www.protondb.com/app/2698940#nICRHhtT8P"
+     "url": "https://www.protondb.com/app/2698940#nICRHhtT8P",
+     "day": "2025-06-05"
     },
     {
      "name": "Officially supported",
      "date": "Oct 30, 2025, 0:00 AM GMT",
-     "url": "https://www.ubisoft.com/en-us/game/the-crew/motorfest/news-updates/35DPcha72DbvZFcSFkHP28/season-8-quality-of-life-improvements"
+     "url": "https://www.ubisoft.com/en-us/game/the-crew/motorfest/news-updates/35DPcha72DbvZFcSFkHP28/season-8-quality-of-life-improvements",
+     "day": "2025-10-30"
     }
    ],
    "platforms": {
@@ -8250,6 +8746,8 @@ window.AC_DATA = {
    "url": "https://www.ubisoft.com/en-us/game/the-division/the-division-1",
    "steam": "365590",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/365590/e36fd6a73af2b20d6286633ee3a089acf53397ff/header.jpg?t=1782421726",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -8285,17 +8783,21 @@ window.AC_DATA = {
    "url": "https://www.ubisoft.com/en-us/game/the-division/the-division-2",
    "steam": "2221490",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2221490/cbba91ad5e65bce519fca6297c61f14e7e8af6ea/header_alt_assets_12.jpg?t=1791884938",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Show your support!",
      "date": "23 August 2022 12:40:12 UTC",
-     "url": "https://discussions.ubisoft.com/post/829691"
+     "url": "https://discussions.ubisoft.com/post/829691",
+     "day": "2022-08-23"
     },
     {
      "name": "Added Proton EAC Support",
      "date": "18 January 2023 13:11:00 UTC",
-     "url": "https://steamcommunity.com/games/2221490/announcements/detail/3632750190483497137"
+     "url": "https://steamcommunity.com/games/2221490/announcements/detail/3632750190483497137",
+     "day": "2023-01-18"
     }
    ],
    "platforms": {
@@ -8338,6 +8840,8 @@ window.AC_DATA = {
    "url": "https://www.reachthefinals.com/",
    "steam": "2073850",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2073850/61f55ef49a74c76bf9fda9ec35bc3101eeee2b3e/header.jpg?t=1789034839",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2025-11-08",
    "history": [],
    "platforms": {
@@ -8374,6 +8878,8 @@ window.AC_DATA = {
    "url": "https://tfd.nexon.com",
    "steam": "2074920",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2074920/dc8ac02c8328d66f2f78ea8b83472bdd7e281a62/header.jpg?t=1789716956",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-07-02",
    "history": [],
    "platforms": {
@@ -8410,6 +8916,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2285150",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2285150/7a625692b42e4ebfce79e723b8f6a846aa4241a2/header.jpg?t=1779699935",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-10-07",
    "history": [],
    "platforms": {
@@ -8445,6 +8953,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "376210",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/376210/header.jpg?t=1653237914",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -8485,6 +8995,8 @@ window.AC_DATA = {
    "url": "https://www.txchainsawgame.com/",
    "steam": "1433140",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1433140/header.jpg?t=1790794420",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-07-10",
    "history": [],
    "platforms": {
@@ -8520,6 +9032,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2429640",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2429640/497cc638fa3186f1aeefddaff89eaaf6f0c2e7dd/header.jpg?t=1787851215",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-10-05",
    "history": [],
    "platforms": {
@@ -8555,6 +9069,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1237970",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237970/header.jpg?t=1779987598",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -8590,6 +9106,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1827180",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1827180/header.jpg?t=1779961808",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-10-19",
    "history": [],
    "platforms": {
@@ -8625,17 +9143,21 @@ window.AC_DATA = {
    "url": "https://www.toweroffantasy-global.com/",
    "steam": "2064650",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2064650/9d1884cad51adb615d0fd9958e715e5c98027e5a/header.jpg?t=1792393433",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2025-04-30",
    "history": [
     {
      "name": "Game started working on Linux",
      "date": "31 March 2025 05:12:08 UTC",
-     "url": "https://www.protondb.com/app/2064650#nnunTaGO89"
+     "url": "https://www.protondb.com/app/2064650#nnunTaGO89",
+     "day": "2025-03-31"
     },
     {
      "name": "Refused Steam Deck Support",
      "date": "5 August 2022 4:42 PM UTC-5",
-     "url": "https://twitter.com/ToF_EN_Official/status/1555670612005343232"
+     "url": "https://twitter.com/ToF_EN_Official/status/1555670612005343232",
+     "day": "2022-08-05"
     }
    ],
    "platforms": {
@@ -8675,6 +9197,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "3224770",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3224770/d7ddfe8985d7be8db7a0195d5c482c4438ed929d/header.jpg?t=1773306345",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2025-07-12",
    "history": [],
    "platforms": {
@@ -8710,6 +9234,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1881700",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1881700/header.jpg?t=1774904319",
+   "deck": "unsupported",
+   "protondb": "silver",
    "updated": "2024-09-27",
    "history": [],
    "platforms": {
@@ -8745,6 +9271,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1549250",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1549250/e11d9acd35ad263506649d9c537a5c62a5b7fa61/header_alt_assets_8.jpg?t=1789007178",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-08-24",
    "history": [],
    "platforms": {
@@ -8781,12 +9309,15 @@ window.AC_DATA = {
    "url": "",
    "steam": "304930",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/304930/161ec2d6ace8a03afdb7a423510ff8f7d8b301ba/header.jpg?t=1783436894",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [
     {
      "name": "Activated BattlEye in Proton",
      "date": "Nov 06, 2021, 2:15 AM",
-     "url": "https://store.steampowered.com/news/group/4145017/view/3104663180636096966"
+     "url": "https://store.steampowered.com/news/group/4145017/view/3104663180636096966",
+     "day": "2021-11-06"
     }
    ],
    "platforms": {
@@ -8826,6 +9357,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1604030",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1604030/be49834ab147ad22ba17005fb847c93917d18b97/header.jpg?t=1787038382",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2024-11-10",
    "history": [],
    "platforms": {
@@ -8861,12 +9394,15 @@ window.AC_DATA = {
    "url": "https://playvalorant.com",
    "steam": "",
    "image": "images/covers/valorant.png",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-09-02",
    "history": [
     {
      "name": "Vanguard developer claims Linux has \"too much attack surface\".",
      "date": "Fri, 26 Jan 2024 01:27:06 GMT",
-     "url": "https://github.com/AreWeAntiCheatYet/AreWeAntiCheatYet/assets/33342705/266b364f-8964-4ae2-9cc4-58e2fd5f9947"
+     "url": "https://github.com/AreWeAntiCheatYet/AreWeAntiCheatYet/assets/33342705/266b364f-8964-4ae2-9cc4-58e2fd5f9947",
+     "day": "2024-01-26"
     }
    ],
    "platforms": {
@@ -8910,6 +9446,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2818260",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2818260/b094a53f163355afd252d36feee13e75f94dc4ae/header.jpg?t=1771426885",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-10-27",
    "history": [],
    "platforms": {
@@ -8945,6 +9483,8 @@ window.AC_DATA = {
    "url": "https://vindictus.nexon.net/",
    "steam": "212160",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212160/456e1fd3b007e1ade6ac029c49164e1ed74e14ac/header.jpg?t=1787104224",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2024-09-08",
    "history": [],
    "platforms": {
@@ -8980,12 +9520,15 @@ window.AC_DATA = {
    "url": "https://hello.vrchat.com/",
    "steam": "438100",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438100/header.jpg?t=1762366454",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2024-01-20",
    "history": [
     {
      "name": "Does this prevent people from playing VRChat on platforms like SteamOS on the Steam Deck? - NO!",
      "date": "Tue Jul 26 2022 00:00:00 GMT+0000",
-     "url": "https://hello.vrchat.com/blog/vrchat-security-update"
+     "url": "https://hello.vrchat.com/blog/vrchat-security-update",
+     "day": "2022-07-26"
     }
    ],
    "platforms": {
@@ -9033,6 +9576,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "767560",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/767560/0d291b863576b43b588ab30a49d9991aea694ed8/header.jpg?t=1790758165",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2024-10-25",
    "history": [],
    "platforms": {
@@ -9068,6 +9613,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1491000",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1491000/652a3f62eab64537ac38d483c6fc3cf5d2036ff1/header.jpg?t=1776768151",
+   "deck": "playable",
+   "protondb": "silver",
    "updated": "2024-10-13",
    "history": [],
    "platforms": {
@@ -9103,12 +9650,15 @@ window.AC_DATA = {
    "url": "https://warthunder.com/",
    "steam": "236390",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236390/38881c549e623fe432af4e7b4bc3952b443906f5/header.jpg?t=1791988478",
+   "deck": "verified",
+   "protondb": "gold",
    "updated": "2024-12-27",
    "history": [
     {
      "name": "War Thunder switches to BattlEye",
      "date": "2024-12-05T00:00:00.0000000",
-     "url": "https://warthunder.com/en/news/9247-war-thunder-anti-cheat-system-update-en"
+     "url": "https://warthunder.com/en/news/9247-war-thunder-anti-cheat-system-update-en",
+     "day": "2024-12-05"
     }
    ],
    "platforms": {
@@ -9156,6 +9706,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/warcraft-iii-reforged.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-07-04",
    "history": [],
    "platforms": {
@@ -9192,6 +9744,8 @@ window.AC_DATA = {
    "url": "https://ru.warface.com",
    "steam": "291480",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/291480/a5d53fd96d3f04a4d92e3c71a74e5061db8cc186/header.jpg?t=1772125417",
+   "deck": "unsupported",
+   "protondb": "borked",
    "updated": "2024-09-22",
    "history": [],
    "platforms": {
@@ -9227,6 +9781,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "230410",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/230410/1a3e7c2a05ce4e5cad5ac4c7e858cf5b0934704e/header.jpg?t=1790176468",
+   "deck": "verified",
+   "protondb": "platinum",
    "updated": "2024-01-19",
    "history": [],
    "platforms": {
@@ -9274,6 +9830,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "1361210",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1361210/6f8919b0183f24d271650c6dca958fb91edd5849/header_alt_assets_20.jpg?t=1790691939",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-12-27",
    "history": [],
    "platforms": {
@@ -9309,6 +9867,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "2183900",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2183900/c0da5cad512f85a006abb9181cb3f45107fb0223/header_alt_assets_14.jpg?t=1790874369",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-10-05",
    "history": [],
    "platforms": {
@@ -9344,17 +9904,21 @@ window.AC_DATA = {
    "url": "https://www.vermintide.com/",
    "steam": "552500",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552500/header.jpg?t=1764008361",
+   "deck": "unsupported",
+   "protondb": "gold",
    "updated": "2025-04-05",
    "history": [
     {
      "name": "EAC Implementation more complex than suspected",
      "date": "Jan 08, 2022, 0:00 AM",
-     "url": "https://support.fatshark.se/hc/en-us/articles/4408080108817--PC-Regarding-Easy-Anti-Cheat-and-Linux-Wine-Proton-Support"
+     "url": "https://support.fatshark.se/hc/en-us/articles/4408080108817--PC-Regarding-Easy-Anti-Cheat-and-Linux-Wine-Proton-Support",
+     "day": "2022-01-08"
     },
     {
      "name": "Works with launcher workaround and Proton Experimental",
      "date": "Aug 04, 2022, 9:21 PM GMT+2",
-     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/637"
+     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/637",
+     "day": "2022-08-04"
     }
    ],
    "platforms": {
@@ -9390,6 +9954,8 @@ window.AC_DATA = {
    "url": "https://www.ubisoft.com/en-us/game/watch-dogs/watch-dogs-2",
    "steam": "447040",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/447040/header.jpg?t=1751986887",
+   "deck": "unsupported",
+   "protondb": "platinum",
    "updated": "2025-07-30",
    "history": [],
    "platforms": {
@@ -9425,17 +9991,21 @@ window.AC_DATA = {
    "url": "https://www.ubisoft.com/en-us/game/watch-dogs/legion",
    "steam": "2239550",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2239550/header.jpg?t=1788548571",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-11-04",
    "history": [
     {
      "name": "Multiplayer working",
      "date": "Jan 28, 2023, 11:23 AM GMT+1",
-     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/1095"
+     "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/1095",
+     "day": "2023-01-28"
     },
     {
      "name": "BattlEye Removed",
      "date": "Tue Oct 31 2023 09:00:30 GMT-0500 (Central Daylight Time)",
-     "url": "https://steamdb.info/depot/2239551/history/"
+     "url": "https://steamdb.info/depot/2239551/history/",
+     "day": "2023-10-31"
     }
    ],
    "platforms": {
@@ -9468,9 +10038,11 @@ window.AC_DATA = {
    "anticheats": [
     "Unknown (Custom)"
    ],
-   "url": "https://wargaming.net/worldoftanks/",
+   "url": "https://worldoftanks.com/",
    "steam": "1407200",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1407200/77abf4cf5822818d81603512d8c747c618177189/header_alt_assets_26.jpg?t=1792410541",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-02-27",
    "history": [],
    "platforms": {
@@ -9514,6 +10086,8 @@ window.AC_DATA = {
    "url": "https://wotblitz.com/",
    "steam": "444200",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/444200/bd64dd64069d31a55e803ca181f4e1b6df7c9ae5/header.jpg?t=1791962132",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2024-02-27",
    "history": [],
    "platforms": {
@@ -9549,6 +10123,8 @@ window.AC_DATA = {
    "url": "",
    "steam": "",
    "image": "images/covers/world-of-warcraft.jpg",
+   "deck": "",
+   "protondb": "",
    "updated": "2024-03-13",
    "history": [],
    "platforms": {
@@ -9588,17 +10164,21 @@ window.AC_DATA = {
    "url": "https://wutheringwaves.kurogames.com/en/",
    "steam": "3513350",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3513350/fb969539fb0373bd5ee07c767bf9dafa4afae5c3/header.jpg?t=1791864800",
+   "deck": "playable",
+   "protondb": "platinum",
    "updated": "2025-07-04",
    "history": [
     {
      "name": "Steam Deck rating changed from Unknown to Playable.",
      "date": "Jul 15, 2025, 12:00 PM GMT-7",
-     "url": "https://store.steampowered.com/app/3513350/Wuthering_Waves/"
+     "url": "https://store.steampowered.com/app/3513350/Wuthering_Waves/",
+     "day": "2025-07-15"
     },
     {
      "name": "Publisher claims to be looking into better Steam Deck compatibility on the Steam store page description.",
      "date": "Jun 12, 2025, 12:00 PM GMT-7",
-     "url": "https://store.steampowered.com/app/3513350/Wuthering_Waves/"
+     "url": "https://store.steampowered.com/app/3513350/Wuthering_Waves/",
+     "day": "2025-06-12"
     }
    ],
    "platforms": {
@@ -9650,6 +10230,8 @@ window.AC_DATA = {
    "url": "https://zenless.hoyoverse.com/",
    "steam": "4162040",
    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4162040/285a6967d0efc7e37dad0e6a2d5ec3f0139915fc/header_alt_assets_1.jpg?t=1788905636",
+   "deck": "playable",
+   "protondb": "gold",
    "updated": "2024-07-31",
    "history": [],
    "platforms": {
@@ -9678,6 +10260,429 @@ window.AC_DATA = {
      "notes": []
     }
    }
+  }
+ ],
+ "changes": [],
+ "news": [
+  {
+   "day": "2026-10-14",
+   "slug": "fortnite",
+   "name": "Fortnite",
+   "text": "Epic announces Fortnite for Linux",
+   "url": "https://onlineservices.epicgames.com/news/introducing-easy-anti-cheat-linux-v2"
+  },
+  {
+   "day": "2026-10-02",
+   "slug": "skate",
+   "name": "skate.",
+   "text": "ReSkate fan project released",
+   "url": "https://www.pcgamer.com/games/sports/reskate-modding-platform-released/"
+  },
+  {
+   "day": "2026-09-10",
+   "slug": "for-honor",
+   "name": "For Honor",
+   "text": "Ubisoft blocks Linux and Steam Deck",
+   "url": "https://www.digitalcitizen.life/ubisoft-will-block-for-honor-on-linux-and-steam-deck-from-september-10/"
+  },
+  {
+   "day": "2025-10-30",
+   "slug": "the-crew-motorfest",
+   "name": "The Crew Motorfest",
+   "text": "Officially supported",
+   "url": "https://www.ubisoft.com/en-us/game/the-crew/motorfest/news-updates/35DPcha72DbvZFcSFkHP28/season-8-quality-of-life-improvements"
+  },
+  {
+   "day": "2025-09-25",
+   "slug": "farlight-84",
+   "name": "Farlight 84",
+   "text": "Developer divided linux into abnormal environments",
+   "url": "https://www.youtube.com/watch?v=hdo8vCJU0gw&t=134s"
+  },
+  {
+   "day": "2025-08-21",
+   "slug": "farlight-84",
+   "name": "Farlight 84",
+   "text": "Game started apply 1 day account ban with explicit linux denied message",
+   "url": "https://www.protondb.com/app/1928420/?device=any"
+  },
+  {
+   "day": "2025-07-15",
+   "slug": "wuthering-waves",
+   "name": "Wuthering Waves",
+   "text": "Steam Deck rating changed from Unknown to Playable.",
+   "url": "https://store.steampowered.com/app/3513350/Wuthering_Waves/"
+  },
+  {
+   "day": "2025-06-12",
+   "slug": "wuthering-waves",
+   "name": "Wuthering Waves",
+   "text": "Publisher claims to be looking into better Steam Deck compatibility on the Steam store page description.",
+   "url": "https://store.steampowered.com/app/3513350/Wuthering_Waves/"
+  },
+  {
+   "day": "2025-06-05",
+   "slug": "the-crew-motorfest",
+   "name": "The Crew Motorfest",
+   "text": "Running on Proton",
+   "url": "https://www.protondb.com/app/2698940#nICRHhtT8P"
+  },
+  {
+   "day": "2025-05-28",
+   "slug": "reverse-1999",
+   "name": "Reverse: 1999",
+   "text": "As of Wine-Staging 10.5, Reverse: 1999 is playable on Linux.",
+   "url": "https://www.protondb.com/app/3092660"
+  },
+  {
+   "day": "2025-05-28",
+   "slug": "punishing-gray-raven",
+   "name": "Punishing: Gray Raven",
+   "text": "As of Wine-Staging 10.5, Punishing: Gray Raven is playable on Linux.",
+   "url": "https://github.com/AreWeAntiCheatYet/AreWeAntiCheatYet/issues/1792"
+  },
+  {
+   "day": "2025-05-28",
+   "slug": "heaven-burns-red",
+   "name": "Heaven Burns Red",
+   "text": "As of Wine-Staging 10.5, Heaven Burns Red is playable on Linux.",
+   "url": "https://www.protondb.com/app/1973710"
+  },
+  {
+   "day": "2025-04-01",
+   "slug": "paladins",
+   "name": "Paladins",
+   "text": "EAC updated, and Linux allowed after Evil Mojo layoffs",
+   "url": "https://www.protondb.com/app/444090/1000#JBFivnOCC-"
+  },
+  {
+   "day": "2025-03-31",
+   "slug": "tower-of-fantasy",
+   "name": "Tower of Fantasy",
+   "text": "Game started working on Linux",
+   "url": "https://www.protondb.com/app/2064650#nnunTaGO89"
+  },
+  {
+   "day": "2024-12-05",
+   "slug": "war-thunder",
+   "name": "War Thunder",
+   "text": "War Thunder switches to BattlEye",
+   "url": "https://warthunder.com/en/news/9247-war-thunder-anti-cheat-system-update-en"
+  },
+  {
+   "day": "2024-10-31",
+   "slug": "apex-legends",
+   "name": "Apex Legends",
+   "text": "Linux support disabled",
+   "url": "https://x.com/PlayApex/status/1852019667315102151"
+  },
+  {
+   "day": "2024-09-17",
+   "slug": "grand-theft-auto-v",
+   "name": "Grand Theft Auto V",
+   "text": "BattlEye added",
+   "url": "https://support.rockstargames.com/articles/1nenwhZlVrJY6CTFeSS2Fx/grand-theft-auto-online-battleye-faq"
+  },
+  {
+   "day": "2024-09-11",
+   "slug": "farlight-84",
+   "name": "Farlight 84",
+   "text": "EAC replaced by NetEase Yidun",
+   "url": "https://steamdb.info/depot/1928421/history/?changeid=M:5622484311305688663"
+  },
+  {
+   "day": "2024-08-01",
+   "slug": "roblox",
+   "name": "Roblox",
+   "text": "Game can now run using a proprietary runtime environment without the need for Wine.",
+   "url": "https://sober.vinegarhq.org/"
+  },
+  {
+   "day": "2024-06-11",
+   "slug": "fortnite",
+   "name": "Fortnite",
+   "text": "Removed BattlEye",
+   "url": "https://x.com/ShiinaBR/status/1800567329870537171"
+  },
+  {
+   "day": "2024-03-01",
+   "slug": "roblox",
+   "name": "Roblox",
+   "text": "Wine Support Yanked",
+   "url": "https://vinegarhq.org/Home/rol_faq.html"
+  },
+  {
+   "day": "2024-01-26",
+   "slug": "valorant",
+   "name": "Valorant",
+   "text": "Vanguard developer claims Linux has \"too much attack surface\".",
+   "url": "https://github.com/AreWeAntiCheatYet/AreWeAntiCheatYet/assets/33342705/266b364f-8964-4ae2-9cc4-58e2fd5f9947"
+  },
+  {
+   "day": "2023-11-23",
+   "slug": "hunt-showdown-1896",
+   "name": "Hunt: Showdown 1896",
+   "text": "Anticheat appears to be fixed following the official acknowledgment of anticheat issues by Crytek.",
+   "url": "https://www.gamingonlinux.com/2023/11/hunt-showdown-anti-cheat-now-fixed-for-steam-deck-linux/"
+  },
+  {
+   "day": "2023-11-16",
+   "slug": "hunt-showdown-1896",
+   "name": "Hunt: Showdown 1896",
+   "text": "Widespread reports of anticheat breaking following November 16th 2023 update",
+   "url": "https://www.reddit.com/r/linux_gaming/comments/17wtqu1/hunt_showdown_not_working_anymore/"
+  },
+  {
+   "day": "2023-10-31",
+   "slug": "watch-dogs-legion",
+   "name": "Watch Dogs: Legion",
+   "text": "BattlEye Removed",
+   "url": "https://steamdb.info/depot/2239551/history/"
+  },
+  {
+   "day": "2023-09-29",
+   "slug": "hell-let-loose",
+   "name": "Hell Let Loose",
+   "text": "No official acknowledgement, but widespread reports that the game works now.",
+   "url": "https://www.reddit.com/r/linux_gaming/comments/16v2ula/hell_let_loose_works_on_linux_now/"
+  },
+  {
+   "day": "2023-08-23",
+   "slug": "rainbow-six-extraction",
+   "name": "Rainbow Six Extraction",
+   "text": "Proton Experimental fixes Rainbow Six Extraction, EA App, Immortals of Aveum",
+   "url": "https://www.gamingonlinux.com/2023/08/proton-experimental-fixes-rainbow-six-extraction-ea-app-immortals-of-aveum/"
+  },
+  {
+   "day": "2023-07-27",
+   "slug": "for-honor",
+   "name": "For Honor",
+   "text": "Steam Deck Support",
+   "url": "https://www.ubisoft.com/en-us/game/for-honor/news-updates/6jz99oXbJUVyK5h17fp6B8/patch-notes-2451-for-honor"
+  },
+  {
+   "day": "2023-07-15",
+   "slug": "battlebit-remastered",
+   "name": "BattleBit Remastered",
+   "text": "Devs announce FACEIT Linux support via official Discord",
+   "url": "https://i.postimg.cc/DZ4Ty8Wb/battlebit-mod-post.png"
+  },
+  {
+   "day": "2023-07-14",
+   "slug": "battlebit-remastered",
+   "name": "BattleBit Remastered",
+   "text": "Devs commit to supporting EAC on Linux.",
+   "url": "https://www.reddit.com/r/pcgaming/comments/14zhjb1/battlebit_ama/jrxva4o/"
+  },
+  {
+   "day": "2023-07-05",
+   "slug": "genshin-impact",
+   "name": "Genshin Impact",
+   "text": "v3.8: Game Anti-Cheat is allowing Proton on clean installs, on update release.",
+   "url": "https://www.reddit.com/r/linux_gaming/comments/15sskjh/"
+  },
+  {
+   "day": "2023-06-09",
+   "slug": "riders-republic",
+   "name": "Riders Republic",
+   "text": "Developers are looking into Steam Deck compatibility",
+   "url": "https://store.steampowered.com/news/app/2290180?emclan=103582791473516299&emgid=3665413967455070747"
+  },
+  {
+   "day": "2023-06-07",
+   "slug": "smite",
+   "name": "SMITE",
+   "text": "Linux Support!",
+   "url": "https://www.smitegame.com/news/the-season-of-souls-10-6-update-notes/"
+  },
+  {
+   "day": "2023-05-13",
+   "slug": "roblox",
+   "name": "Roblox",
+   "text": "Future Wine Support",
+   "url": "https://user-images.githubusercontent.com/29169102/238155523-b6d53f64-81a1-49a8-be6d-d02d1e784dfb.png"
+  },
+  {
+   "day": "2023-05-10",
+   "slug": "dead-by-daylight",
+   "name": "Dead by Daylight",
+   "text": "Dead by Daylight is Steam Deck Verified!",
+   "url": "https://store.steampowered.com/news/app/381210/view/3723958226061651097"
+  },
+  {
+   "day": "2023-04-27",
+   "slug": "for-honor",
+   "name": "For Honor",
+   "text": "Support Finalized",
+   "url": "https://steamdb.info/patchnotes/10988960/"
+  },
+  {
+   "day": "2023-04-06",
+   "slug": "halo-the-master-chief-collection",
+   "name": "Halo: The Master Chief Collection",
+   "text": "Steam Deck Support",
+   "url": "https://support.halowaypoint.com/hc/en-us/articles/14589112499348"
+  },
+  {
+   "day": "2023-04-03",
+   "slug": "hell-let-loose",
+   "name": "Hell Let Loose",
+   "text": "Steam Deck Support Planned",
+   "url": "https://youtu.be/DJqh61nfuTs?t=386"
+  },
+  {
+   "day": "2023-03-03",
+   "slug": "genshin-impact",
+   "name": "Genshin Impact",
+   "text": "v3.5: Game Anti-Cheat observed allowing Proton in restricted scenarios, 2 business weeks after update launch.",
+   "url": "https://www.reddit.com/r/linux_gaming/comments/123zllz/"
+  },
+  {
+   "day": "2023-02-22",
+   "slug": "dead-by-daylight",
+   "name": "Dead by Daylight",
+   "text": "Previous forum link deleted",
+   "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/1151"
+  },
+  {
+   "day": "2023-02-15",
+   "slug": "hunt-showdown-1896",
+   "name": "Hunt: Showdown 1896",
+   "text": "Multiple reports of game working",
+   "url": "https://www.gamingonlinux.com/2023/02/hunt-showdown-added-easy-anti-cheat-for-steam-deck-linux/"
+  },
+  {
+   "day": "2023-02-14",
+   "slug": "paladins",
+   "name": "Paladins",
+   "text": "No plans to dedicate time for steam deck / linux compatibility",
+   "url": "https://www.reddit.com/r/paladinsgame/comments/110mcuf/with_em_striving_to_do_better_how_about_some/j8g2nam/"
+  },
+  {
+   "day": "2023-01-28",
+   "slug": "watch-dogs-legion",
+   "name": "Watch Dogs: Legion",
+   "text": "Multiplayer working",
+   "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/1095"
+  },
+  {
+   "day": "2023-01-18",
+   "slug": "the-division-2",
+   "name": "The Division 2",
+   "text": "Added Proton EAC Support",
+   "url": "https://steamcommunity.com/games/2221490/announcements/detail/3632750190483497137"
+  },
+  {
+   "day": "2023-01-12",
+   "slug": "squad",
+   "name": "Squad",
+   "text": "Workaround no longer required",
+   "url": "https://github.com/ValveSoftware/Proton/issues/938#issuecomment-1381029311"
+  },
+  {
+   "day": "2022-12-18",
+   "slug": "halo-infinite",
+   "name": "Halo Infinite",
+   "text": "No longer requires workaround",
+   "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/1022"
+  },
+  {
+   "day": "2022-12-15",
+   "slug": "halo-the-master-chief-collection",
+   "name": "Halo: The Master Chief Collection",
+   "text": "Still actively working on it",
+   "url": "https://www.theverge.com/23499215/valve-steam-deck-interview-late-2022"
+  },
+  {
+   "day": "2022-11-17",
+   "slug": "naraka-bladepoint",
+   "name": "Naraka: Bladepoint",
+   "text": "Seems to work ootb now",
+   "url": "https://www.protondb.com/app/1203220#2_AueeZeaM"
+  },
+  {
+   "day": "2022-11-15",
+   "slug": "dead-by-daylight",
+   "name": "Dead by Daylight",
+   "text": "Runs with workarounds",
+   "url": "https://forum.deadbydaylight.com/en/discussion/comment/3265222/#Comment_3265222"
+  },
+  {
+   "day": "2022-11-02",
+   "slug": "fortnite",
+   "name": "Fortnite",
+   "text": "Was running for a short period of time",
+   "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/918#issuecomment-1299673303"
+  },
+  {
+   "day": "2022-11-01",
+   "slug": "fortnite",
+   "name": "Fortnite",
+   "text": "Removed Hyperion",
+   "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/918"
+  },
+  {
+   "day": "2022-10-12",
+   "slug": "escape-from-tarkov",
+   "name": "Escape from Tarkov",
+   "text": "BattlEye have not yet activated support",
+   "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/859"
+  },
+  {
+   "day": "2022-10-10",
+   "slug": "crossout",
+   "name": "Crossout",
+   "text": "Steam Deck verified",
+   "url": "https://steamdb.info/app/386180/history/?changeid=16318055"
+  },
+  {
+   "day": "2022-09-26",
+   "slug": "rust",
+   "name": "Rust",
+   "text": "Well, maybe no support for Linux after all",
+   "url": "https://twitter.com/garrynewman/status/1574466250167787520"
+  },
+  {
+   "day": "2022-08-31",
+   "slug": "halo-the-master-chief-collection",
+   "name": "Halo: The Master Chief Collection",
+   "text": "Updated Linux EAC Files",
+   "url": "https://steamdb.info/patchnotes/9367265/"
+  },
+  {
+   "day": "2022-08-23",
+   "slug": "the-division-2",
+   "name": "The Division 2",
+   "text": "Show your support!",
+   "url": "https://discussions.ubisoft.com/post/829691"
+  },
+  {
+   "day": "2022-08-05",
+   "slug": "tower-of-fantasy",
+   "name": "Tower of Fantasy",
+   "text": "Refused Steam Deck Support",
+   "url": "https://twitter.com/ToF_EN_Official/status/1555670612005343232"
+  },
+  {
+   "day": "2022-08-05",
+   "slug": "smite",
+   "name": "SMITE",
+   "text": "Previously working most likely due to fluke in EAC Config",
+   "url": "https://github.com/ValveSoftware/Proton/issues/6062#issuecomment-1206809079"
+  },
+  {
+   "day": "2022-08-05",
+   "slug": "paladins",
+   "name": "Paladins",
+   "text": "Previously working most likely due to fluke in EAC Config",
+   "url": "https://github.com/ValveSoftware/Proton/issues/6062#issuecomment-1206809079"
+  },
+  {
+   "day": "2022-08-04",
+   "slug": "warhammer-vermintide-2",
+   "name": "Warhammer: Vermintide 2",
+   "text": "Works with launcher workaround and Proton Experimental",
+   "url": "https://github.com/Starz0r/AreWeAntiCheatYet/issues/637"
   }
  ]
 };

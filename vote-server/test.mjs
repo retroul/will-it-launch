@@ -88,4 +88,26 @@ assert.equal((await call("GET", "/requests")).body.requests.length, 4);
 const stored = JSON.stringify([...sqlite.prepare("SELECT * FROM votes").all(), ...sqlite.prepare("SELECT * FROM requests").all()]);
 assert.ok(!/\d+\.\d+\.\d+\.\d+/.test(stored), "IPs are hashed");
 
+// Bot check (Turnstile) and rate limit, with Cloudflare's verify call and limiter faked.
+const realFetch = globalThis.fetch;
+globalThis.fetch = async (url, init) => {
+  assert.equal(String(url), "https://challenges.cloudflare.com/turnstile/v0/siteverify");
+  assert.equal(init.body.get("secret"), "ts-secret");
+  return new Response(JSON.stringify({ success: init.body.get("response") === "good-token" }));
+};
+let used = 0;
+const guarded = { ...env, TURNSTILE_SECRET: "ts-secret", WRITE_LIMITER: { limit: async () => ({ success: ++used <= 3 }) } };
+const guardedCall = (method, path, body) => worker.fetch(new Request(`https://votes.example${path}`, {
+  method, headers: { "CF-Connecting-IP": "7.7.7.7", Origin: "https://site.example", "Content-Type": "application/json" },
+  body: body === undefined ? undefined : JSON.stringify(body),
+}), guarded).then(async (res) => ({ status: res.status, body: await res.json() }));
+
+assert.equal((await guardedCall("POST", "/requests", { name: "Bot Game" })).status, 403, "no token");
+assert.equal((await guardedCall("POST", "/requests", { name: "Bot Game", token: "fake" })).status, 403, "bad token");
+r = await guardedCall("POST", "/requests", { name: "Human Game", token: "good-token" });
+assert.equal(r.status, 200, "good token");
+assert.equal((await guardedCall("POST", `/requests/${r.body.id}/vote`, {})).status, 429, "4th write in a minute is limited");
+assert.equal((await guardedCall("GET", "/requests")).status, 200, "reading is never limited");
+globalThis.fetch = realFetch;
+
 console.log("vote-server: all checks passed");

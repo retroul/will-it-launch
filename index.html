@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://shared.akamai.steamstatic.com https://cdn.cloudflare.steamstatic.com; connect-src 'self' https://*.workers.dev; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://shared.akamai.steamstatic.com https://cdn.cloudflare.steamstatic.com; connect-src 'self' https://*.workers.dev https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Will It Launch?</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -11,9 +11,11 @@
 <meta property="og:title" content="Will It Launch?">
 <meta property="og:description" content="Can I play it on Linux, Steam Deck, Mac or my phone? Anti-cheat compatibility for 230+ popular online games.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5z' fill='%23ffcc33' stroke='%231d1b2f' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='m8.5 12 2.4 2.4 4.6-4.8' fill='none' stroke='%231d1b2f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Rubik:wght@500;600;700;800&display=swap">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="theme-color" content="#ffcc33">
+<link rel="alternate" type="application/rss+xml" title="Will It Launch? - recent changes" href="feed.xml">
+<link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -30,6 +32,9 @@
 <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></symbol>
 <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6M6 11l6-6 6 6"/></symbol>
 <symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.3L12 17.1l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z"/></symbol>
+<symbol id="i-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7M16 6l-4-4-4 4M12 2v13"/></symbol>
+<symbol id="i-rss" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1.5" fill="currentColor"/></symbol>
 </svg>
 
 <header class="topbar">
@@ -41,6 +46,7 @@
     <nav class="nav" aria-label="Sections">
       <a href="#games" data-view="games">Games</a>
       <a href="#anticheats" data-view="anticheats">Anti-cheats</a>
+      <a href="#updates" data-view="updates">Updates</a>
       <a href="#requests" data-view="requests">Requests</a>
     </nav>
     <div class="top-actions">
@@ -108,6 +114,12 @@
     <ul id="ac-list" class="ac-list"></ul>
   </section>
 
+  <section id="updates-view" aria-labelledby="updates-heading" hidden>
+    <h2 id="updates-heading" class="section-title">Recently changed</h2>
+    <p class="section-note">Anti-cheat news and status changes, newest first. <a class="rss-link" href="feed.xml"><svg aria-hidden="true"><use href="#i-rss"/></svg>Follow with RSS</a></p>
+    <ol id="update-list" class="update-list"></ol>
+  </section>
+
   <section id="requests-view" aria-labelledby="req-heading" hidden>
     <h2 id="req-heading" class="section-title">Missing a game?</h2>
     <p class="section-note">Ask for it here. The most wanted games get added first.</p>
@@ -118,8 +130,9 @@
         <input id="request-name" type="text" maxlength="60" placeholder="Game name, e.g. Deep Rock Galactic" autocomplete="off" required>
         <button type="submit" class="btn btn-accent">Request it</button>
       </form>
+      <div id="turnstile" class="turnstile"></div>
       <p id="request-hint" class="request-hint" aria-live="polite"></p>
-      <p class="fine-print">One vote per game per internet connection. Votes are anonymous: we only keep a scrambled code made from your IP address, never the address itself.</p>
+      <p class="fine-print">One vote per game per internet connection. Votes are anonymous: we only keep a scrambled code made from your IP address, never the address itself. A quick Cloudflare check makes sure you're not a bot.</p>
       <ol id="request-list" class="request-list"></ol>
     </div>
 

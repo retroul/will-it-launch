@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Will It Launch? - recent changes</title>
+  <link>https://retroul.github.io/will-it-launch/</link>
+  <description>Anti-cheat status changes for popular games on Windows, Mac, Linux, Steam Deck, Android and iOS.</description>
+  <item>
+    <title>Fortnite: Epic announces Fortnite for Linux</title>
+    <link>https://retroul.github.io/will-it-launch/#fortnite</link>
+    <guid isPermaLink="false">2026-10-14:fortnite:Epic announces Fortnite for Linux</guid>
+    <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Source: https://onlineservices.epicgames.com/news/introducing-easy-anti-cheat-linux-v2</description>
+  </item>
+  <item>
+    <title>skate.: ReSkate fan project released</title>
+    <link>https://retroul.github.io/will-it-launch/#skate</link>
+    <guid isPermaLink="false">2026-10-02:skate:ReSkate fan project released</guid>
+    <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Source: https://www.pcgamer.com/games/sports/reskate-modding-platform-released/</description>
+  </item>
+  <item>
+    <title>For Honor: Ubisoft blocks Linux and Steam Deck</title>
+    <link>https://retroul.github.io/will-it-launch/#for-honor</link>
+    <guid isPermaLink="false">2026-09-10:for-honor:Ubisoft blocks Linux and Steam Deck</guid>
+    <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Source: https://www.digitalcitizen.life/ubisoft-will-block-for-honor-on-linux-and-steam-deck-from-september-10/</description>
+  </item>
+  <item>
+    <title>The Crew Motorfest: Officially supported</title>
+    <link>https://retroul.github.io/will-it-launch/#the-crew-motorfest</link>
+    <guid isPermaLink="false">2025-10-30:the-crew-motorfest:Officially supported</guid>
+    <pubDate>Thu, 30 Oct 2025 00:00:00 +0000</pubDate>
+    <description>Source: https://www.ubisoft.com/en-us/game/the-crew/motorfest/news-updates/35DPcha72DbvZFcSFkHP28/season-8-quality-of-life-improvements</description>
+  </item>
+  <item>
+    <title>Farlight 84: Developer divided linux into abnormal environments</title>
+    <link>https://retroul.github.io/will-it-launch/#farlight-84</link>
+    <guid isPermaLink="false">2025-09-25:farlight-84:Developer divided linux into abnormal environments</guid>
+    <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
+    <description>Source: https://www.youtube.com/watch?v=hdo8vCJU0gw&amp;t=134s</description>
+  </item>
+  <item>
+    <title>Farlight 84: Game started apply 1 day account ban with explicit linux denied message</title>
+    <link>https://retroul.github.io/will-it-launch/#farlight-84</link>
+    <guid isPermaLink="false">2025-08-21:farlight-84:Game started apply 1 day account ban with explicit linux denied message</guid>
+    <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
+    <description>Source: https://www.protondb.com/app/1928420/?device=any</description>
+  </item>
+  <item>
+    <title>Wuthering Waves: Steam Deck rating changed from Unknown to Playable.</title>
+    <link>https://retroul.github.io/will-it-launch/#wuthering-waves</link>
+    <guid isPermaLink="false">2025-07-15:wuthering-waves:Steam Deck rating changed from Unknown to Playable.</guid>
+    <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+    <description>Source: https://store.steampowered.com/app/3513350/Wuthering_Waves/</description>
+  </item>
+  <item>
+    <title>Wuthering Waves: Publisher claims to be looking into better Steam Deck compatibility on the Steam store page description.</title>
+    <link>https://retroul.github.io/will-it-launch/#wuthering-waves</link>
+    <guid isPermaLink="false">2025-06-12:wuthering-waves:Publisher claims to be looking into better Steam Deck compatibility on the Steam store page description.</guid>
+    <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+    <description>Source: https://store.steampowered.com/app/3513350/Wuthering_Waves/</description>
+  </item>
+  <item>
+    <title>The Crew Motorfest: Running on Proton</title>
+    <link>https://retroul.github.io/will-it-launch/#the-crew-motorfest</link>
+    <guid isPermaLink="false">2025-06-05:the-crew-motorfest:Running on Proton</guid>
+    <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
+    <description>Source: https://www.protondb.com/app/2698940#nICRHhtT8P</description>
+  </item>
+  <item>
+    <title>Reverse: 1999: As of Wine-Staging 10.5, Reverse: 1999 is playable on Linux.</title>
+    <link>https://retroul.github.io/will-it-launch/#reverse-1999</link>
+    <guid isPermaLink="false">2025-05-28:reverse-1999:As of Wine-Staging 10.5, Reverse: 1999 is playable on Linux.</guid>
+    <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+    <description>Source: https://www.protondb.com/app/3092660</description>
+  </item>
+  <item>
+    <title>Punishing: Gray Raven: As of Wine-Staging 10.5, Punishing: Gray Raven is playable on Linux.</title>
+    <link>https://retroul.github.io/will-it-launch/#punishing-gray-raven</link>
+    <guid isPermaLink="false">2025-05-28:punishing-gray-raven:As of Wine-Staging 10.5, Punishing: Gray Raven is playable on Linux.</guid>
+    <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+    <description>Source: https://github.com/AreWeAntiCheatYet/AreWeAntiCheatYet/issues/1792</description>
+  </item>
+  <item>
+    <title>Heaven Burns Red: As of Wine-Staging 10.5, Heaven Burns Red is playable on Linux.</title>
+    <link>https://retroul.github.io/will-it-launch/#heaven-burns-red</link>
+    <guid isPermaLink="false">2025-05-28:heaven-burns-red:As of Wine-Staging 10.5, Heaven Burns Red is playable on Linux.</guid>
+    <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+    <description>Source: https://www.protondb.com/app/1973710</description>
+  </item>
+  <item>
+    <title>Paladins: EAC updated, and Linux allowed after Evil Mojo layoffs</title>
+    <link>https://retroul.github.io/will-it-launch/#paladins</link>
+    <guid isPermaLink="false">2025-04-01:paladins:EAC updated, and Linux allowed after Evil Mojo layoffs</guid>
+    <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
+    <description>Source: https://www.protondb.com/app/444090/1000#JBFivnOCC-</description>
+  </item>
+  <item>
+    <title>Tower of Fantasy: Game started working on Linux</title>
+    <link>https://retroul.github.io/will-it-launch/#tower-of-fantasy</link>
+    <guid isPermaLink="false">2025-03-31:tower-of-fantasy:Game started working on Linux</guid>
+    <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+    <description>Source: https://www.protondb.com/app/2064650#nnunTaGO89</description>
+  </item>
+  <item>
+    <title>War Thunder: War Thunder switches to BattlEye</title>
+    <link>https://retroul.github.io/will-it-launch/#war-thunder</link>
+    <guid isPermaLink="false">2024-12-05:war-thunder:War Thunder switches to BattlEye</guid>
+    <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+    <description>Source: https://warthunder.com/en/news/9247-war-thunder-anti-cheat-system-update-en</description>
+  </item>
+  <item>
+    <title>Apex Legends: Linux support disabled</title>
+    <link>https://retroul.github.io/will-it-launch/#apex-legends</link>
+    <guid isPermaLink="false">2024-10-31:apex-legends:Linux support disabled</guid>
+    <pubDate>Thu, 31 Oct 2024 00:00:00 +0000</pubDate>
+    <description>Source: https://x.com/PlayApex/status/1852019667315102151</description>
+  </item>
+  <item>
+    <title>Grand Theft Auto V: BattlEye added</title>
+    <link>https://retroul.github.io/will-it-launch/#grand-theft-auto-v</link>
+    <guid isPermaLink="false">2024-09-17:grand-theft-auto-v:BattlEye added</guid>
+    <pubDate>Tue, 17 Sep 2024 00:00:00 +0000</pubDate>
+    <description>Source: https://support.rockstargames.com/articles/1nenwhZlVrJY6CTFeSS2Fx/grand-theft-auto-online-battleye-faq</description>
+  </item>
+  <item>
+    <title>Farlight 84: EAC replaced by NetEase Yidun</title>
+    <link>https://retroul.github.io/will-it-launch/#farlight-84</link>
+    <guid isPermaLink="false">2024-09-11:farlight-84:EAC replaced by NetEase Yidun</guid>
+    <pubDate>Wed, 11 Sep 2024 00:00:00 +0000</pubDate>
+    <description>Source: https://steamdb.info/depot/1928421/history/?changeid=M:5622484311305688663</description>
+  </item>
+  <item>
+    <title>Roblox: Game can now run using a proprietary runtime environment without the need for Wine.</title>
+    <link>https://retroul.github.io/will-it-launch/#roblox</link>
+    <guid isPermaLink="false">2024-08-01:roblox:Game can now run using a proprietary runtime environment without the need for Wine.</guid>
+    <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
+    <description>Source: https://sober.vinegarhq.org/</description>
+  </item>
+  <item>
+    <title>Fortnite: Removed BattlEye</title>
+    <link>https://retroul.github.io/will-it-launch/#fortnite</link>
+    <guid isPermaLink="false">2024-06-11:fortnite:Removed BattlEye</guid>
+    <pubDate>Tue, 11 Jun 2024 00:00:00 +0000</pubDate>
+    <description>Source: https://x.com/ShiinaBR/status/1800567329870537171</description>
+  </item>
+  <item>
+    <title>Roblox: Wine Support Yanked</title>
+    <link>https://retroul.github.io/will-it-launch/#roblox</link>
+    <guid isPermaLink="false">2024-03-01:roblox:Wine Support Yanked</guid>
+    <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
+    <description>Source: https://vinegarhq.org/Home/rol_faq.html</description>
+  </item>
+  <item>
+    <title>Valorant: Vanguard developer claims Linux has "too much attack surface".</title>
+    <link>https://retroul.github.io/will-it-launch/#valorant</link>
+    <guid isPermaLink="false">2024-01-26:valorant:Vanguard developer claims Linux has "too much attack surface".</guid>
+    <pubDate>Fri, 26 Jan 2024 00:00:00 +0000</pubDate>
+    <description>Source: https://github.com/AreWeAntiCheatYet/AreWeAntiCheatYet/assets/33342705/266b364f-8964-4ae2-9cc4-58e2fd5f9947</description>
+  </item>
+  <item>
+    <title>Hunt: Showdown 1896: Anticheat appears to be fixed following the official acknowledgment of anticheat issues by Crytek.</title>
+    <link>https://retroul.github.io/will-it-launch/#hunt-showdown-1896</link>
+    <guid isPermaLink="false">2023-11-23:hunt-showdown-1896:Anticheat appears to be fixed following the official acknowledgment of anticheat issues by Crytek.</guid>
+    <pubDate>Thu, 23 Nov 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://www.gamingonlinux.com/2023/11/hunt-showdown-anti-cheat-now-fixed-for-steam-deck-linux/</description>
+  </item>
+  <item>
+    <title>Hunt: Showdown 1896: Widespread reports of anticheat breaking following November 16th 2023 update</title>
+    <link>https://retroul.github.io/will-it-launch/#hunt-showdown-1896</link>
+    <guid isPermaLink="false">2023-11-16:hunt-showdown-1896:Widespread reports of anticheat breaking following November 16th 2023 update</guid>
+    <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://www.reddit.com/r/linux_gaming/comments/17wtqu1/hunt_showdown_not_working_anymore/</description>
+  </item>
+  <item>
+    <title>Watch Dogs: Legion: BattlEye Removed</title>
+    <link>https://retroul.github.io/will-it-launch/#watch-dogs-legion</link>
+    <guid isPermaLink="false">2023-10-31:watch-dogs-legion:BattlEye Removed</guid>
+    <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://steamdb.info/depot/2239551/history/</description>
+  </item>
+  <item>
+    <title>Hell Let Loose: No official acknowledgement, but widespread reports that the game works now.</title>
+    <link>https://retroul.github.io/will-it-launch/#hell-let-loose</link>
+    <guid isPermaLink="false">2023-09-29:hell-let-loose:No official acknowledgement, but widespread reports that the game works now.</guid>
+    <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://www.reddit.com/r/linux_gaming/comments/16v2ula/hell_let_loose_works_on_linux_now/</description>
+  </item>
+  <item>
+    <title>Rainbow Six Extraction: Proton Experimental fixes Rainbow Six Extraction, EA App, Immortals of Aveum</title>
+    <link>https://retroul.github.io/will-it-launch/#rainbow-six-extraction</link>
+    <guid isPermaLink="false">2023-08-23:rainbow-six-extraction:Proton Experimental fixes Rainbow Six Extraction, EA App, Immortals of Aveum</guid>
+    <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://www.gamingonlinux.com/2023/08/proton-experimental-fixes-rainbow-six-extraction-ea-app-immortals-of-aveum/</description>
+  </item>
+  <item>
+    <title>For Honor: Steam Deck Support</title>
+    <link>https://retroul.github.io/will-it-launch/#for-honor</link>
+    <guid isPermaLink="false">2023-07-27:for-honor:Steam Deck Support</guid>
+    <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://www.ubisoft.com/en-us/game/for-honor/news-updates/6jz99oXbJUVyK5h17fp6B8/patch-notes-2451-for-honor</description>
+  </item>
+  <item>
+    <title>BattleBit Remastered: Devs announce FACEIT Linux support via official Discord</title>
+    <link>https://retroul.github.io/will-it-launch/#battlebit-remastered</link>
+    <guid isPermaLink="false">2023-07-15:battlebit-remastered:Devs announce FACEIT Linux support via official Discord</guid>
+    <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://i.postimg.cc/DZ4Ty8Wb/battlebit-mod-post.png</description>
+  </item>
+  <item>
+    <title>BattleBit Remastered: Devs commit to supporting EAC on Linux.</title>
+    <link>https://retroul.github.io/will-it-launch/#battlebit-remastered</link>
+    <guid isPermaLink="false">2023-07-14:battlebit-remastered:Devs commit to supporting EAC on Linux.</guid>
+    <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://www.reddit.com/r/pcgaming/comments/14zhjb1/battlebit_ama/jrxva4o/</description>
+  </item>
+  <item>
+    <title>Genshin Impact: v3.8: Game Anti-Cheat is allowing Proton on clean installs, on update release.</title>
+    <link>https://retroul.github.io/will-it-launch/#genshin-impact</link>
+    <guid isPermaLink="false">2023-07-05:genshin-impact:v3.8: Game Anti-Cheat is allowing Proton on clean installs, on update release.</guid>
+    <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://www.reddit.com/r/linux_gaming/comments/15sskjh/</description>
+  </item>
+  <item>
+    <title>Riders Republic: Developers are looking into Steam Deck compatibility</title>
+    <link>https://retroul.github.io/will-it-launch/#riders-republic</link>
+    <guid isPermaLink="false">2023-06-09:riders-republic:Developers are looking into Steam Deck compatibility</guid>
+    <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://store.steampowered.com/news/app/2290180?emclan=103582791473516299&amp;emgid=3665413967455070747</description>
+  </item>
+  <item>
+    <title>SMITE: Linux Support!</title>
+    <link>https://retroul.github.io/will-it-launch/#smite</link>
+    <guid isPermaLink="false">2023-06-07:smite:Linux Support!</guid>
+    <pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://www.smitegame.com/news/the-season-of-souls-10-6-update-notes/</description>
+  </item>
+  <item>
+    <title>Roblox: Future Wine Support</title>
+    <link>https://retroul.github.io/will-it-launch/#roblox</link>
+    <guid isPermaLink="false">2023-05-13:roblox:Future Wine Support</guid>
+    <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://user-images.githubusercontent.com/29169102/238155523-b6d53f64-81a1-49a8-be6d-d02d1e784dfb.png</description>
+  </item>
+  <item>
+    <title>Dead by Daylight: Dead by Daylight is Steam Deck Verified!</title>
+    <link>https://retroul.github.io/will-it-launch/#dead-by-daylight</link>
+    <guid isPermaLink="false">2023-05-10:dead-by-daylight:Dead by Daylight is Steam Deck Verified!</guid>
+    <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://store.steampowered.com/news/app/381210/view/3723958226061651097</description>
+  </item>
+  <item>
+    <title>For Honor: Support Finalized</title>
+    <link>https://retroul.github.io/will-it-launch/#for-honor</link>
+    <guid isPermaLink="false">2023-04-27:for-honor:Support Finalized</guid>
+    <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://steamdb.info/patchnotes/10988960/</description>
+  </item>
+  <item>
+    <title>Halo: The Master Chief Collection: Steam Deck Support</title>
+    <link>https://retroul.github.io/will-it-launch/#halo-the-master-chief-collection</link>
+    <guid isPermaLink="false">2023-04-06:halo-the-master-chief-collection:Steam Deck Support</guid>
+    <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://support.halowaypoint.com/hc/en-us/articles/14589112499348</description>
+  </item>
+  <item>
+    <title>Hell Let Loose: Steam Deck Support Planned</title>
+    <link>https://retroul.github.io/will-it-launch/#hell-let-loose</link>
+    <guid isPermaLink="false">2023-04-03:hell-let-loose:Steam Deck Support Planned</guid>
+    <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://youtu.be/DJqh61nfuTs?t=386</description>
+  </item>
+  <item>
+    <title>Genshin Impact: v3.5: Game Anti-Cheat observed allowing Proton in restricted scenarios, 2 business weeks after update launch.</title>
+    <link>https://retroul.github.io/will-it-launch/#genshin-impact</link>
+    <guid isPermaLink="false">2023-03-03:genshin-impact:v3.5: Game Anti-Cheat observed allowing Proton in restricted scenarios, 2 business weeks after update launch.</guid>
+    <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://www.reddit.com/r/linux_gaming/comments/123zllz/</description>
+  </item>
+  <item>
+    <title>Dead by Daylight: Previous forum link deleted</title>
+    <link>https://retroul.github.io/will-it-launch/#dead-by-daylight</link>
+    <guid isPermaLink="false">2023-02-22:dead-by-daylight:Previous forum link deleted</guid>
+    <pubDate>Wed, 22 Feb 2023 00:00:00 +0000</pubDate>
+    <description>Source: https://github.com/Starz0r/AreWeAntiCheatYet/issues/1151</description>
+  </item>
+</channel>
+</rss>

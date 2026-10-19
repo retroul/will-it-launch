@@ -1,0 +1,46 @@
+name: Checks
+
+# Runs on every change: vote-server tests and syntax checks.
+# Runs every week: checks that the source links in the data still work.
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "41 7 * * 3"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "24"
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Vote server tests
+        run: node vote-server/test.mjs
+      - name: Syntax checks
+        run: |
+          node --check app.js
+          node --check sw.js
+          node --check config.js
+          node --check data/games.js
+          python3 -m py_compile tools/update_data.py tools/check_links.py
+
+  links:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Check source links
+        run: python3 tools/check_links.py

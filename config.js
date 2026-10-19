@@ -9,4 +9,8 @@ window.AC_CONFIG = {
   // Leave empty and the Requests page uses GitHub issues instead.
   // If it is not on *.workers.dev, also add its address to connect-src in index.html.
   voteApi: "https://will-it-launch-votes.will-it-launch.workers.dev",
+
+  // Public site key of the Cloudflare Turnstile bot check used for requests and votes.
+  // Leave empty to turn the check off (then also remove TURNSTILE_SECRET from the vote server).
+  turnstileSiteKey: "0x4AAAAAAFcBO-GDsEgQ74y_",
 };

@@ -16,7 +16,11 @@ Anti-cheat decides whether a lot of online games run outside Windows. Will It La
 - **Every platform at a glance** for each game, with cover art, notes, links (Steam, ProtonDB, SteamDB) and a Linux timeline.
 - **Search and filter** by name, genre, anti-cheat or status, and sort by what works best.
 - **Anti-cheat breakdown**: how Easy Anti-Cheat, BattlEye, Vanguard and 40+ others behave on each platform.
-- **Game requests with voting**, anonymous and one vote per connection (optional, see below).
+- **Steam Deck and ProtonDB ratings** for every Steam game.
+- **Updates page and RSS feed** ([feed.xml](feed.xml)) with the latest anti-cheat news and status changes.
+- **Star your games** to keep them at the top, and **share** a direct link to any game.
+- **Install it like an app** and use it offline.
+- **Game requests with voting**, anonymous, one vote per connection, with a Cloudflare bot check and a speed limit.
 - Light and dark themes, works on phones, no build step.
 - **Private by design**: no accounts, cookies, analytics or tracking, and a strict Content Security Policy. See [SECURITY.md](SECURITY.md).
 

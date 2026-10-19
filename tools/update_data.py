@@ -12,6 +12,7 @@ import json
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import date
@@ -19,6 +20,8 @@ from pathlib import Path
 
 UPSTREAM = "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/HEAD/games.json"
 OUT = Path(__file__).resolve().parent.parent / "data" / "games.js"
+FEED = OUT.parent.parent / "feed.xml"
+SITE_URL = "https://retroul.github.io/will-it-launch/"
 
 STATUS = {"S": "supported", "R": "running", "P": "planned", "B": "broken", "D": "denied", "U": "unavailable"}
 COD_MOBILE = ("S", "Separate game: Call of Duty: Mobile")
@@ -39,7 +42,7 @@ GAMES = [
       ios=("U", "Valorant Mobile is only released in China")),
     G("Call of Duty: Black Ops 7", "Shooter", android=COD_MOBILE, ios=COD_MOBILE),
     G("Call of Duty: Black Ops 6", "Shooter"),
-    G("Overwatch 2", "Shooter"),
+    G("Overwatch 2", "Shooter", url="https://overwatch.blizzard.com/"),
     G("Tom Clancy's Rainbow Six® Siege X", "Shooter", title="Rainbow Six Siege X",
       android=("S", "Separate game: Rainbow Six Mobile"), ios=("S", "Separate game: Rainbow Six Mobile")),
     G("Escape from Tarkov", "Shooter"),
@@ -66,7 +69,7 @@ GAMES = [
       android=("S", "Released February 2026, cross-play and cross-save"), ios=("S", "Released February 2024, cross-play and cross-save")),
     G("War Thunder", "Shooter", mac="S",
       android=("S", "Separate game: War Thunder Mobile"), ios=("S", "Separate game: War Thunder Mobile")),
-    G("World of Tanks", "Shooter",
+    G("World of Tanks", "Shooter", url="https://worldoftanks.com/",
       android=("S", "Separate game: World of Tanks Blitz"), ios=("S", "Separate game: World of Tanks Blitz")),
     G("Gray Zone Warfare", "Shooter"),
     G("Arena Breakout: Infinite", "Shooter",
@@ -297,7 +300,8 @@ GAMES = [
     G("Insurgency", "Shooter", mac="S"),
     G("Black Squad", "Shooter"),
     G("Mordhau", "Action"),
-    G("Tom Clancy's Ghost Recon Wildlands", "Shooter", title="Ghost Recon Wildlands", steam="460930"),
+    G("Tom Clancy's Ghost Recon Wildlands", "Shooter", title="Ghost Recon Wildlands", steam="460930",
+      url="https://www.ubisoft.com/en-us/game/ghost-recon/wildlands"),
     G("Tom Clancy's The Division", "Shooter", title="The Division"),
     G("Tom Clancy\u2019s Rainbow Six® Extraction", "Shooter", title="Rainbow Six Extraction"),
     G("Quake Champions", "Shooter"),
@@ -455,6 +459,43 @@ def saved_cover(url, slug):
         return ""
 
 
+DECK = {1: "unsupported", 2: "playable", 3: "verified"}
+MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
+
+
+def steam_ratings(appid, old):
+    """Valve's Steam Deck rating and ProtonDB's recent tier; keeps the old values if a lookup fails."""
+    deck, proton = old.get("deck", ""), old.get("protondb", "")
+    try:
+        res = json.loads(fetch(f"https://store.steampowered.com/saleaction/ajaxgetdeckappcompatibilityreport?nAppID={appid}&l=english")).get("results") or {}
+        deck = DECK.get(res.get("resolved_category"), "")
+    except Exception as err:
+        print(f"  Deck rating failed for {appid}: {err}")
+    try:
+        summary = json.loads(fetch(f"https://www.protondb.com/api/v1/reports/summaries/{appid}.json"))
+        proton = summary.get("trendingTier") or summary.get("tier") or ""
+    except urllib.error.HTTPError as err:
+        proton = "" if err.code == 404 else proton
+    except Exception as err:
+        print(f"  ProtonDB lookup failed for {appid}: {err}")
+    time.sleep(0.25)
+    return deck, proton
+
+
+def parse_day(text):
+    """Turn upstream's mixed date formats ("Apr 12, 2022", "Mon 28, March 2022", "26 November 2019", ISO) into YYYY-MM-DD."""
+    text = text or ""
+    m = re.match(r"(\d{4})-(\d{2})-(\d{2})", text)
+    if m:
+        return m.group(0)
+    year = re.search(r"\b(19|20)\d{2}\b", text)
+    month = next((MONTHS[w[:3].lower()] for w in re.findall(r"[A-Za-z]{3,}", text) if w[:3].lower() in MONTHS), None)
+    day = re.search(r"(?<![\d:])(\d{1,2})(?![\d:])", text[:year.start()] if year else text)
+    if year and month and day:
+        return f"{year.group(0)}-{month:02d}-{int(day.group(1)):02d}"
+    return ""
+
+
 def slugify(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
 
@@ -497,6 +538,9 @@ def build(upstream, previous):
             linux_notes = [{"text": t, "url": u} for t, u in notes] + linux_notes
             history += [{"name": n, "date": d, "url": u} for n, d, u in events]
             updated = max([updated] + [d for _, d, _ in events])
+        for h in history:
+            h["day"] = parse_day(h["date"])
+        deck, proton = steam_ratings(steam, old) if steam else ("", "")
         games.append({
             "slug": slug,
             "name": title,
@@ -505,6 +549,8 @@ def build(upstream, previous):
             "url": cur["url"] or up.get("url") or "",
             "steam": steam,
             "image": image,
+            "deck": deck,
+            "protondb": proton,
             "updated": updated,
             "history": history,
             "platforms": {
@@ -518,6 +564,61 @@ def build(upstream, previous):
     return sorted(games, key=lambda g: g["name"].lower())
 
 
+def status_changes(old_games, games):
+    """Status changes on any platform since the last build, for the "Recently changed" feed."""
+    old = {g["slug"]: g for g in old_games}
+    today = date.today().isoformat()
+    changes = []
+    for g in games:
+        before = old.get(g["slug"])
+        for plat, info in g["platforms"].items():
+            if before and before["platforms"][plat]["status"] != info["status"]:
+                changes.append({"day": today, "slug": g["slug"], "name": g["name"], "platform": plat,
+                                "from": before["platforms"][plat]["status"], "to": info["status"]})
+    return changes
+
+
+PLATFORM_NAMES = {"windows": "Windows", "macos": "Mac", "linux": "Linux", "android": "Android", "ios": "iOS"}
+STATUS_WORDS = {"supported": "works", "running": "works unofficially", "planned": "coming soon",
+                "broken": "doesn't work", "denied": "blocked by devs", "unavailable": "not released"}
+
+
+def news(games, changes, limit=60):
+    """Newest events first: status changes plus dated timeline entries."""
+    items = [{"day": c["day"], "slug": c["slug"], "name": c["name"], "url": "",
+              "text": f"{PLATFORM_NAMES[c['platform']]}: {STATUS_WORDS[c['from']]} \u2192 {STATUS_WORDS[c['to']]}"}
+             for c in changes]
+    items += [{"day": h["day"], "slug": g["slug"], "name": g["name"], "text": h["name"], "url": h["url"]}
+              for g in games for h in g["history"] if h["day"]]
+    return sorted(items, key=lambda i: (i["day"], i["name"]), reverse=True)[:limit]
+
+
+def write_feed(items):
+    from email.utils import format_datetime
+    from datetime import datetime, timezone
+    from xml.sax.saxutils import escape
+    entries = []
+    for i in items[:40]:
+        when = format_datetime(datetime.fromisoformat(i["day"]).replace(tzinfo=timezone.utc))
+        link = f"{SITE_URL}#{i['slug']}"
+        entries.append(f"""  <item>
+    <title>{escape(i['name'])}: {escape(i['text'])}</title>
+    <link>{escape(link)}</link>
+    <guid isPermaLink="false">{escape(i['day'] + ':' + i['slug'] + ':' + i['text'])}</guid>
+    <pubDate>{when}</pubDate>{f"{chr(10)}    <description>Source: {escape(i['url'])}</description>" if i['url'] else ""}
+  </item>""")
+    FEED.write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Will It Launch? - recent changes</title>
+  <link>{SITE_URL}</link>
+  <description>Anti-cheat status changes for popular games on Windows, Mac, Linux, Steam Deck, Android and iOS.</description>
+{chr(10).join(entries)}
+</channel>
+</rss>
+""", encoding="utf-8")
+
+
 def main():
     if len(sys.argv) > 1:
         upstream = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
@@ -528,16 +629,18 @@ def main():
     if OUT.exists():
         current = json.loads(OUT.read_text(encoding="utf-8").split("=", 1)[1].rstrip().rstrip(";"))
     games = build(upstream, {g["slug"]: g for g in current.get("games", [])})
-    if current:
-        if current.get("games") == games:
-            print(f"No changes ({len(games)} games)")
-            return
+    changes = current.get("changes", []) + status_changes(current.get("games", []), games)
+    if current.get("games") == games and current.get("changes", []) == changes and FEED.exists():
+        print(f"No changes ({len(games)} games)")
+        return
+    items = news(games, changes)
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(
         "// Generated by tools/update_data.py - edit that file, not this one.\n"
-        f"window.AC_DATA = {json.dumps({'generated': date.today().isoformat(), 'games': games}, ensure_ascii=False, indent=1)};\n",
+        f"window.AC_DATA = {json.dumps({'generated': date.today().isoformat(), 'games': games, 'changes': changes, 'news': items}, ensure_ascii=False, indent=1)};\n",
         encoding="utf-8")
-    print(f"Wrote {len(games)} games to {OUT}")
+    write_feed(items)
+    print(f"Wrote {len(games)} games, {len(items)} news items to {OUT.name} and {FEED.name}")
 
 
 if __name__ == "__main__":

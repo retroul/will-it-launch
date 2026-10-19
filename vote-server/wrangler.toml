@@ -11,6 +11,16 @@ binding = "DB"
 database_name = "will-it-launch-votes"
 database_id = "ff84b25e-0d01-45b9-9551-45d49d3eeaf6"
 
+# At most 20 writes (requests/votes) per voter per minute. Uses Cloudflare's built-in rate limiter.
+[[ratelimits]]
+name = "WRITE_LIMITER"
+namespace_id = "1001"
+
+  [ratelimits.simple]
+  limit = 20
+  period = 60
+
 # Secrets (set with `npx wrangler secret put NAME`, never commit them):
 #   VOTER_SECRET  random text used to hash IPs
 #   ADMIN_TOKEN   lets you delete spam requests
+#   TURNSTILE_SECRET  secret key of your Cloudflare Turnstile widget (bot check)
