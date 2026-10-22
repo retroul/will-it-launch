@@ -329,6 +329,21 @@ GAMES = [
     G("Dragonheir: Silent Gods", "Anime RPG", android="S", ios="S"),
     G("Madoka Magica Magia Exedra", "Anime RPG", android="S", ios="S"),
     G("MapleStory Worlds", "MMO", android="S", ios="S"),
+    # --- Added after October 2026 -------------------------------------------
+    G("Call of Duty: Modern Warfare II (2022)", "Shooter", title="Call of Duty: Modern Warfare II"),
+    G("Call of Duty: Vanguard", "Shooter"),
+    G("Call of Duty Black Ops: Cold War", "Shooter", title="Call of Duty: Black Ops Cold War"),
+    G("Call of Duty: Black Ops II", "Shooter"),
+    G("PlanetSide 2", "Shooter"),
+    G("STAR WARS™ Battlefront™ II (2017)", "Shooter", title="Star Wars Battlefront II"),
+    G("STAR WARS™: Squadrons", "Shooter", title="Star Wars: Squadrons"),
+    G("Aimlabs", "Shooter"),
+    G("KovaaK", "Shooter", title="KovaaK's", steam="824270"),
+    G("PROJECT: PLAYTIME", "Survival", title="Project: Playtime"),
+    G("Killer Klowns from Outer Space: The Game", "Action"),
+    G("DRAGON BALL: THE BREAKERS", "Action", title="Dragon Ball: The Breakers"),
+    G("Harry Potter: Quidditch Champions", "Racing & Sports"),
+    G("Pax Dei", "MMO"),
 ]
 
 # Steam store IDs the upstream list doesn't have (used for cover art and store links).
