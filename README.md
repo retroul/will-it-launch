@@ -22,7 +22,7 @@ Anti-cheat decides whether a lot of online games run outside Windows. Will It La
 - **Install it like an app** and use it offline.
 - **Game requests with voting**, anonymous, one vote per connection, with a Cloudflare bot check and a speed limit.
 - Light and dark themes, works on phones, no build step.
-- **Private by design**: no accounts, cookies, analytics or tracking, and a strict Content Security Policy. See [SECURITY.md](SECURITY.md).
+- **Private by design**: no accounts, cookies, analytics or tracking, fonts hosted on the site itself, and a strict Content Security Policy. The Requests page is the one place that loads something from Cloudflare (the bot check). See [SECURITY.md](SECURITY.md).
 
 ## Help out
 
@@ -58,22 +58,26 @@ The "Request a game" and "Something wrong? Tell us" links find your repository a
 There are two options:
 
 - **GitHub only (default).** The Requests page links to an issue form. People vote with 👍 on requests, one vote per GitHub account.
-- **Anonymous votes on the site.** Deploy the small [vote server](vote-server/README.md) (free Cloudflare Worker) and put its address in `config.js` as `voteApi`. Anyone can then request and vote without an account. Votes are limited to one per IP, and IPs are never stored, only a keyed hash.
+- **Anonymous votes on the site.** Deploy the small [vote server](vote-server/README.md) (free Cloudflare Worker) and put its address in `config.js` as `voteApi`, plus a Turnstile site key as `turnstileSiteKey` for the bot check. Anyone can then request and vote without an account. Votes are limited to one per IP, and IPs are never stored, only a keyed hash.
 
 ## Where the data comes from
 
 | What | Source |
 | --- | --- |
 | Linux & Steam Deck status, anti-cheat names, notes, timeline | [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) ([GitHub](https://github.com/AreWeAntiCheatYet/AreWeAntiCheatYet), MIT) |
+| Steam Deck ratings | Steam's Deck compatibility report |
+| ProtonDB ratings | [ProtonDB](https://www.protondb.com) |
 | Mac availability | Steam store data plus manual checks |
 | Windows, Android, iOS availability | Maintained by hand in `tools/update_data.py` |
 | Cover art | Steam store images; for games not on Steam, official share images, App Store screenshots or Wikipedia, saved in `images/covers/` |
 
-A GitHub Action (`.github/workflows/update-data.yml`) pulls the latest Linux data every Monday and commits it if anything changed. To run it yourself:
+A GitHub Action (`.github/workflows/update-data.yml`) pulls the latest Linux data every Monday and commits it if anything changed. The same script rebuilds `feed.xml` and the Updates page. To run it yourself (Pillow is only needed to shrink new cover images, so `pip install pillow` first if you add games):
 
 ```sh
 python3 tools/update_data.py
 ```
+
+A second workflow (`.github/workflows/checks.yml`) runs the vote server tests and syntax checks on every push, and checks the source links once a week. You can run the link check with `python3 tools/check_links.py`.
 
 ### Add or fix a game
 
@@ -88,13 +92,21 @@ python3 tools/update_data.py
 ### Project layout
 
 ```
-index.html          page
-styles.css          design
-app.js              filtering, sorting, views, requests
-config.js           optional settings (repo, vote server)
-data/games.js       generated game data (don't edit by hand)
-tools/update_data.py  builds data/games.js
-vote-server/        optional Cloudflare Worker for anonymous voting
+index.html            page
+styles.css            design
+app.js                filtering, sorting, views, requests
+config.js             optional settings (repo, vote server, bot check)
+sw.js                 offline support
+manifest.webmanifest  install-as-app details
+feed.xml              RSS feed (generated)
+fonts/                self-hosted Figtree and Rubik
+icons/                app icons
+images/covers/        saved cover art
+data/games.js         generated game data (don't edit by hand)
+tools/update_data.py  builds data/games.js and feed.xml
+tools/check_links.py  checks that the source links still work
+vote-server/          optional Cloudflare Worker for anonymous voting
+SECURITY.md           privacy notes and how to report a problem
 ```
 
 ## License

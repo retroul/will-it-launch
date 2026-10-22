@@ -1,4 +1,4 @@
-// Site settings. Both are optional.
+// Site settings. All of them are optional.
 window.AC_CONFIG = {
   // Your GitHub repository, used for "Request a game" and "Report a problem" links.
   // Leave empty on GitHub Pages: it is worked out from the address (name.github.io/repo).
