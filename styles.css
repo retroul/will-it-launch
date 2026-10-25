@@ -215,6 +215,12 @@ h1 {
   background: var(--surface); color: var(--fg);
 }
 .search input { padding-left: 44px; }
+.search kbd {
+  position: absolute; right: 14px; padding: 0 7px; border: 1.5px solid var(--line); border-radius: 6px;
+  font: inherit; font-size: 0.8rem; color: var(--muted); pointer-events: none;
+}
+.search input:focus ~ kbd, .search input:not(:placeholder-shown) ~ kbd { display: none; }
+@media (hover: none) { .search kbd { display: none; } }
 .search input::placeholder, .request-form input::placeholder { color: var(--muted); }
 .search input:focus, .select select:focus, .request-form input:focus { border-color: var(--link); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--link) 25%, transparent); }
 .select { flex: 0 1 190px; min-width: 0; }
@@ -412,9 +418,9 @@ code { font-size: 0.9em; padding: 1px 6px; border-radius: 6px; background: var(-
 .star[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
 .star:active { transform: scale(0.9); }
 @media (hover: none) { .star { opacity: 1; } }
-.chip-star { --s: var(--accent); }
-.chip-star::before { display: none; }
-.chip-star svg { color: var(--accent); filter: drop-shadow(0 0 0.5px var(--accent-ink)); }
+.chip-star, .chip-recent { --s: var(--accent); }
+.chip-star::before, .chip-recent::before { display: none; }
+.chip-star svg, .chip-recent svg { color: var(--accent); filter: drop-shadow(0 0 0.5px var(--accent-ink)); }
 
 .deck-tag {
   justify-self: start; width: fit-content;

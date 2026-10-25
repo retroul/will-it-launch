@@ -24,6 +24,14 @@ FEED = OUT.parent.parent / "feed.xml"
 SITE_URL = "https://retroul.github.io/will-it-launch/"
 
 STATUS = {"S": "supported", "R": "running", "P": "planned", "B": "broken", "D": "denied", "U": "unavailable"}
+# Upstream spells some anti-cheats differently from game to game; one name each keeps filters and the Anti-cheats page whole.
+ANTICHEAT_NAMES = {"RICOCHET": "Ricochet", "UNCHEATER": "Uncheater", "CrackProof": "Crackproof", "Valve Anti-Cheat": "VAC"}
+
+
+def anticheat_names(names):
+    return list(dict.fromkeys(ANTICHEAT_NAMES.get(n, n) for n in names))
+
+
 COD_MOBILE = ("S", "Separate game: Call of Duty: Mobile")
 
 
@@ -344,6 +352,22 @@ GAMES = [
     G("DRAGON BALL: THE BREAKERS", "Action", title="Dragon Ball: The Breakers"),
     G("Harry Potter: Quidditch Champions", "Racing & Sports"),
     G("Pax Dei", "MMO"),
+    # --- Added in the second October 2026 batch -----------------------------
+    G("Splitgate 2", "Shooter"),
+    G("Splitgate", "Shooter"),
+    G("Caliber", "Shooter"),
+    G("Exoborne", "Shooter"),
+    G("Hell is Others", "Shooter"),
+    G("Midnight Murder Club", "Shooter"),
+    G("Off The Grid", "Battle Royale"),
+    G("Totally Accurate Battlegrounds", "Battle Royale", title="Totally Accurate Battlegrounds (TABG)"),
+    G("Longvinter", "Survival"),
+    G("Dread Hunger", "Survival"),
+    G("Meet Your Maker", "Action"),
+    G("SWORD ART ONLINE Fractured Daydream", "Action", title="Sword Art Online: Fractured Daydream"),
+    G("Stormgate", "Strategy"),
+    G("Tarisland", "MMO"),
+    G("Mortal Online 2", "MMO"),
 ]
 
 # Steam store IDs the upstream list doesn't have (used for cover art and store links).
@@ -444,7 +468,8 @@ def steam_cover(appid):
 
 
 def saved_cover(url, slug):
-    """Download a cover once into images/covers/ (shrunk to 600px wide); returns its site path or ''."""
+    """Download a cover once into images/covers/ (shrunk to 600px wide); returns its site path or ''.
+    The site never hot-links cover art, so visitors' browsers only ever talk to this site."""
     saved = sorted(COVERS.glob(f"{slug}.*"))
     if saved:
         return saved[0].relative_to(ROOT).as_posix()
@@ -536,7 +561,7 @@ def build(upstream, previous):
         steam = cur["steam"] or EXTRA_STEAM.get(cur["name"]) or up.get("storeIds", {}).get("steam") or ""
         old = previous.get(slug, {})
         if steam:
-            image = old["image"] if old.get("steam") == steam and old.get("image") else steam_cover(steam)
+            image = old["image"] if old.get("steam") == steam and old.get("image", "").startswith("images/") else saved_cover(steam_cover(steam), slug)
         elif cur["name"] in COVER_URL:
             image = saved_cover(COVER_URL[cur["name"]], slug)
         else:
@@ -560,7 +585,7 @@ def build(upstream, previous):
             "slug": slug,
             "name": title,
             "genre": cur["genre"],
-            "anticheats": up.get("anticheats", []),
+            "anticheats": anticheat_names(up.get("anticheats", [])),
             "url": cur["url"] or up.get("url") or "",
             "steam": steam,
             "image": image,

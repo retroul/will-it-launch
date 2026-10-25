@@ -46,6 +46,7 @@
     sort: "name",
     open: new Set(),
     starredOnly: false,
+    recentOnly: false,
     favorites: new Set(readJson("favorites", [])),
   };
 
@@ -146,7 +147,11 @@
     return true;
   }
   const isShown = (g) => matchesBase(g) && (!state.statuses.size || state.statuses.has(statusOf(g)))
-    && (!state.starredOnly || state.favorites.has(g.slug));
+    && (!state.starredOnly || state.favorites.has(g.slug)) && (!state.recentOnly || isRecent(g));
+
+  const RECENT_DAYS = 90;
+  const recentSince = new Date(Date.now() - RECENT_DAYS * 864e5).toISOString().slice(0, 10);
+  const isRecent = (g) => (g.updated || "") >= recentSince;
 
   const SORTS = {
     name: (a, b) => a.name.localeCompare(b.name),
@@ -159,7 +164,9 @@
   function renderChips(base) {
     const c = countBy(base, state.platform);
     const starred = base.filter((g) => state.favorites.has(g.slug)).length;
-    $("#status-chips").innerHTML = `<button type="button" class="chip chip-star" id="starred-only" aria-pressed="${state.starredOnly}" ${starred || state.starredOnly ? "" : "disabled"}>${icon("star")}Starred <span class="n">${starred}</span></button>` + STATUSES.map((s) => {
+    const recent = base.filter(isRecent).length;
+    $("#status-chips").innerHTML = `<button type="button" class="chip chip-star" id="starred-only" aria-pressed="${state.starredOnly}" ${starred || state.starredOnly ? "" : "disabled"}>${icon("star")}Starred <span class="n">${starred}</span></button>`
+      + `<button type="button" class="chip chip-recent" id="recent-only" aria-pressed="${state.recentOnly}" title="Updated in the last ${RECENT_DAYS} days" ${recent || state.recentOnly ? "" : "disabled"}>${icon("clock")}Recently updated <span class="n">${recent}</span></button>` + STATUSES.map((s) => {
       const on = state.statuses.has(s.id);
       return `<button type="button" class="chip" data-status="${s.id}" aria-pressed="${on}" ${c[s.id] || on ? "" : "disabled"}>${s.label} <span class="n">${c[s.id]}</span></button>`;
     }).join("");
@@ -241,6 +248,38 @@
     $("#result-count").textContent = shown.length === games.length
       ? `Showing all ${games.length} games`
       : `Showing ${shown.length} of ${games.length} games (${works} work on ${platform(state.platform).name})`;
+    syncUrl();
+  }
+
+  // ---- shareable filters (?q=...&ac=...) ---------------------------------------
+  // The address bar mirrors the list's filters so any view can be linked. The platform rides along
+  // whenever there are filters, because a link that says "works on Mac" must open on Mac.
+  function syncUrl() {
+    const p = new URLSearchParams();
+    if (state.query) p.set("q", state.query);
+    if (state.genre) p.set("genre", state.genre);
+    if (state.anticheat) p.set("ac", state.anticheat);
+    if (state.statuses.size) p.set("status", [...state.statuses].join(","));
+    if (state.starredOnly) p.set("starred", "1");
+    if (state.recentOnly) p.set("recent", "1");
+    if (state.sort !== "name") p.set("sort", state.sort);
+    if ([...p].length) p.set("p", state.platform);
+    const qs = p.toString();
+    history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + location.hash);
+  }
+
+  function readUrl() {
+    const p = new URLSearchParams(location.search);
+    const pick = (name, allowed) => (allowed.includes(p.get(name)) ? p.get(name) : "");
+    if (p.has("p")) state.platform = pick("p", PLATFORMS.map((x) => x.id)) || state.platform;
+    state.query = (p.get("q") || "").slice(0, 80).trim().toLowerCase();
+    state.genre = pick("genre", games.map((g) => g.genre));
+    state.anticheat = pick("ac", games.flatMap((g) => g.anticheats));
+    (p.get("status") || "").split(",").forEach((s) => { if (Object.hasOwn(RANK, s)) state.statuses.add(s); });
+    state.starredOnly = p.get("starred") === "1";
+    state.recentOnly = p.get("recent") === "1";
+    state.sort = pick("sort", Object.keys(SORTS)) || "name";
+    $("#search").value = state.query; $("#genre").value = state.genre; $("#anticheat").value = state.anticheat; $("#sort").value = state.sort;
   }
 
   // ---- anti-cheats -----------------------------------------------------------
@@ -407,7 +446,7 @@
   }
 
   function clearFilters(rerender = true) {
-    Object.assign(state, { query: "", genre: "", anticheat: "" });
+    Object.assign(state, { query: "", genre: "", anticheat: "", starredOnly: false, recentOnly: false });
     state.statuses.clear();
     $("#search").value = ""; $("#genre").value = ""; $("#anticheat").value = "";
     if (rerender) renderGames();
@@ -476,11 +515,30 @@
     $("#anticheat").addEventListener("change", (e) => { state.anticheat = e.target.value; renderGames(); });
     $("#sort").addEventListener("change", (e) => { state.sort = e.target.value; renderGames(); });
     $("#clear-filters").addEventListener("click", () => clearFilters());
+    // "/" jumps to search from anywhere; Esc clears it, then leaves it.
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "/" || e.ctrlKey || e.metaKey || e.altKey || e.target.closest?.("input, textarea, select, [contenteditable]")) return;
+      e.preventDefault();
+      if ($("#games-view").hidden) { location.hash = "games"; route(); }
+      $("#search").focus();
+    });
+    $("#search").addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      e.preventDefault();
+      if (!e.target.value) return e.target.blur();
+      e.target.value = "";
+      state.query = "";
+      renderGames();
+    });
     $("#status-chips").addEventListener("click", (e) => {
       const chip = e.target.closest(".chip");
       if (!chip) return;
       if (chip.id === "starred-only") {
         state.starredOnly = !state.starredOnly;
+        return renderGames();
+      }
+      if (chip.id === "recent-only") {
+        state.recentOnly = !state.recentOnly;
         return renderGames();
       }
       const s = chip.dataset.status;
@@ -583,6 +641,7 @@
   }
 
   initStatic();
+  readUrl();
   initRequests();
   bind();
   syncThemeButton();

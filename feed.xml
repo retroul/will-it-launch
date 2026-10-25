@@ -5,6 +5,12 @@
   <link>https://retroul.github.io/will-it-launch/</link>
   <description>Anti-cheat status changes for popular games on Windows, Mac, Linux, Steam Deck, Android and iOS.</description>
   <item>
+    <title>Strinova: Linux: doesn't work → works unofficially</title>
+    <link>https://retroul.github.io/will-it-launch/#strinova</link>
+    <guid isPermaLink="false">2026-10-25:strinova:Linux: doesn't work → works unofficially</guid>
+    <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
     <title>Fortnite: Epic announces Fortnite for Linux</title>
     <link>https://retroul.github.io/will-it-launch/#fortnite</link>
     <guid isPermaLink="false">2026-10-14:fortnite:Epic announces Fortnite for Linux</guid>
@@ -38,6 +44,13 @@
     <guid isPermaLink="false">2025-09-25:farlight-84:Developer divided linux into abnormal environments</guid>
     <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
     <description>Source: https://www.youtube.com/watch?v=hdo8vCJU0gw&amp;t=134s</description>
+  </item>
+  <item>
+    <title>Exoborne: Denied in playtest</title>
+    <link>https://retroul.github.io/will-it-launch/#exoborne</link>
+    <guid isPermaLink="false">2025-09-18:exoborne:Denied in playtest</guid>
+    <pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate>
+    <description>Source: https://imgur.com/a/znTffem</description>
   </item>
   <item>
     <title>Farlight 84: Game started apply 1 day account ban with explicit linux denied message</title>
@@ -269,20 +282,6 @@
     <guid isPermaLink="false">2023-04-06:halo-the-master-chief-collection:Steam Deck Support</guid>
     <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
     <description>Source: https://support.halowaypoint.com/hc/en-us/articles/14589112499348</description>
-  </item>
-  <item>
-    <title>Hell Let Loose: Steam Deck Support Planned</title>
-    <link>https://retroul.github.io/will-it-launch/#hell-let-loose</link>
-    <guid isPermaLink="false">2023-04-03:hell-let-loose:Steam Deck Support Planned</guid>
-    <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
-    <description>Source: https://youtu.be/DJqh61nfuTs?t=386</description>
-  </item>
-  <item>
-    <title>Genshin Impact: v3.5: Game Anti-Cheat observed allowing Proton in restricted scenarios, 2 business weeks after update launch.</title>
-    <link>https://retroul.github.io/will-it-launch/#genshin-impact</link>
-    <guid isPermaLink="false">2023-03-03:genshin-impact:v3.5: Game Anti-Cheat observed allowing Proton in restricted scenarios, 2 business weeks after update launch.</guid>
-    <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
-    <description>Source: https://www.reddit.com/r/linux_gaming/comments/123zllz/</description>
   </item>
 </channel>
 </rss>

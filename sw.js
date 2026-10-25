@@ -20,11 +20,12 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   const req = event.request;
-  if (req.method !== "GET" || new URL(req.url).origin !== self.location.origin) return;
+  const url = new URL(req.url);
+  if (req.method !== "GET" || url.origin !== self.location.origin) return;
   event.respondWith(
     fetch(req)
       .then((res) => {
-        if (res.ok) {
+        if (res.ok && !url.search) {
           const copy = res.clone();
           caches.open(CACHE).then((c) => c.put(req, copy));
         }

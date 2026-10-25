@@ -2,7 +2,7 @@
 
 **Can I play it on Linux, Steam Deck, Mac or my phone?**
 
-Anti-cheat decides whether a lot of online games run outside Windows. Will It Launch? tracks 230+ popular online games on five platforms (Windows, Mac, Linux & Steam Deck, Android, iPhone & iPad) so you can check before you buy, install or switch.
+Anti-cheat decides whether a lot of online games run outside Windows. Will It Launch? tracks 260+ popular online games on five platforms (Windows, Mac, Linux & Steam Deck, Android, iPhone & iPad) so you can check before you buy, install or switch.
 
 **Try it: https://retroul.github.io/will-it-launch/**
 
@@ -19,6 +19,8 @@ Anti-cheat decides whether a lot of online games run outside Windows. Will It La
 - **Steam Deck and ProtonDB ratings** for every Steam game.
 - **Updates page and RSS feed** ([feed.xml](feed.xml)) with the latest anti-cheat news and status changes.
 - **Star your games** to keep them at the top, and **share** a direct link to any game.
+- **Shareable lists**: the address bar follows your search, filters and platform, so you can send someone the exact list you're looking at. Your own platform is remembered between visits.
+- **Recently updated** filter for games whose status changed in the last 90 days, and a `/` shortcut to jump to search (`Esc` clears it).
 - **Install it like an app** and use it offline.
 - **Game requests with voting**, anonymous, one vote per connection, with a Cloudflare bot check and a speed limit.
 - Light and dark themes, works on phones, no build step.
@@ -69,7 +71,7 @@ There are two options:
 | ProtonDB ratings | [ProtonDB](https://www.protondb.com) |
 | Mac availability | Steam store data plus manual checks |
 | Windows, Android, iOS availability | Maintained by hand in `tools/update_data.py` |
-| Cover art | Steam store images; for games not on Steam, official share images, App Store screenshots or Wikipedia, saved in `images/covers/` |
+| Cover art | Steam store images; for games not on Steam, official share images, App Store screenshots or Wikipedia. All are saved in `images/covers/`, never linked from other sites |
 
 A GitHub Action (`.github/workflows/update-data.yml`) pulls the latest Linux data every Monday and commits it if anything changed. The same script rebuilds `feed.xml` and the Updates page. To run it yourself (Pillow is only needed to shrink new cover images, so `pip install pillow` first if you add games):
 
