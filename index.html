@@ -8,13 +8,22 @@
 <title>Will It Launch?</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Check if popular online games and their anti-cheat work on Windows, Mac, Linux, Steam Deck, Android and iOS.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Will It Launch?">
+<meta property="og:url" content="https://retroul.github.io/will-it-launch/">
+<meta property="og:image" content="https://retroul.github.io/will-it-launch/images/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Will It Launch? Can I play it on Linux, Steam Deck, Mac or my phone?">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:title" content="Will It Launch?">
-<meta property="og:description" content="Can I play it on Linux, Steam Deck, Mac or my phone? Anti-cheat compatibility for 230+ popular online games.">
+<meta property="og:description" content="Can I play it on Linux, Steam Deck, Mac or my phone? Anti-cheat compatibility for 260+ popular online games on five platforms.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5z' fill='%23ffcc33' stroke='%231d1b2f' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='m8.5 12 2.4 2.4 4.6-4.8' fill='none' stroke='%231d1b2f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <meta name="theme-color" content="#ffcc33">
 <link rel="alternate" type="application/rss+xml" title="Will It Launch? - recent changes" href="feed.xml">
+<script src="theme.js"></script>
 <link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -35,6 +44,10 @@
 <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.3L12 17.1l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z"/></symbol>
 <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
 <symbol id="i-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7M16 6l-4-4-4 4M12 2v13"/></symbol>
+<symbol id="i-deck" viewBox="0 0 24 24"><path fill="currentColor" d="M8.999 0v4.309c4.242 0 7.694 3.45 7.694 7.691s-3.452 7.691-7.694 7.691V24c6.617 0 12-5.383 12-12s-5.383-12-12-12m0 6.011c-3.313 0-6 2.687-5.998 6a5.999 5.999 0 1 0 5.998-6"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.268 21a2 2 0 0 0 3.464 0M11.68 2.009A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673c-.824-.85-1.678-1.731-2.21-3.348"/><circle cx="18" cy="5" r="3"/></symbol>
+<symbol id="i-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h.01M3 12h.01M3 19h.01M8 5h13M8 12h13M8 19h13"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
 <symbol id="i-rss" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1.5" fill="currentColor"/></symbol>
 </svg>
 
@@ -60,7 +73,7 @@
 <section class="hero">
   <div class="wrap">
     <h1>Can I play it on <span class="nowrap"><span class="sticker" id="hero-platform">Linux</span>?</span></h1>
-    <p class="hero-sub">Anti-cheat decides whether a lot of online games run outside Windows. We track <strong id="game-count">200+</strong> popular games on five platforms, so you can check before you buy, install or switch.</p>
+    <p class="hero-sub">Anti-cheat decides whether a lot of online games run outside Windows. We track <strong id="game-count">260+</strong> popular games on five platforms, so you can check before you buy, install or switch.</p>
     <div class="platforms" id="platforms" role="radiogroup" aria-label="Your platform"></div>
     <div class="summary" id="summary" aria-live="polite"></div>
   </div>
@@ -95,8 +108,17 @@
       <div class="chips" id="status-chips" role="group" aria-label="Show only"></div>
     </div>
 
+    <div id="list-banner" class="list-banner" hidden>
+      <p><svg aria-hidden="true"><use href="#i-list"/></svg><span>Someone shared a list of <strong id="list-size"></strong> with you.</span></p>
+      <div class="list-actions">
+        <button type="button" id="list-star" class="btn btn-small"><svg aria-hidden="true"><use href="#i-star"/></svg><span>Star them all</span></button>
+        <button type="button" id="list-close" class="btn btn-small btn-ghost"><svg aria-hidden="true"><use href="#i-x"/></svg><span>Show every game</span></button>
+      </div>
+    </div>
+
     <div class="list-head">
       <p id="result-count" class="result-count" aria-live="polite"></p>
+      <button type="button" id="share-starred" class="btn btn-small btn-ghost" hidden><svg aria-hidden="true"><use href="#i-share"/></svg><span>Share your starred games</span></button>
       <details class="legend">
         <summary>What do the labels mean?</summary>
         <dl id="legend-list"></dl>
@@ -113,6 +135,7 @@
   <section id="anticheats-view" aria-labelledby="ac-heading" hidden>
     <h2 id="ac-heading" class="section-title">Anti-cheats on <span id="ac-platform">Linux</span></h2>
     <p class="section-note">Each anti-cheat, and how the games using it do on the platform you picked above. Tap a game to see the details.</p>
+    <p class="section-note">Why it matters: most anti-cheats that run a kernel driver (code deep inside Windows) can't run on Linux at all. Easy Anti-Cheat and BattlEye are the big exceptions. They have a mode for Proton, the tool Steam uses to run Windows games on Linux and Steam Deck, but each developer decides whether to turn it on.</p>
     <ul id="ac-list" class="ac-list"></ul>
   </section>
 
@@ -161,6 +184,7 @@
 
 <script src="config.js"></script>
 <script src="data/games.js"></script>
+<script src="data/anticheats.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

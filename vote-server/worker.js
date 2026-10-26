@@ -15,6 +15,7 @@
 
 const MAX_LIST = 100;
 const MAX_NEW_PER_DAY = 5;
+const MAX_BODY = 4096;
 const DAY = 86400;
 
 export default {
@@ -43,13 +44,12 @@ async function route(request, env, cors) {
   if (parts[0] !== "requests") throw new HttpError(404, "Not found.");
 
   const voter = await voterId(request, env.VOTER_SECRET);
-  const body = request.method === "POST" ? await readBody(request) : {};
-  if (request.method !== "GET") {
-    if (env.WRITE_LIMITER && !(await env.WRITE_LIMITER.limit({ key: voter })).success) {
-      throw new HttpError(429, "Too many votes in a short time. Wait a minute and try again.");
-    }
-    if (request.method === "POST") await checkHuman(env, request, body.token);
+  // Rate limit before reading the body, so floods cost as little as possible.
+  if (request.method !== "GET" && env.WRITE_LIMITER && !(await env.WRITE_LIMITER.limit({ key: voter })).success) {
+    throw new HttpError(429, "Too many votes in a short time. Wait a minute and try again.");
   }
+  const body = request.method === "POST" ? await readBody(request) : {};
+  if (request.method === "POST") await checkHuman(env, request, body.token);
   const id = parts[1] === undefined ? null : Number(parts[1]);
   if (parts[1] !== undefined && !Number.isInteger(id)) throw new HttpError(404, "Not found.");
 
@@ -102,8 +102,11 @@ async function unvote(db, voter, id) {
   const result = await state(db, voter, id);
   if (result.votes === 0) {
     // Nobody wants it any more: drop the request so the list stays tidy.
-    await db.prepare("DELETE FROM requests WHERE id = ?").bind(id).run();
-    return { ...result, removed: true };
+    // Only if still empty: someone may have voted in the meantime.
+    const { meta } = await db.prepare("DELETE FROM requests WHERE id = ? AND NOT EXISTS (SELECT 1 FROM votes WHERE request_id = ?)")
+      .bind(id, id).run();
+    if (meta?.changes) return { ...result, removed: true };
+    return state(db, voter, id);
   }
   return result;
 }
@@ -133,7 +136,10 @@ async function requireRequest(db, id) {
 // ---- input ------------------------------------------------------------------
 
 async function readBody(request) {
+  // Real requests are a game name plus a bot-check token: well under 4 KB.
+  if (Number(request.headers.get("Content-Length")) > MAX_BODY) throw new HttpError(413, "That request is too big.");
   const text = await request.text();
+  if (text.length > MAX_BODY) throw new HttpError(413, "That request is too big.");
   if (!text) return {};
   try {
     const body = JSON.parse(text);
@@ -183,10 +189,22 @@ class HttpError extends Error {
 function nowSeconds() { return Math.floor(Date.now() / 1000); }
 
 async function voterId(request, secret) {
-  const ip = request.headers.get("CF-Connecting-IP") || "unknown";
+  const ip = voterNetwork(request.headers.get("CF-Connecting-IP") || "unknown");
   const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(secret), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
   const sig = new Uint8Array(await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(ip)));
   return btoa(String.fromCharCode(...sig.slice(0, 16))).replace(/[+/=]/g, (c) => ({ "+": "-", "/": "_", "=": "" }[c]));
+}
+
+// One IPv6 connection usually owns a whole /64 (billions of addresses), so count the /64 as one voter.
+// IPv4 addresses are used as they are.
+export function voterNetwork(ip) {
+  if (ip.includes(".")) return ip.slice(ip.lastIndexOf(":") + 1); // IPv4, or IPv4 written as IPv6 (::ffff:1.2.3.4)
+  if (!ip.includes(":")) return ip;
+  const [head, tail = ""] = ip.toLowerCase().split("::");
+  const left = head ? head.split(":") : [];
+  const right = tail ? tail.split(":") : [];
+  const full = ip.includes("::") ? [...left, ...Array(8 - left.length - right.length).fill("0"), ...right] : left;
+  return full.slice(0, 4).map((h) => h.padStart(4, "0")).join(":") + "::/64";
 }
 
 async function sameSecret(a, b) {

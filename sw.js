@@ -1,8 +1,8 @@
 // Offline support. Online: always fetch fresh files (and keep a copy).
 // Offline: serve the last copy. Only this site's own files are cached, never other sites or the vote server.
-const CACHE = "will-it-launch-v1";
+const CACHE = "will-it-launch-v2";
 const CORE = [
-  "./", "index.html", "styles.css", "app.js", "config.js", "data/games.js", "manifest.webmanifest",
+  "./", "index.html", "styles.css", "theme.js", "app.js", "config.js", "data/games.js", "data/anticheats.js", "manifest.webmanifest",
   "fonts/fonts.css", "fonts/figtree-latin.woff2", "fonts/rubik-latin.woff2", "icons/icon-192.png",
 ];
 
@@ -31,6 +31,8 @@ self.addEventListener("fetch", (event) => {
         }
         return res;
       })
-      .catch(() => caches.match(req, { ignoreSearch: true }).then((hit) => hit || caches.match("index.html"))),
+      // Offline and not cached: pages fall back to the app shell; other files just fail.
+      .catch(() => caches.match(req, { ignoreSearch: true })
+        .then((hit) => hit || (req.mode === "navigate" ? caches.match("index.html") : Response.error()))),
   );
 });

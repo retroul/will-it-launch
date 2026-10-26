@@ -33,6 +33,7 @@
     set(key, value) { try { localStorage.setItem("will-it-launch:" + key, value); } catch { /* storage blocked */ } },
   };
 
+  const saveFavorites = () => store.set("favorites", JSON.stringify([...state.favorites]));
   function readJson(key, fallback) {
     try { return JSON.parse(store.get(key)) ?? fallback; } catch { return fallback; }
   }
@@ -47,8 +48,12 @@
     open: new Set(),
     starredOnly: false,
     recentOnly: false,
+    deckOnly: false,
+    changedOnly: false,
+    list: null, // Set of slugs from a shared ?list= link
     favorites: new Set(readJson("favorites", [])),
   };
+  const info = window.AC_INFO || {};
 
   // ---- helpers ---------------------------------------------------------------
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -147,11 +152,39 @@
     return true;
   }
   const isShown = (g) => matchesBase(g) && (!state.statuses.size || state.statuses.has(statusOf(g)))
-    && (!state.starredOnly || state.favorites.has(g.slug)) && (!state.recentOnly || isRecent(g));
+    && (!state.starredOnly || state.favorites.has(g.slug)) && (!state.recentOnly || isRecent(g))
+    && (!state.deckOnly || DECK_OK.has(g.deck)) && (!state.changedOnly || changes.has(g.slug))
+    && (!state.list || state.list.has(g.slug));
 
   const RECENT_DAYS = 90;
   const recentSince = new Date(Date.now() - RECENT_DAYS * 864e5).toISOString().slice(0, 10);
   const isRecent = (g) => (g.updated || "") >= recentSince;
+
+  const DECK_OK = new Set(["verified", "playable"]);
+
+  // ---- changed since your last visit ----------------------------------------
+  // Each visit saves every game's five statuses in this browser. Next visit, games whose statuses
+  // differ (or that are new) get marked. The baseline is kept for the whole browser session,
+  // so reloading doesn't wipe the marks.
+  const sessionStore = {
+    get(key) { try { return sessionStorage.getItem("will-it-launch:" + key); } catch { return null; } },
+    set(key, value) { try { sessionStorage.setItem("will-it-launch:" + key, value); } catch { /* storage blocked */ } },
+  };
+  const changes = (() => {
+    const sig = (g) => PLATFORMS.map((p) => RANK[statusOf(g, p.id)]).join("");
+    const before = sessionStore.get("seen") ?? store.get("seen");
+    if (before !== null) sessionStore.set("seen", before);
+    store.set("seen", JSON.stringify(Object.fromEntries(games.map((g) => [g.slug, sig(g)]))));
+    let prev = null;
+    try { prev = JSON.parse(before); } catch { /* first visit or broken value */ }
+    const out = new Map();
+    if (!prev || typeof prev !== "object") return out;
+    games.forEach((g) => {
+      if (!Object.hasOwn(prev, g.slug)) out.set(g.slug, "new");
+      else if (prev[g.slug] !== sig(g)) out.set(g.slug, "changed");
+    });
+    return out;
+  })();
 
   const SORTS = {
     name: (a, b) => a.name.localeCompare(b.name),
@@ -163,13 +196,22 @@
 
   function renderChips(base) {
     const c = countBy(base, state.platform);
+    const all = countBy(games, state.platform);
     const starred = base.filter((g) => state.favorites.has(g.slug)).length;
     const recent = base.filter(isRecent).length;
-    $("#status-chips").innerHTML = `<button type="button" class="chip chip-star" id="starred-only" aria-pressed="${state.starredOnly}" ${starred || state.starredOnly ? "" : "disabled"}>${icon("star")}Starred <span class="n">${starred}</span></button>`
-      + `<button type="button" class="chip chip-recent" id="recent-only" aria-pressed="${state.recentOnly}" title="Updated in the last ${RECENT_DAYS} days" ${recent || state.recentOnly ? "" : "disabled"}>${icon("clock")}Recently updated <span class="n">${recent}</span></button>` + STATUSES.map((s) => {
-      const on = state.statuses.has(s.id);
-      return `<button type="button" class="chip" data-status="${s.id}" aria-pressed="${on}" ${c[s.id] || on ? "" : "disabled"}>${s.label} <span class="n">${c[s.id]}</span></button>`;
-    }).join("");
+    const deck = base.filter((g) => DECK_OK.has(g.deck)).length;
+    const changed = base.filter((g) => changes.has(g.slug)).length;
+    const toggle = (id, on, n, iconName, text, title = "") => `<button type="button" class="chip chip-icon" id="${id}" aria-pressed="${on}"${title ? ` title="${title}"` : ""} ${n || on ? "" : "disabled"}>${icon(iconName)}${text} <span class="n">${n}</span></button>`;
+    $("#status-chips").innerHTML = toggle("starred-only", state.starredOnly, starred, "star", "Starred")
+      + (changes.size ? toggle("changed-only", state.changedOnly, changed, "bell", "Changed since your last visit", "New games, or games whose status changed since you last came here") : "")
+      + toggle("recent-only", state.recentOnly, recent, "clock", "Recently updated", `Updated in the last ${RECENT_DAYS} days`)
+      + toggle("deck-only", state.deckOnly, deck, "deck", "Deck Verified or Playable", "Valve's Steam Deck rating is Verified or Playable")
+      // A status no game has on this platform gets no chip. Ones the search narrowed to zero stay, greyed out,
+      // so the toolbar doesn't jump while typing.
+      + STATUSES.filter((s) => all[s.id] || state.statuses.has(s.id)).map((s) => {
+        const on = state.statuses.has(s.id);
+        return `<button type="button" class="chip" data-status="${s.id}" aria-pressed="${on}" ${c[s.id] || on ? "" : "disabled"}>${s.label} <span class="n">${c[s.id]}</span></button>`;
+      }).join("");
   }
 
   function detailHtml(g) {
@@ -225,11 +267,15 @@
     const fav = state.favorites.has(g.slug);
     const deck = state.platform === "linux" && g.deck
       ? `<span class="deck-tag" data-deck="${esc(g.deck)}">Deck ${DECK[g.deck] || esc(g.deck)}</span>` : "";
+    const change = changes.get(g.slug);
+    const changeTag = change
+      ? `<span class="change-tag" title="${change === "new" ? "Added since your last visit" : "A status changed since your last visit"}">${change === "new" ? "New" : "Changed"}</span>` : "";
+    const tags = deck || changeTag ? `<span class="g-tags">${changeTag}${deck}</span>` : "";
     return `<li class="game${open ? " open" : ""}" id="${esc(g.slug)}">
       <button type="button" class="star" data-star="${esc(g.slug)}" aria-pressed="${fav}" aria-label="${fav ? "Unstar" : "Star"} ${esc(g.name)}" title="${fav ? "Remove from your starred games" : "Star this game"}">${icon("star")}</button>
       <button type="button" class="row" data-slug="${esc(g.slug)}" aria-expanded="${open}" aria-controls="detail-${esc(g.slug)}">
         ${cover(g)}
-        <span class="g-text"><span class="g-name">${esc(g.name)}</span>${deck}<span class="g-meta">${esc(g.genre)} · ${esc(g.anticheats.join(", ") || "No anti-cheat listed")}</span></span>
+        <span class="g-text"><span class="g-name">${esc(g.name)}</span>${tags}<span class="g-meta">${esc(g.genre)} · ${esc(g.anticheats.join(", ") || "No anti-cheat listed")}</span></span>
         <span class="badges">${badges}</span>
         <span class="verdict" data-status="${s}">${verdict(s, state.platform)}</span>
       </button>
@@ -248,6 +294,15 @@
     $("#result-count").textContent = shown.length === games.length
       ? `Showing all ${games.length} games`
       : `Showing ${shown.length} of ${games.length} games (${works} work on ${platform(state.platform).name})`;
+    $("#list-banner").hidden = !state.list;
+    if (state.list) {
+      const n = state.list.size;
+      $("#list-size").textContent = `${n} game${n === 1 ? "" : "s"}`;
+      const allStarred = [...state.list].every((s) => state.favorites.has(s));
+      $("#list-star").disabled = allStarred;
+      $("#list-star").lastChild.textContent = allStarred ? "All starred" : "Star them all";
+    }
+    $("#share-starred").hidden = state.favorites.size === 0;
     syncUrl();
   }
 
@@ -256,12 +311,14 @@
   // whenever there are filters, because a link that says "works on Mac" must open on Mac.
   function syncUrl() {
     const p = new URLSearchParams();
-    if (state.query) p.set("q", state.query);
+    if (state.query) p.set("q", $("#search").value.trim());
     if (state.genre) p.set("genre", state.genre);
     if (state.anticheat) p.set("ac", state.anticheat);
     if (state.statuses.size) p.set("status", [...state.statuses].join(","));
     if (state.starredOnly) p.set("starred", "1");
     if (state.recentOnly) p.set("recent", "1");
+    if (state.deckOnly) p.set("deck", "1");
+    if (state.list) p.set("list", [...state.list].join(","));
     if (state.sort !== "name") p.set("sort", state.sort);
     if ([...p].length) p.set("p", state.platform);
     const qs = p.toString();
@@ -272,14 +329,19 @@
     const p = new URLSearchParams(location.search);
     const pick = (name, allowed) => (allowed.includes(p.get(name)) ? p.get(name) : "");
     if (p.has("p")) state.platform = pick("p", PLATFORMS.map((x) => x.id)) || state.platform;
-    state.query = (p.get("q") || "").slice(0, 80).trim().toLowerCase();
+    const q = (p.get("q") || "").slice(0, 80).trim();
+    state.query = q.toLowerCase();
     state.genre = pick("genre", games.map((g) => g.genre));
     state.anticheat = pick("ac", games.flatMap((g) => g.anticheats));
     (p.get("status") || "").split(",").forEach((s) => { if (Object.hasOwn(RANK, s)) state.statuses.add(s); });
     state.starredOnly = p.get("starred") === "1";
     state.recentOnly = p.get("recent") === "1";
+    state.deckOnly = p.get("deck") === "1";
+    // ?list=slug,slug: someone's shared starred games. Unknown slugs are dropped.
+    const list = (p.get("list") || "").split(",").filter((s) => bySlug.has(s)).slice(0, games.length);
+    state.list = list.length ? new Set(list) : null;
     state.sort = pick("sort", Object.keys(SORTS)) || "name";
-    $("#search").value = state.query; $("#genre").value = state.genre; $("#anticheat").value = state.anticheat; $("#sort").value = state.sort;
+    $("#search").value = q; $("#genre").value = state.genre; $("#anticheat").value = state.anticheat; $("#sort").value = state.sort;
   }
 
   // ---- anti-cheats -----------------------------------------------------------
@@ -294,7 +356,7 @@
         const chips = list.slice().sort((a, b) => RANK[statusOf(a, p)] - RANK[statusOf(b, p)] || a.name.localeCompare(b.name))
           .map((g) => `<a class="ac-game" data-status="${statusOf(g, p)}" href="#${esc(g.slug)}" title="${esc(verdict(statusOf(g, p), p))}">${esc(g.name)}</a>`).join("");
         return `<li class="ac-item">
-          <div><h3 class="ac-name">${esc(name)}</h3><p class="ac-count">${list.length} game${list.length === 1 ? "" : "s"}</p></div>
+          <div><h3 class="ac-name">${esc(name)}</h3><p class="ac-count">${list.length} game${list.length === 1 ? "" : "s"}</p>${info[name] ? `<p class="ac-info">${esc(info[name])}</p>` : ""}</div>
           <div class="ac-body">${bar(c, list.length)}${key(c)}<div class="ac-games">${chips}</div></div>
         </li>`;
       }).join("");
@@ -324,7 +386,7 @@
         method,
         headers: body ? { "Content-Type": "application/json" } : {},
         body: body ? JSON.stringify(body) : undefined,
-      });
+      }).catch(() => { throw new Error("Couldn't reach the vote server. Check your connection and try again."); });
       const json = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(json.error || "The vote server didn't answer. Try again later.");
       return json;
@@ -347,6 +409,7 @@
             appearance: "interaction-only",
             callback: (token) => this.pending?.resolve(token),
             "error-callback": () => this.pending?.reject(new Error("The bot check failed. Reload the page and try again.")),
+            "timeout-callback": () => this.pending?.reject(new Error("The bot check timed out. Try again.")),
           });
           resolve();
         };
@@ -361,6 +424,8 @@
     async token() {
       if (!this.key) return undefined;
       await this.load();
+      // One check at a time: a newer click cancels the older one, so its button doesn't stay stuck.
+      this.pending?.reject(new Error("Only one vote at a time. Try that one again."));
       return new Promise((resolve, reject) => {
         this.pending = { resolve, reject };
         window.turnstile.reset(this.widget);
@@ -399,7 +464,7 @@
     $("#request-list").innerHTML = votes.items.length
       ? votes.items.map((r) => `<li class="request">
           <span class="request-name">${esc(r.name)}</span>
-          <button type="button" class="vote" data-id="${r.id}" aria-pressed="${r.voted}" aria-label="${r.voted ? "Remove your vote for" : "Vote for"} ${esc(r.name)}">${icon("up")}${r.votes}</button>
+          <button type="button" class="vote" data-id="${Number(r.id)}" aria-pressed="${Boolean(r.voted)}" aria-label="${r.voted ? "Remove your vote for" : "Vote for"} ${esc(r.name)}">${icon("up")}${Number(r.votes)}</button>
         </li>`).join("")
       : `<li class="request-empty">No requests yet. Be the first!</li>`;
   }
@@ -427,7 +492,8 @@
   // ---- routing (bare #tokens only) -----------------------------------------
   const VIEWS = ["games", "anticheats", "updates", "requests"];
   function route() {
-    const token = decodeURIComponent(location.hash.slice(1));
+    let token = "";
+    try { token = decodeURIComponent(location.hash.slice(1)); } catch { /* malformed link: show the games */ }
     const view = VIEWS.includes(token) ? token : "games";
     VIEWS.forEach((v) => { $(`#${v}-view`).hidden = v !== view; });
     document.querySelectorAll(".nav a").forEach((a) => {
@@ -442,26 +508,49 @@
     if (!isShown(bySlug.get(slug))) clearFilters(false);
     state.open.add(slug);
     renderGames();
-    requestAnimationFrame(() => document.getElementById(slug)?.scrollIntoView({ block: "start" }));
+    // Jump, don't smooth-scroll through hundreds of rows. CSS scroll-margin keeps it below the toolbar.
+    requestAnimationFrame(() => document.getElementById(slug)?.scrollIntoView({ block: "start", behavior: "instant" }));
+  }
+
+  // Rows opened from a link must land below the sticky toolbar, whose height changes as chips wrap.
+  function trackToolbarHeight() {
+    const bar = $(".toolbar");
+    const sync = () => document.documentElement.style.setProperty("--toolbar-h",
+      `${getComputedStyle(bar).position === "sticky" ? bar.offsetHeight : 0}px`);
+    sync();
+    if (window.ResizeObserver) new ResizeObserver(sync).observe(bar);
   }
 
   function clearFilters(rerender = true) {
-    Object.assign(state, { query: "", genre: "", anticheat: "", starredOnly: false, recentOnly: false });
+    Object.assign(state, { query: "", genre: "", anticheat: "", starredOnly: false, recentOnly: false, deckOnly: false, changedOnly: false, list: null });
     state.statuses.clear();
     $("#search").value = ""; $("#genre").value = ""; $("#anticheat").value = "";
     if (rerender) renderGames();
   }
 
   // ---- share -----------------------------------------------------------------
-  async function shareGame(btn) {
+  function shareGame(btn) {
     const g = bySlug.get(btn.dataset.share);
-    const url = `${location.origin}${location.pathname}#${g.slug}`;
+    return shareLink(btn, `${location.origin}${location.pathname}#${g.slug}`, `${g.name} on Will It Launch?`);
+  }
+
+  function shareStarred(btn) {
+    // Sorted so the same stars always make the same link.
+    const slugs = [...state.favorites].filter((s) => bySlug.has(s)).sort();
+    return shareLink(btn, `${location.origin}${location.pathname}?list=${slugs.join(",")}`, "My games on Will It Launch?");
+  }
+
+  // Phones get the system share sheet; everything else copies the link.
+  async function shareLink(btn, url, title) {
+    const label = btn.lastChild;
+    btn.dataset.label ||= label.textContent; // the real label, even if clicked again mid-"Link copied"
     const done = (text) => {
-      btn.lastChild.textContent = text;
-      setTimeout(() => { btn.lastChild.textContent = "Share"; }, 2000);
+      label.textContent = text;
+      clearTimeout(btn.resetTimer);
+      btn.resetTimer = setTimeout(() => { label.textContent = btn.dataset.label; }, 2000);
     };
     if (navigator.share && matchMedia("(pointer: coarse)").matches) {
-      try { await navigator.share({ title: `${g.name} on Will It Launch?`, url }); return; } catch { /* cancelled */ }
+      try { await navigator.share({ title, url }); return; } catch { /* cancelled */ }
     }
     try {
       await navigator.clipboard.writeText(url);
@@ -515,6 +604,13 @@
     $("#anticheat").addEventListener("change", (e) => { state.anticheat = e.target.value; renderGames(); });
     $("#sort").addEventListener("change", (e) => { state.sort = e.target.value; renderGames(); });
     $("#clear-filters").addEventListener("click", () => clearFilters());
+    $("#share-starred").addEventListener("click", (e) => shareStarred(e.currentTarget));
+    $("#list-close").addEventListener("click", () => { state.list = null; renderGames(); });
+    $("#list-star").addEventListener("click", () => {
+      state.list?.forEach((s) => state.favorites.add(s));
+      saveFavorites();
+      renderGames();
+    });
     // "/" jumps to search from anywhere; Esc clears it, then leaves it.
     document.addEventListener("keydown", (e) => {
       if (e.key !== "/" || e.ctrlKey || e.metaKey || e.altKey || e.target.closest?.("input, textarea, select, [contenteditable]")) return;
@@ -537,8 +633,9 @@
         state.starredOnly = !state.starredOnly;
         return renderGames();
       }
-      if (chip.id === "recent-only") {
-        state.recentOnly = !state.recentOnly;
+      const flag = { "recent-only": "recentOnly", "deck-only": "deckOnly", "changed-only": "changedOnly" }[chip.id];
+      if (flag) {
+        state[flag] = !state[flag];
         return renderGames();
       }
       const s = chip.dataset.status;
@@ -552,7 +649,7 @@
       if (star) {
         const slug = star.dataset.star;
         state.favorites.has(slug) ? state.favorites.delete(slug) : state.favorites.add(slug);
-        store.set("favorites", JSON.stringify([...state.favorites]));
+        saveFavorites();
         renderGames();
         document.querySelector(`.star[data-star="${CSS.escape(slug)}"]`)?.focus({ preventScroll: true });
         return;
@@ -631,10 +728,6 @@
     window.addEventListener("hashchange", route);
   }
 
-  // Apply a saved theme only if the visitor picked one; otherwise follow the system.
-  const savedTheme = store.get("theme");
-  if (savedTheme === "light" || savedTheme === "dark") document.documentElement.dataset.theme = savedTheme;
-
   // Offline support: only over https (GitHub Pages), never for local files.
   if ("serviceWorker" in navigator && location.protocol === "https:") {
     navigator.serviceWorker.register("sw.js").catch(() => { /* offline mode is optional */ });
@@ -644,6 +737,7 @@
   readUrl();
   initRequests();
   bind();
+  trackToolbarHeight();
   syncThemeButton();
   renderHero();
   renderGames();

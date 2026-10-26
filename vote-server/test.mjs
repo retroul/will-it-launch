@@ -3,7 +3,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { DatabaseSync } from "node:sqlite";
-import worker from "./worker.js";
+import worker, { voterNetwork } from "./worker.js";
 
 const sqlite = new DatabaseSync(":memory:");
 sqlite.exec(readFileSync(new URL("./schema.sql", import.meta.url), "utf8"));
@@ -15,7 +15,7 @@ const DB = {
       bind: (...p) => make(p),
       first: async () => sqlite.prepare(sql).get(...params) ?? null,
       all: async () => ({ results: sqlite.prepare(sql).all(...params) }),
-      run: async () => sqlite.prepare(sql).run(...params),
+      run: async () => ({ success: true, meta: sqlite.prepare(sql).run(...params) }),
     });
     return make([]);
   },
@@ -61,12 +61,29 @@ r = await call("DELETE", `/requests/${id}/vote`);
 assert.equal(r.body.removed, true);
 assert.equal((await call("GET", "/requests")).body.requests.length, 0);
 
+// IPv6: one voter per /64, since one connection usually owns the whole block.
+assert.equal(voterNetwork("2001:db8:1:2:aaaa::1"), "2001:0db8:0001:0002::/64");
+assert.equal(voterNetwork("2001:db8:1:2::"), "2001:0db8:0001:0002::/64");
+assert.equal(voterNetwork("2001:DB8::1"), "2001:0db8:0000:0000::/64");
+assert.equal(voterNetwork("::1"), "0000:0000:0000:0000::/64");
+assert.equal(voterNetwork("::ffff:203.0.113.9"), "203.0.113.9");
+assert.equal(voterNetwork("203.0.113.9"), "203.0.113.9");
+r = await call("POST", "/requests", { ip: "2001:db8:1:2::10", body: { name: "IPv6 Game" } });
+const v6 = r.body.id;
+r = await call("POST", `/requests/${v6}/vote`, { ip: "2001:db8:1:2:ffff:ffff:ffff:ffff" });
+assert.deepEqual([r.body.votes, r.body.voted], [1, true], "same /64 counts once");
+r = await call("POST", `/requests/${v6}/vote`, { ip: "2001:db8:1:3::10" });
+assert.equal(r.body.votes, 2, "another /64 is another voter");
+await call("DELETE", `/requests/${v6}/vote`, { ip: "2001:db8:1:3::10" });
+assert.equal((await call("DELETE", `/requests/${v6}/vote`, { ip: "2001:db8:1:2::99" })).body.removed, true);
+
 // Validation.
 for (const name of ["", "x", "a".repeat(61), "visit https://spam.example", "<b>hi</b>", 42, "!!!"]) {
   r = await call("POST", "/requests", { body: { name } });
   assert.equal(r.status, 400, `rejects ${JSON.stringify(name)}`);
 }
 assert.equal((await call("POST", "/requests", { body: "not json" })).status, 400);
+assert.equal((await call("POST", "/requests", { body: { name: "Big", pad: "x".repeat(5000) } })).status, 413);
 assert.equal((await call("POST", "/requests/999/vote")).status, 404);
 assert.equal((await call("POST", "/requests/abc/vote")).status, 404);
 

@@ -15,10 +15,11 @@ Anti-cheat decides whether a lot of online games run outside Windows. Will It La
 - **Pick your platform** and see how many games work there, in plain words: *Works*, *Works unofficially*, *Coming soon*, *Doesn't work*, *Blocked by devs*.
 - **Every platform at a glance** for each game, with cover art, notes, links (Steam, ProtonDB, SteamDB) and a Linux timeline.
 - **Search and filter** by name, genre, anti-cheat or status, and sort by what works best.
-- **Anti-cheat breakdown**: how Easy Anti-Cheat, BattlEye, Vanguard and 40+ others behave on each platform.
-- **Steam Deck and ProtonDB ratings** for every Steam game.
+- **Anti-cheat breakdown**: how Easy Anti-Cheat, BattlEye, Vanguard and 40+ others behave on each platform, with a short note on what the main ones are.
+- **Steam Deck and ProtonDB ratings** for every Steam game, and a filter for games rated Deck Verified or Playable.
 - **Updates page and RSS feed** ([feed.xml](feed.xml)) with the latest anti-cheat news and status changes.
-- **Star your games** to keep them at the top, and **share** a direct link to any game.
+- **Star your games** to keep them at the top, **share** a direct link to any game, or share your whole starred list as one link.
+- **Changed since your last visit**: games that are new or whose status changed since you last came are marked, with a filter to show only those. This is worked out in your browser.
 - **Shareable lists**: the address bar follows your search, filters and platform, so you can send someone the exact list you're looking at. Your own platform is remembered between visits.
 - **Recently updated** filter for games whose status changed in the last 90 days, and a `/` shortcut to jump to search (`Esc` clears it).
 - **Install it like an app** and use it offline.
@@ -96,6 +97,7 @@ A second workflow (`.github/workflows/checks.yml`) runs the vote server tests an
 ```
 index.html            page
 styles.css            design
+theme.js              applies the saved theme before the page draws
 app.js                filtering, sorting, views, requests
 config.js             optional settings (repo, vote server, bot check)
 sw.js                 offline support
@@ -104,7 +106,9 @@ feed.xml              RSS feed (generated)
 fonts/                self-hosted Figtree and Rubik
 icons/                app icons
 images/covers/        saved cover art
+images/og.png         link preview picture
 data/games.js         generated game data (don't edit by hand)
+data/anticheats.js    short anti-cheat notes (edited by hand)
 tools/update_data.py  builds data/games.js and feed.xml
 tools/check_links.py  checks that the source links still work
 vote-server/          optional Cloudflare Worker for anonymous voting
